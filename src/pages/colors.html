@@ -1,0 +1,141 @@
+<div class="lt-page">
+  <div class="lt-frame lt-frame--narrow">
+
+    <h1>Colors</h1>
+    <p>
+      La palette de couleurs de l’usine fournit des <strong>tokens sémantiques</strong> 
+      (success, danger, info…) ainsi que des <strong>tokens de fond et d’UI</strong> 
+      (background, container, overlay, border…).  
+      Ces variables CSS constituent la base pour les utilitaires et les composants.
+    </p>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="UI & backgrounds">
+        <p>Couleurs de base utilisées pour les surfaces et overlays.</p>
+        <ltds-code-block language="css" dedent>
+        :root {
+        --color-ui-white: #fff;
+        --color-ui-black: #000;
+
+        --color-ui-white-opacity-92: rgba(255,255,255,.92);
+        --color-ui-white-opacity-80: rgba(255,255,255,.8);
+        --color-ui-white-opacity-60: rgba(255,255,255,.6);
+        --color-ui-white-opacity-40: rgba(255,255,255,.4);
+        --color-ui-white-opacity-20: rgba(255,255,255,.2);
+
+        --color-ui-border: var(--color-ui-white-opacity-20);
+
+        --color-background: #050b14;
+        --color-container:  #091420;
+        --color-overlay:    #12283d;
+        }
+        </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Couleurs de texte">
+        <p>Hiérarchie lisible : primaire, secondaire, tertiaire, inversée…</p>
+        <ltds-code-block language="css" dedent>
+        :root {
+        --color-text-primary:    var(--color-ui-white-opacity-92);
+        --color-text-secondary:  var(--color-ui-white-opacity-60);
+        --color-text-tertiary:   var(--color-ui-white-opacity-40);
+        --color-text-inverted:   var(--color-ui-black);
+        --color-text-translucent: var(--color-ui-white-opacity-20);
+
+        --color-text-danger:     var(--color-danger);
+        --color-text-success:    var(--color-success);
+        --color-text-info:       var(--color-info);
+        --color-text-warning:    var(--color-warning);
+        }
+        </ltds-code-block>
+        <p class="u-text-secondary u-fs-0">
+        Exemple : <code>color: var(--color-text-secondary);</code>
+        </p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Couleurs sémantiques">
+        <p>Pratiques pour les états (erreur, succès, information, avertissement).</p>
+        <ltds-code-block language="css" dedent>
+        :root {
+        --color-danger: rgb(231, 76, 60);
+        --color-danger-hover: rgb(192, 57, 43);
+        --color-danger-active: rgb(169, 50, 38);
+        --color-danger-opacity-10: rgba(231, 76, 60, .1);
+
+        --color-info: rgb(96, 135, 255);
+        --color-info-active: rgb(49, 84, 189);
+        --color-info-opacity-10: rgba(96, 135, 255, .1);
+
+        --color-success: rgb(46, 158, 91);
+        --color-success-hover: rgb(39, 146, 79);
+        --color-success-active: rgb(31, 122, 64);
+        --color-success-opacity-10: rgba(46, 158, 91, .1);
+
+        --color-warning: rgb(245, 185, 59);
+        --color-warning-hover: rgb(224, 167, 47);
+        --color-warning-active: rgb(195, 141, 30);
+        --color-warning-opacity-10: rgba(245, 185, 59, .1);
+        }
+        </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Borders">
+        <p>Tokens génériques pour les bordures, sobres par défaut.</p>
+        <ltds-code-block language="css" dedent>
+        :root {
+        --color-border:         rgba(255,255,255,.12); /* standard */
+        --color-border-strong:  rgba(255,255,255,.25); /* plus visible */
+        --color-border-inverse: rgba(0,0,0,.25);       /* sur fond clair */
+        }
+        </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Brand & gradients">
+        <p>Les couleurs de marque sont définies dans <code>brand-*</code>, puis remappées en <code>--color-primary</code>.</p>
+        <ltds-code-block language="css" dedent>
+        :root,
+        [data-scheme] {
+        --color-primary:            var(--brand-primary);
+        --color-primary-hover:      var(--brand-primary-hover);
+        --color-primary-active:     var(--brand-primary-active);
+
+        --color-primary-opacity-4:  var(--brand-primary-opacity-4);
+        --color-primary-opacity-10: var(--brand-primary-opacity-10);
+        --color-primary-opacity-20: var(--brand-primary-opacity-20);
+        --color-primary-opacity-40: var(--brand-primary-opacity-40);
+
+        --gradient-primary: var(--brand-gradient-primary);
+        --text-gradient:    var(--brand-text-gradient-primary);
+
+        --gradient-secondary: linear-gradient(to bottom, var(--color-background), var(--color-container));
+        }
+        </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Schemes (variantes)">
+        <p>Possibilité de surcharger via l’attribut <code>[data-scheme]</code>.</p>
+        <ltds-code-block language="css" dedent>
+        [data-scheme="1"] {
+        --brand-primary: rgb(136, 91, 241);
+        --brand-gradient-primary: linear-gradient(to top, rgb(56,40,100), rgb(30,23,53));
+        }
+        [data-scheme="2"] {
+        --brand-primary: rgb(54, 114, 229);
+        --brand-gradient-primary: linear-gradient(to top, #0B172D, #091428);
+        }
+        </ltds-code-block>
+    </doc-section>
+
+  </div>
+</div>

@@ -1,0 +1,76 @@
+<!-- /src/pages/reset.html -->
+<div class="lt-page">
+  <div class="lt-frame lt-frame--narrow">
+    
+    <h1>Reset</h1>
+
+    <p class="u-text-secondary">
+    Le <strong>reset</strong> assure une base homogène entre navigateurs, en neutralisant les styles par défaut 
+    et en appliquant des règles sûres et minimales.
+    </p>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Principes">
+      <ul>
+        <li>Suppression des marges et paddings par défaut</li>
+        <li>Utilisation systématique de <code>box-sizing: border-box</code></li>
+        <li>Définition d’une typographie et couleur de texte de base</li>
+        <li>Règles sûres pour images et médias (max-width: 100%)</li>
+      </ul>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Reset universel">
+      <p>On annule les marges/paddings et on uniformise la boîte de calcul.</p>
+      <ltds-code-block language="css" dedent>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Base HTML & Body">
+      <p>Définition de la typo et des couleurs par défaut, pour assurer la cohérence visuelle.</p>
+      <ltds-code-block language="css" dedent>
+      html, body {
+        font-family: var(--font-family-base);
+        font-weight: var(--font-weight-regular);
+        font-size: var(--font-size-2);
+        color: var(--color-text-primary);
+      }
+      </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Éléments média">
+      <p>Images et vidéos fluides, jamais plus larges que leur conteneur.</p>
+      <ltds-code-block language="css" dedent>
+      img, video {
+        max-width: 100%;
+        height: auto;
+      }
+      </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Bonnes pratiques">
+      <p>
+        Le reset doit rester minimal : il n’est pas destiné à imposer une charte graphique, 
+        mais uniquement à créer une base stable pour les styles du Design System.
+      </p>
+      <p>
+        Éviter les resets trop agressifs (ex. suppression de styles utiles pour <code>button</code> ou <code>a</code>), 
+        qui compliquent l’accessibilité et nécessitent des réécritures inutiles.
+      </p>
+    </doc-section>
+
+  </div>
+</div>

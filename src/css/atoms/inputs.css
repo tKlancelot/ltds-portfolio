@@ -1,0 +1,119 @@
+/* reset  */
+
+input:-internal-autofill-selected{
+    appearance: auto;
+    background-image: none !important;
+}
+
+label{
+    display: block;
+}
+
+
+select,option,
+input,textarea{
+    font-size: var(--font-size-2);
+    color: var(--color-text-primary);
+}
+
+input{
+    line-height: var(--size-8);
+    padding-inline: var(--size-2);
+    font-family: var(--ff-primary);
+}
+
+
+textarea{
+    padding: var(--size-2);
+}
+
+select,
+input::placeholder,
+textarea::placeholder{
+    color:var(--text-tertiary);
+}
+
+
+
+select option{
+    background-color: var(--color-container);
+}
+
+
+input:focus-visible,
+textarea:focus-visible{
+    outline: unset;
+    background-color:oklch(from var(--color-primary-opacity-20) calc(l * .90) c h);
+}
+
+.input,
+.select,
+.textarea{
+    border: unset;
+    background-color: var(--color-primary-opacity-10);
+    font-family: var(--ff-primary);
+}
+
+.select{
+    min-height: var(--size-8);
+    text-indent: var(--size-1);
+}
+
+
+.form-row-upload{
+    background-color: var(--color-primary-opacity-4);
+    border: 2px dashed var(--color-primary-opacity-40);
+    transition: var(--transition-ease);
+    min-height: 128px;
+    *{
+        cursor: pointer; 
+    }
+}
+
+.form-row-upload:hover{
+    background-color: var(--color-primary-opacity-10);
+    border-color: var(--color-primary);
+}
+
+.form-row-upload.form-row-upload-small{
+    min-height: 48px;
+    padding: var(--size-2);
+}
+
+.form-row-upload:hover label{
+    color: var(--color-primary);
+}
+
+.form-row-upload input,
+.form-row-upload label{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary-opacity-40);
+    font-weight: 700;
+}
+
+.form-row-upload input{
+    z-index: 1;
+    opacity: 0;
+    color: transparent;
+}
+
+
+.form-row-upload #preview{  
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+

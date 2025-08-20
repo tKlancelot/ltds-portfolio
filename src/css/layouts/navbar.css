@@ -1,0 +1,12 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--size-4);
+    background-color:var(--color-primary-opacity-4);
+}
+
+.navbar a{
+    text-underline-offset: 8px;
+    transition: var(--transition-ease);
+}

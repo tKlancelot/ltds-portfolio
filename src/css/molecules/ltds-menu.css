@@ -1,0 +1,50 @@
+/* MENU BAR ITEMS && MENU BAR ITEMS SUB-MENUS */
+/* DEFINED BY LTDS  */
+
+.ltds-menu{
+    display: flex;
+    gap: var(--size-4);
+    align-items: center;
+}
+
+.ltds-menu-item{
+    position: relative;
+    cursor: pointer;
+}
+
+.ltds-menu-label{
+    display: flex;
+    align-items: center;
+    gap: var(--size-2);
+}
+
+.ltds-menu-submenu{
+    --menu-offset-y: 108%;
+    --menu-offset-x: -32px;
+    --menu-text-color: var(--color-text-inverted);
+    top: var(--menu-offset-y);
+    right: var(--menu-offset-x);
+    color: var(--menu-text-color);
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.9);
+    transition: transform 0.24s cubic-bezier(0.39, 0.575, 0.565, 1);
+    width: max-content;
+    background-color: var(--color-ui-white-opacity-92);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radii-2);
+    padding: var(--size-3);
+    z-index: 1;
+}
+
+.ltds-menu-submenu li{
+    min-width: var(--large-size-2);
+    line-height: var(--lh-4);
+}
+
+.ltds-menu-item:hover .ltds-menu-submenu{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}

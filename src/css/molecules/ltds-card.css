@@ -1,0 +1,170 @@
+/* ================================
+   LTDS CARD (custom element)
+   ================================ */
+
+/* lien en wrapper ET liens internes */
+a.ltds-card,
+ltds-card a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;          /* le wrapper <a> occupe toute la card */
+}
+
+.ltds-card {
+    /* Tokens configurables */
+    --card-padding: var(--size-4);
+    --card-radius: var(--radii-3);
+    --card-bg: var(--color-primary-opacity-10);
+    --card-bg2: var(--color-primary-opacity-10);
+    --card-border: color-mix(in oklab, var(--color-primary) 96%, transparent);
+    --card-border-hover: color-mix(in oklab, var(--color-primary) 100%, transparent);
+    --card-outline-focus-visible: 2px solid color-mix(in oklab, var(--color-primary) 55%, transparent);
+    /* --card-shadow: var(--shadow-1); */
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-3);
+    padding: var(--card-padding);
+    border-radius: var(--card-radius);
+    background-color: var(--card-bg);
+    height: 100%;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    transition: transform .18s ease, box-shadow .18s ease,
+        background .25s ease, border-color .18s ease;
+}
+
+/* fine bordure (overlay) */
+.ltds-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    border: 1px solid var(--card-border);
+    opacity: .6;
+}
+
+/* Interactif */
+.ltds-card--interactive {
+    cursor: pointer;
+}
+
+.ltds-card--interactive:hover {
+    transform: translateY(-4px);
+}
+
+.ltds-card--interactive:hover::before {
+    opacity: 1;
+    border-color: var(--card-border-hover);
+}
+
+.ltds-card--interactive:focus-visible {
+    outline:var(--card-outline-focus-visible);
+    outline-offset: 2px;
+}
+
+ltds-card:focus-within .ltds-card {
+  outline:var(--card-outline-focus-visible);
+  outline-offset: 2px;
+}
+
+/* Verre dépoli */
+.ltds-card--glass {
+    background:
+        radial-gradient(120% 100% at 50% -10%, rgba(255, 255, 255, .06), transparent 60%),
+        linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .03));
+    backdrop-filter: saturate(120%) blur(10px);
+    --card-border: rgba(255, 255, 255, .18);
+}
+
+.ltds-card--info{
+    --card-bg: var(--color-info-opacity-10);
+    --card-border:  color-mix(in oklab, var(--color-info) 96%, transparent);
+    --card-border-hover: var(--color-info-active);
+    --card-outline-focus-visible: 2px solid color-mix(in oklab, var(--color-info) 55%, transparent);
+}
+
+.ltds-card--success{
+    --card-bg: var(--color-success-opacity-10);
+    --card-border: color-mix(in oklab, var(--color-success) 96%, transparent);
+    --card-border-hover: var(--color-success-active);
+    --card-outline-focus-visible: 2px solid color-mix(in oklab, var(--color-success) 55%, transparent);
+}
+
+.ltds-card--warning{
+    --card-bg: var(--color-warning-opacity-10);
+    --card-border: color-mix(in oklab, var(--color-warning) 96%, transparent);
+    --card-border-hover: var(--color-warning-active);
+    --card-outline-focus-visible: 2px solid color-mix(in oklab, var(--color-warning) 55%, transparent);
+}
+
+.ltds-card--danger{
+    --card-bg: var(--color-danger-opacity-10);
+    --card-border: color-mix(in oklab, var(--color-danger) 96%, transparent);
+    --card-border-hover: var(--color-danger-active);
+    --card-outline-focus-visible: 2px solid color-mix(in oklab, var(--color-danger) 55%, transparent);
+}
+
+/* Pas de bordure */
+.ltds-card--no-border::before {
+    border: none;
+}
+
+/* ================================
+   Sous-blocs (via classes)
+   ================================ */
+ltds-card .ltds-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--size-3);
+}
+
+ltds-card .ltds-card-title {
+    font-family: var(--font-family-accent);
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+ltds-card .ltds-card-subtitle {
+    font-size: var(--font-size-1);
+    color: var(--color-text-secondary);
+}
+
+ltds-card .ltds-card-body {
+    color: var(--color-text-primary);
+}
+
+ltds-card .ltds-card-footer {
+    margin-top: auto;
+    display: flex;
+    gap: var(--size-3);
+    align-items: center;
+}
+
+/* ================================
+   Helper grid
+   ================================ */
+.ltds-card-grid {
+    display: grid;
+    gap: var(--gap-4);
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.ltds-card-grid>ltds-card {
+    grid-column: span 4;
+}
+
+@media (max-width: 1439px) {
+    .ltds-card-grid>ltds-card {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 768px) {
+    .ltds-card-grid>ltds-card {
+        grid-column: span 12;
+    }
+}

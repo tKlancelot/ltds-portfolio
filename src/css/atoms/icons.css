@@ -1,0 +1,30 @@
+[class^="lt-icon-"] {
+    color: currentColor;
+}
+
+i[class^="lt-icon-"].lt-icon-style-solid:before, i[class*=" lt-icon-"].lt-icon-style-solid:before{
+    font-weight: bold!important;
+}
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    &::before{
+        font-size: var(--font-size-3);
+    }
+}
+
+.icon.icon-size-sm::before{
+    font-size: var(--font-size-1);
+}
+
+.icon.icon-size-lg::before{
+    font-size: var(--font-size-4);
+}
+
+.icon.icon-size-xl::before{
+    font-size: var(--font-size-5);
+}

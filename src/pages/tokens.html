@@ -1,0 +1,191 @@
+<div class="lt-page">
+  <div class="lt-frame lt-frame--narrow">
+
+    <h1>Tokens</h1>
+    <p>Ces variables CSS constituent la source de vérité du système (typo, tailles, espaces, arrondis, etc.). Elles sont consommées par les utilitaires et composants.</p>
+
+    <ltds-divider></ltds-divider>
+
+
+    <doc-section title="Import couleurs">
+        <p>Les couleurs (brand, UI, sémantiques, borders, gradients) sont déclarées dans un fichier séparé pour faciliter les thèmes.</p>
+        <ltds-code-block language="css" dedent>
+        @import './colors.css';
+        </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Typographie : familles & graisses">
+        <p>Familles et échelle de poids cohérente. Les projets peuvent surcharger <code>--font-family-*</code> côté app.</p>
+        <ltds-code-block language="css" dedent>
+        :root {
+        /* familles */
+        --font-family-base: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+        --font-family-accent: "Anton", var(--font-family-base);
+        --font-family-alt: "Mona Sans", var(--font-family-base);
+
+        /* poids */
+        --font-weight-regular: 400;
+        --font-weight-medium:  500;
+        --font-weight-semibold:600;
+        --font-weight-bold:    700;
+        }
+        </ltds-code-block>
+        <p class="u-text-secondary u-fs-0">Exemples :</p>
+        <ltds-code-block language="css" dedent>
+        .title { font-family: var(--font-family-accent); font-weight: var(--font-weight-bold); }
+        .body  { font-family: var(--font-family-base);   font-weight: var(--font-weight-regular); }
+        </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Échelle de tailles de police">
+        <p>Échelle typographique simple (rem). Des utilitaires <code>u-fs-*</code> existent côté “utilities”.</p>
+        <ltds-code-block language="css" dedent>
+        :root {
+        --font-size-0: 0.75rem;
+        --font-size-1: 0.875rem;
+        --font-size-2: 1rem;
+        --font-size-3: 1.25rem;
+        --font-size-4: 1.5rem;
+        --font-size-5: 2rem;
+        --font-size-6: 3rem;
+        --font-size-7: 4rem;
+        --font-size-8: 5rem;
+        }
+        </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Échelles de tailles (espaces unitaires)">
+        <p>Échelle compacte pour marges/paddings, gaps et composants.</p>
+        <ltds-code-block language="css" dedent>
+        :root {
+        --size-0: 0px;
+        --size-1: 4px;
+        --size-2: 8px;
+        --size-3: 12px;
+        --size-4: 16px;
+        --size-5: 20px;
+        --size-6: 24px;
+        --size-7: 32px;
+        --size-8: 40px;
+        --size-9: 48px;
+        --size-10: 64px;
+
+        /* alias gap */
+        --gap-1: var(--size-1);
+        --gap-2: var(--size-2);
+        --gap-3: var(--size-3);
+        --gap-4: var(--size-4);
+        --gap-5: var(--size-5);
+        --gap-6: var(--size-6);
+        --gap-7: var(--size-7);
+        --gap-8: var(--size-8);
+        --gap-9: var(--size-9);
+        --gap-10: var(--size-10);
+        }
+        </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Grandes tailles (layouts, composants media)">
+        <p>Convenient tokens pour contraindre rapidement dimensions max/min.</p>
+        <ltds-code-block language="css" dedent>
+        :root {
+        --large-size-1: 96px;
+        --large-size-2: 120px;
+        --large-size-3: 192px;
+        --large-size-4: 240px;
+        --large-size-5: 320px;
+        --large-size-6: 480px;
+        --large-size-7: 640px;
+        --large-size-8: 768px;
+        --large-size-9: 1024px;
+        --large-size-10: 1280px;
+        }
+        </ltds-code-block>
+        <ltds-code-block language="css" dedent>
+        .card { max-width: var(--large-size-5); } /* 320px */
+        .avatar { width: var(--large-size-1); height: var(--large-size-1); }
+        </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Arrondis (radius/radii)">
+        <p>Convention : <code>--radius-0</code>, <code>--radius-1</code>, puis <code>--radii-2..6</code> et <code>--radii-round</code>.</p>
+        <ltds-code-block language="css" dedent>
+        :root{
+        --radius-0: 0;        /* carré */
+        --radius-1: 2px;      /* très léger */
+        --radii-2: 4px;       /* petit arrondi */
+        --radii-3: 8px;       /* standard */
+        --radii-4: 12px;      /* accentué */
+        --radii-5: 16px;      /* très arrondi */
+        --radii-6: 24px;      /* pill / gros bouton */
+        --radii-round: 50%;   /* cercle */
+        }
+        </ltds-code-block>
+        <ltds-code-block language="css" dedent>
+        .btn { border-radius: var(--radii-3); }
+        .avatar { border-radius: var(--radii-round); }
+        </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Interlignage (line-heights)">
+        <p>Échelle simple, reliée à des utilitaires <code>u-lh-*</code> et <code>u-lh-prc-*</code>.</p>
+        <ltds-code-block language="css" dedent>
+        :root{
+        --lh-0: 1;
+        --lh-1: 1.25;
+        --lh-2: 1.5;
+        --lh-3: 1.75;
+        --lh-4: 2;
+        }
+        </ltds-code-block>
+        <p class="u-lh-2">Texte avec line-height 1.5</p>
+        <p class="u-lh-prc-4">Texte avec line-height 200%</p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Ombres & transitions">
+        <p>Tokens utilitaires pour obtenir une cohérence d’élévation et d’animations.</p>
+        <ltds-code-block language="css" dedent>
+        :root{
+        --shadow-1: 0 2px 4px rgba(0,0,0,0.1);
+        --shadow-2: 0 4px 8px rgba(0,0,0,0.2);
+
+        --transition-ease: 0.32s ease-in-out;
+        }
+        </ltds-code-block>
+        <ltds-code-block language="css" dedent>
+        .card { box-shadow: var(--shadow-1); transition: transform var(--transition-ease); }
+        .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); }
+        </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Surcharges côté application">
+        <p>Pour personnaliser le design, surchargez les tokens au plus haut niveau (ex. <code>:root</code> ou attributs de thème) :</p>
+        <ltds-code-block language="css" dedent>
+        :root {
+        --font-family-base: "Inter", system-ui, sans-serif;
+        --font-family-accent: "Inter", var(--font-family-base);
+        }
+        [data-scheme="2"] {
+        /* change le schéma de couleurs déclaré dans colors.css */
+        }
+        </ltds-code-block>
+    </doc-section>
+
+</div>
+</div>

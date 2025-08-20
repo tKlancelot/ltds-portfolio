@@ -1,0 +1,22 @@
+/* custom scrollbar  */
+
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary-opacity-40);
+    /* border-radius: var(--radii-2); */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    /* background-color: var(--color-primary-opacity-40); */
+    background-color: var(--color-info-active);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--color-primary-opacity-20);
+    background-clip: content-box; /* important : fait que le bg ne déborde pas */
+}
+
+::-webkit-scrollbar {
+    width: var(--size-2);
+    /* height: var(--size-3); */
+}

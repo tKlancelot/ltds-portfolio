@@ -1,0 +1,73 @@
+/* custom-select.css */
+
+custom-select {
+    width: 100%;
+}
+
+/* Style de base pour le container */
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Le trigger */
+.custom-select-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--color-ui-border);
+    background-color: var(--color-background);
+    padding: var(--size-2);
+    color: var(--color-primary);
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Ajouter un caret (flèche) */
+.custom-select-trigger .custom-select-caret {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--size-6);
+}
+
+/* Le dropdown */
+.custom-select-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-ui-border);
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Option du dropdown */
+.custom-select-option {
+    padding: var(--size-2);
+    cursor: pointer;
+    background-color: var(--color-background);
+}
+
+.custom-select-option:hover {
+    background-color: var(--color-overlay);
+    color: var(--color-primary);
+}
+
+/* Afficher ou cacher le dropdown */
+.custom-select-dropdown.hidden {
+    display: none;
+}
+
+.custom-select-dropdown:not(.hidden) {
+    display: block;
+}
+
+/* Focus */
+.custom-select:focus-within .custom-select-trigger {
+    border-color: var(--focus-border-color, #007bff);
+}

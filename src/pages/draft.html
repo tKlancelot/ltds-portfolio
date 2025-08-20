@@ -1,0 +1,125 @@
+<main>
+    <div class="u-container u-py-6">
+          <h1 class="u-text-gradient-primary u-fs-4 u-fw-bold u-mb-6">Flexboxes — Compliance</h1>
+
+        <div class="u-flex u-gap-2 u-mb-4">
+            <button onclick="document.body.setAttribute('data-scheme','1')" class="ltds-btn ltds-btn--gradient">Schéma 1</button>
+            <button onclick="document.body.setAttribute('data-scheme','2')" class="ltds-btn ltds-btn--outline">Schéma 2</button>
+        </div>
+
+
+   
+                      <!-- 5) Responsive (≤768 → colonne) -->
+          <section class="u-container u-container--primary u-p-4 u-mb-8">
+            <h2 class="u-fs-3 u-mb-3">Responsive</h2>
+    
+            <div class="u-flex u-gap-6 u-mob-flex-col">
+              <div class="demo-chip u-container--primary">A</div>
+              <div class="demo-chip u-container--primary">B</div>
+              <div class="demo-chip u-container--primary">C</div>
+            </div>
+    
+            <p class="u-text-secondary u-mt-3">
+              Ici <code>.u-mob-flex-col</code> force la colonne à ≤ 768px (breakpoints en <em>max-width</em>).
+            </p>
+          </section>
+          <!-- 1) Direction & wrap -->
+          <section class="u-container u-container--info u-p-4 u-mb-8">
+            <h2 class="u-fs-3 u-mb-3">Direction & Wrap</h2>
+    
+            <div class="u-flex u-flex-row u-gap-4 u-mb-4">
+              <span class="demo-chip u-container--info">row</span>
+              <span class="demo-chip u-container--info">row</span>
+              <span class="demo-chip u-container--info">row</span>
+            </div>
+    
+            <div class="u-flex u-flex-col u-gap-2 u-mb-4">
+              <span class="demo-chip u-container--info">col</span>
+              <span class="demo-chip u-container--info">col</span>
+              <span class="demo-chip u-container--info">col</span>
+            </div>
+    
+            <div class="u-flex u-flex-wrap u-gap-2">
+              <!-- éléments étroits pour forcer le wrap -->
+              <span class="demo-chip u-container--info u-min-w-l-2">wrap</span>
+              <span class="demo-chip u-container--info u-min-w-l-2">wrap</span>
+              <span class="demo-chip u-container--info u-min-w-l-2">wrap</span>
+              <span class="demo-chip u-container--info u-min-w-l-2">wrap</span>
+            </div>
+          </section>
+    
+          <!-- 2) Justify-content -->
+          <section class="u-container u-container--success u-p-4 u-mb-8">
+            <h2 class="u-fs-3 u-mb-3">Justify-content</h2>
+    
+            <div class="u-flex u-justify-start u-gap-4 u-mb-3">
+              <span class="demo-chip u-container--success">start</span>
+              <span class="demo-chip u-container--success">start</span>
+            </div>
+    
+            <div class="u-flex u-justify-center u-gap-4 u-mb-3">
+              <span class="demo-chip u-container--success">center</span>
+              <span class="demo-chip u-container--success">center</span>
+            </div>
+    
+            <div class="u-flex u-justify-end u-gap-4 u-mb-3">
+              <span class="demo-chip u-container--success">end</span>
+              <span class="demo-chip u-container--success">end</span>
+            </div>
+    
+            <div class="u-flex u-justify-between u-gap-4">
+              <span class="demo-chip u-container--success">between</span>
+              <span class="demo-chip u-container--success">between</span>
+            </div>
+          </section>
+    
+          <!-- 3) Align-items / Align-content -->
+          <section class="u-container u-container--warning u-p-4 u-mb-8">
+            <h2 class="u-fs-3 u-mb-3">Align-items & Align-content</h2>
+    
+            <!-- items -->
+            <div class="u-flex u-items-start u-gap-4 u-mb-3" style="min-height: 96px;">
+              <span class="demo-chip u-container--warning">start</span>
+              <span class="demo-chip u-container--warning">start</span>
+            </div>
+    
+            <div class="u-flex u-items-center u-gap-4 u-mb-3" style="min-height: 96px;">
+              <span class="demo-chip u-border-1 u-border-warning" style="background: var(--color-warning-opacity-10)">center</span>
+              <span class="demo-chip u-border-1 u-border-warning" style="background: var(--color-warning-opacity-10)">center</span>
+            </div>
+    
+            <div class="u-flex u-items-end u-gap-4" style="min-height: 96px;">
+              <span class="demo-chip u-border-1 u-border-warning" style="background: var(--color-warning-opacity-10)">end</span>
+              <span class="demo-chip u-border-1 u-border-warning" style="background: var(--color-warning-opacity-10)">end</span>
+            </div>
+    
+            <!-- content (multilignes, on force le wrap + hauteur) -->
+            <div class="u-flex u-flex-wrap u-content-center u-gap-2 u-mt-4" style="height: 160px;">
+              <span class="demo-chip u-border-1 u-border-warning" style="background: var(--color-warning-opacity-10); min-width: 120px;">content</span>
+              <span class="demo-chip u-border-1 u-border-warning" style="background: var(--color-warning-opacity-10); min-width: 120px;">content</span>
+              <span class="demo-chip u-border-1 u-border-warning" style="background: var(--color-warning-opacity-10); min-width: 120px;">content</span>
+              <span class="demo-chip u-border-1 u-border-warning" style="background: var(--color-warning-opacity-10); min-width: 120px;">content</span>
+              <span class="demo-chip u-border-1 u-border-warning" style="background: var(--color-warning-opacity-10); min-width: 120px;">content</span>
+            </div>
+          </section>
+    
+          <!-- 4) Self (align-self) & order -->
+          <section class="u-container u-container--danger u-p-4 u-mb-8">
+            <h2 class="u-fs-3 u-mb-3">Self & Order</h2>
+    
+            <div class="u-flex u-items-center u-gap-4 u-mb-4" style="min-height: 120px;">
+              <span class="demo-chip u-self-start  u-border-1 u-border-danger" style="background: var(--color-danger-opacity-10)">self-start</span>
+              <span class="demo-chip u-self-center u-border-1 u-border-danger" style="background: var(--color-danger-opacity-10)">self-center</span>
+              <span class="demo-chip u-self-end    u-border-1 u-border-danger" style="background: var(--color-danger-opacity-10)">self-end</span>
+            </div>
+    
+            <div class="u-flex u-gap-4">
+              <span class="demo-chip u-order-2 u-border-1 u-border-danger" style="background: var(--color-danger-opacity-10)">order-2</span>
+              <span class="demo-chip u-order-0 u-border-1 u-border-danger" style="background: var(--color-danger-opacity-10)">order-0</span>
+              <span class="demo-chip u-order-1 u-border-1 u-border-danger" style="background: var(--color-danger-opacity-10)">order-1</span>
+            </div>
+          </section>
+    
+
+    </div>
+</main>

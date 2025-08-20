@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+    <symbol id="icon-upload" fill="none">
+        <path d="M4 40V8C4 6.89544 4.89544 6 6 6H16.8958C17.5831 6 18.2222 6.35282 18.5883 6.93438L21.1894 11.0656C21.5556 11.6472 22.1948 12 22.882 12H42C43.1046 12 44 12.8954 44 14V40C44 41.1046 43.1046 42 42 42H6C4.89544 42 4 41.1046 4 40Z" stroke="#200E32" stroke-width="2"/>
+        <path d="M30 28L24 34L18 28" stroke="#200E32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M24 34V20" stroke="#200E32" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+</svg>

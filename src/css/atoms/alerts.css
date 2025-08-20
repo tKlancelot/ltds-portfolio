@@ -1,0 +1,6 @@
+blockquote{
+    border-left: 2px solid var(--color-primary-opacity-40);
+    padding-left: var(--size-6);
+    font-style: italic;
+    font-weight: 300;
+}

@@ -1,0 +1,17 @@
+/* src/css/molecules/ltds-divider.css */
+
+ltds-divider {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  margin: var(--size-2) 0;
+}
+
+ltds-divider[strong] {
+  border-bottom: 2px solid var(--color-border-strong);
+}
+
+ltds-divider[wide] {
+  margin: var(--size-8) 0;
+}

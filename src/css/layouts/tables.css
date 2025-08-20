@@ -1,0 +1,26 @@
+.table{
+    --table-head-bg-color: var(--color-primary);
+    --table-collapse: collapse;
+    width: 100%;
+    border-collapse: var(--table-collapse);
+}
+
+.table thead{
+    background-color: var(--table-head-bg-color);
+    font-weight: unset;
+}
+
+.table th,
+.table td{
+    padding: var(--size-2);
+    border-bottom: 1px solid var(--color-primary-opacity-20);  
+}
+
+.table td .u-text-clamp *{
+    font-size: var(--font-size-1)!important;
+    line-height: normal !important;
+}
+
+.table tr:nth-of-type(even){ 
+    background-color: var(--color-primary-opacity-10);
+}

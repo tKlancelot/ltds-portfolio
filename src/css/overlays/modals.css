@@ -1,0 +1,79 @@
+modal-dialog {
+    display: none;
+}
+
+modal-dialog.is-open {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+modal-dialog.is-open .modal {
+    display: flex;
+}
+
+.modal__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__content {
+    background: var(--color-overlay);
+    padding: var(--size-4);
+    border-radius: var(--radii-2);
+    box-shadow: var(--shadow-2, 0 4px 8px rgba(0, 0, 0, 0.2));
+    border: 1px solid var(--color-ui-border);
+    min-width: 300px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.32s ease;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-4, 16px);
+}
+
+.modal.modal-color-scheme-primary .modal__content {
+    background: var(--brand-gradient-primary);
+}
+
+
+.modal__content.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal__content.perspective-10 {
+    transform: perspective(1000px) rotate3d(2, 60, -1, 0deg) translateY(40px);
+}
+
+.modal__content.animate-in {
+    opacity: 1;
+    transform: translateY(0) !important;
+}
+
+.modal__content.animate-out {
+    opacity: 0;
+    transform: translateY(40px) !important;
+}
+
+.modal__content.animate-in.perspective-10 {
+    transform: perspective(1000px) rotate3d(2, 60, -1, 10deg) translateY(0) !important;
+}
+
+
+#panel modal-dialog{
+    position: initial;
+    .modal{
+        inset: initial;
+    }
+}
+
