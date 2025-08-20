@@ -18,7 +18,7 @@
 }
 
 .doc-section li{
-  list-style: "✔";
-  padding-left: 0.5rem;
-  margin-left: var(--size-3)
+  list-style: square;
+  padding-left: 0.75rem;
+  margin-left: var(--size-4)
 }

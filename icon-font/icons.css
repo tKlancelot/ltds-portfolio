@@ -1,7 +1,7 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.woff?22f6b7e4ae3d413dc5bf839411d17080") format("woff"),
-url("./icons.woff2?22f6b7e4ae3d413dc5bf839411d17080") format("woff2");
+    src: url("./icons.woff?cc4cf049be8a4aca1fc3ac25e3b14cce") format("woff"),
+url("./icons.woff2?cc4cf049be8a4aca1fc3ac25e3b14cce") format("woff2");
 }
 
 i[class^="lt-icon-"]:before, i[class*=" lt-icon-"]:before {
@@ -54,18 +54,21 @@ i[class^="lt-icon-"]:before, i[class*=" lt-icon-"]:before {
 .lt-icon-caret-down:before {
     content: "\f10d";
 }
-.lt-icon-breakpoints:before {
+.lt-icon-burger:before {
     content: "\f10e";
 }
-.lt-icon-base:before {
+.lt-icon-breakpoints:before {
     content: "\f10f";
 }
-.lt-icon-back-arrow:before {
+.lt-icon-base:before {
     content: "\f110";
 }
-.lt-icon-atoms:before {
+.lt-icon-back-arrow:before {
     content: "\f111";
 }
-.lt-icon-about:before {
+.lt-icon-atoms:before {
     content: "\f112";
+}
+.lt-icon-about:before {
+    content: "\f113";
 }

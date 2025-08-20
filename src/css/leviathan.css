@@ -21,6 +21,9 @@
     font-weight: 400;
 }
 
+body{
+    overflow: hidden;
+}
 
 /* APP  */
 
@@ -84,16 +87,6 @@
     }
 }
 
-#footer{
-    padding: var(--size-4);
-    background-color: var(--color-container);
-    min-height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid var(--color-primary-opacity-20);
-    position: relative;
-}
 
 h1,h2{
     font-family: var(--font-family-accent);
@@ -153,11 +146,15 @@ h1,h2{
 .lt-page{
     /* Cadre de base */
     .lt-frame {
-      width: 100%;
-      max-width: 100ch; /* par défaut : lecture confortable */
-      display: flex;
-      flex-direction: column;
-      gap: var(--size-4);
+        background-color: var(--color-primary-opacity-10);
+        width: 100%;
+        max-width: 100ch; /* par défaut : lecture confortable */
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-4);
+        padding: var(--size-6);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radii-3);
     }
     
     /* Variantes de largeur */

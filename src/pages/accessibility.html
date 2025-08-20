@@ -1,0 +1,91 @@
+<div class="lt-page">
+    <div class="lt-frame lt-frame--narrow">
+
+    <h1>Accessibilité (a11y)</h1>
+    <p>
+        Le fichier <code>accessibility.css</code> fournit des classes utilitaires destinées à améliorer l’accessibilité.
+        Cette page explique simplement leur rôle et pourquoi elles existent.
+    </p>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Visibilité (lecteurs d’écran)">
+        <p>
+        Les classes <code>.u-sr-only</code> et <code>.u-sr-only-focusable</code> permettent de rendre du contenu invisible visuellement
+        mais accessible aux lecteurs d’écran. C’est utile pour ajouter des liens « skip link » (sauter au contenu) ou
+        des indications vocales sans encombrer l’interface. <code>.u-not-sr-only</code> permet d’annuler cet effet.
+        </p>
+        <ltds-code-block language="css" dedent>
+        .u-sr-only { ... }
+        .u-sr-only-focusable { ... }
+        .u-not-sr-only { ... }
+        </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Focus clavier">
+        <p>
+        Naviguer uniquement au clavier est essentiel pour de nombreux utilisateurs.
+        Les classes <code>.u-focus-ring</code>, <code>.u-focus-ring-primary</code>, <code>.u-focus-ring-inset</code> ou <code>.u-focusable</code>
+        garantissent que l’élément reçoit un anneau de focus clair au clavier.
+        À l’inverse, <code>.u-focus-outline-none</code> supprime l’outline, mais doit être utilisé avec précaution car il peut rendre la navigation inaccessible.
+        </p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Mouvement (réduction)">
+        <p>
+        Les animations peuvent être gênantes pour certaines personnes. Avec <code>.u-reduce-motion</code>,
+        les transitions et animations sont fortement réduites si l’utilisateur a activé l’option « Réduire les animations » dans son système.
+        La classe <code>.u-no-animations</code> coupe totalement les animations.
+        </p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Contraste et thèmes forcés">
+        <p>
+        Certains environnements (Windows High Contrast, ou réglages <code>prefers-contrast</code>) imposent des couleurs spécifiques.
+        Les classes comme <code>.u-contrast-boost</code> aident à renforcer la lisibilité (ex. soulignement plus épais, bords visibles).
+        De plus, les anneaux de focus sont adaptés automatiquement pour rester visibles.
+        </p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Interactions et pointeurs">
+        <p>
+        Sur mobile ou tablette, il n’y a pas toujours de survol (<code>hover</code>). La classe <code>.u-hover-only</code>
+        permet de désactiver des effets de hover dans ces contextes. <code>.u-touch-target</code> garantit
+        que les boutons et liens ont une zone cliquable suffisamment grande (44×44 px minimum).
+        </p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="États ARIA">
+        <p>
+        Les attributs <code>aria-*</code> servent à informer les technologies d’assistance (par ex. <code>aria-busy</code> ou <code>aria-disabled</code>).
+        Les règles CSS de l’usine ajoutent une cohérence visuelle (curseur interdit, opacité réduite, etc.) pour ces états.
+        Enfin, les éléments rendus focusables avec <code>tabindex</code> reçoivent un outline visible.
+        </p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Résumé">
+        <ul>
+        <li><strong>Visibilité :</strong> masqué visuellement mais lu par lecteur d’écran (<code>.u-sr-only</code>).</li>
+        <li><strong>Focus :</strong> anneaux clairs et visibles au clavier (<code>.u-focus-ring</code>).</li>
+        <li><strong>Mouvement :</strong> réduction ou suppression des animations si demandé.</li>
+        <li><strong>Contraste :</strong> support des thèmes forcés et contraste élevé.</li>
+        <li><strong>Interactions :</strong> cibles tactiles suffisantes, gestion du hover.</li>
+        <li><strong>ARIA :</strong> styles visuels alignés avec les attributs d’état.</li>
+        </ul>
+    </doc-section>
+
+    </div>
+</div>
+

@@ -29,7 +29,7 @@ export const cards = [
     title: "Utilities",
     subtitle: "helpers",
     content: "Classes rapides : marges, paddings, line-height, font-size, backgrounds…",
-    extraClass: "ltds-card--warning",
+    extraClass: "ltds-card--success",
     href: "/design-system/utilities"
   },
   {
@@ -37,7 +37,7 @@ export const cards = [
     title: "Accessibility",
     subtitle: "a11y",
     content: "Helpers visuels comme u-hidden, display-flex/block pour l’accessibilité.",
-    extraClass: "ltds-card--danger",
+    extraClass: "ltds-card--warning",
     href: "/design-system/accessibility"
   },
   {
