@@ -18,11 +18,6 @@ export const loadPage = async (template, pageScript) => {
     document.getElementById('app').innerHTML = html;
   }
 
-  // ---- PARTIALS (ex: navbar)
-  const navbarHost = document.getElementById('navbar-host');
-  if (navbarHost && partials['../parts/navbar.html']) {
-    navbarHost.innerHTML = await partials['../parts/navbar.html']();
-  }
 
   // ---- SCRIPT DE PAGE
   if (pageScript) {

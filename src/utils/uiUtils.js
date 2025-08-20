@@ -1,22 +1,33 @@
 // utils/uiUtils.js
 import tippy from 'tippy.js';
-import 'tippy.js/dist/tippy.css'; // optional for styling
-import { getRole, getToken } from "./userUtils";
+import 'tippy.js/dist/tippy.css';
+import { getRole, getToken } from './userUtils';
 import { apiUrl } from './config.js';
 
+// 👉 Vite importe le HTML comme string
+import navbarTpl from '../parts/navbar.html?raw';
 
 export const initializeBaseStructure = async () => {
-    let app = document.getElementById('app');
+  const app = document.getElementById('app');
+  if (!app) return;
 
-    const navbar = fetch('/src/parts/navbar.html').then(res => res.text());
-    if (navbar) {
-      console.log('✅ Navbar chargé');
-      let menuNav = document.getElementById('menu-nav');
-      menuNav.innerHTML = await navbar;
-      app.prepend(menuNav);       // déplacer le noeud menu-nav dans #app
-    }
+  // Si #menu-nav existe déjà, on le réutilise, sinon on le crée
+  let menuNav = document.getElementById('menu-nav');
+  if (!menuNav) {
+    menuNav = document.createElement('nav');
+    menuNav.id = 'menu-nav';
+    // optionnel: classes utilitaires si besoin
+    // menuNav.className = 'u-border u-py-2';
+  }
 
+  // Injecte le template importé (pas de fetch)
+  menuNav.innerHTML = navbarTpl;
 
+  // S’assure que la navbar est en haut de #app
+  if (!menuNav.parentElement) app.prepend(menuNav);
+  else if (menuNav.parentElement !== app) app.prepend(menuNav);
+
+  console.log('✅ Navbar injectée (import ?raw)');
 };
 
 export const handlePermissions = () => {
