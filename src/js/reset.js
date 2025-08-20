@@ -1,1 +1,3 @@
-console.log('hello from reset page')
+export default function initReset() {
+    console.log('reset !');
+}

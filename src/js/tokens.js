@@ -1,1 +1,3 @@
-console.log('my tokens !')
+export default function initTokens() {
+    console.log('tokens !');
+}

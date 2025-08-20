@@ -1,9 +1,7 @@
 import { cards } from '../datas/cards-data.js';
 
-console.log('🏠 Script home.js chargé');
+export default async function initHomePage(params) {
 
-
-async function initHomePage(params) {
     console.log('🏠 Script home.js chargé avec params:', params);
 
     // Initialisation du carousel Splide
@@ -42,5 +40,3 @@ async function initHomePage(params) {
     });
 
 }
-
-initHomePage();

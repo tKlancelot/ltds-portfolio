@@ -1,23 +1,40 @@
-export const loadPage = async (pageName, pageScript) => {
-  try {
-    // 1. Charger le HTML
-    const response = await fetch(`/src/pages/${pageName}.html`);
-    const html = await response.text();
-    document.getElementById('app').querySelector('main').innerHTML = html;
-    console.log(`✅ ${pageName} chargé`);
-  } catch (error) {
-    console.error(`❌ Erreur lors du chargement de ${pageName}:`, error);
-    if (pageName !== '404') loadPage('404');
-    return; // on arrête ici si la page n'existe pas
+// src/utils/routerUtils.js
+
+// 1) Charge toutes les pages HTML comme "raw string"
+const pages = import.meta.glob('../pages/*.html', { as: 'raw' });
+// 2) Charge les partials (navbar, etc.) aussi en raw
+const partials = import.meta.glob('../parts/*.html', { as: 'raw' });
+// 3) Prépare l’import dynamique des scripts de page (bundlés par Vite)
+const pageModules = import.meta.glob('../js/*.js');
+
+export const loadPage = async (template, pageScript) => {
+  // ---- PAGE HTML
+  const pageKey = `../pages/${template}.html`;
+  if (!pages[pageKey]) {
+    // fallback local si template inconnu
+    document.getElementById('app').innerHTML = '<h1>404</h1>';
+  } else {
+    const html = await pages[pageKey](); // renvoie la string HTML
+    document.getElementById('app').innerHTML = html;
   }
 
-  // 2. Charger le JS associé dynamiquement
+  // ---- PARTIALS (ex: navbar)
+  const navbarHost = document.getElementById('navbar-host');
+  if (navbarHost && partials['../parts/navbar.html']) {
+    navbarHost.innerHTML = await partials['../parts/navbar.html']();
+  }
+
+  // ---- SCRIPT DE PAGE
   if (pageScript) {
-    try {
-      await import(/* @vite-ignore */ `/src/js/${pageScript}`);
-      console.log(`✅ ${pageScript} importé`);
-    } catch (error) {
-      console.error(`❌ Erreur lors de l'import de ${pageScript}:`, error);
+    const modKey = `../js/${pageScript}`;
+    if (pageModules[modKey]) {
+      const mod = await pageModules[modKey](); // charge le module bundlé
+      // convention : chaque page exporte `default` = init()
+      if (typeof mod.default === 'function') {
+        await mod.default(); // exécute l’initialisation de la page
+      }
+    } else {
+      console.warn(`⚠️ Module introuvable: ${modKey}`);
     }
   }
 };

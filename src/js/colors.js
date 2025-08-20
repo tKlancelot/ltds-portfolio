@@ -1,1 +1,3 @@
-console.log('colors !');
+export default function initColors() {
+    console.log('colors !');
+}
