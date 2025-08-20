@@ -11,17 +11,8 @@ export const initializeBaseStructure = async () => {
   const app = document.getElementById('app');
   if (!app) return;
 
-  // Si #menu-nav existe déjà, on le réutilise, sinon on le crée
   let menuNav = document.getElementById('menu-nav');
-  if (!menuNav) {
-    menuNav = document.createElement('nav');
-    menuNav.id = 'menu-nav';
-    // optionnel: classes utilitaires si besoin
-    // menuNav.className = 'u-border u-py-2';
-  }
-
-  // Injecte le template importé (pas de fetch)
-  menuNav.innerHTML = navbarTpl;
+  if (menuNav) menuNav.innerHTML = navbarTpl; // Injecte le template importé (pas de fetch)
 
   // S’assure que la navbar est en haut de #app
   if (!menuNav.parentElement) app.prepend(menuNav);
@@ -29,35 +20,6 @@ export const initializeBaseStructure = async () => {
 
   console.log('✅ Navbar injectée (import ?raw)');
 };
-
-export const handlePermissions = () => {
-
-
-    const logoutLink = document.getElementById('logout');
-    const addSettingLink = document.getElementById('add-setting');
-    const pageSettingsLink = document.getElementById('page-settings');
-    const usersAdminLink = document.getElementById('users-admin');
-    const addUserLink = document.getElementById('add-user');
-
-    // HAS TOKEN PERMISSION
-    logoutLink.style.display = getToken() ? 'block' : 'none';
-
-    // ADMIN PERMISSIONS 
-    addSettingLink.style.display = getToken() && (getRole() === 'admin' || getRole() === 'super_admin') ? 'block' : 'none';
-    pageSettingsLink.style.display = getToken() && (getRole() === 'admin' || getRole() === 'super_admin') ? 'block' : 'none';
-
-    // SUPER ADMIN PERMISSIONS
-    usersAdminLink.style.display = getToken() && (getRole() === 'super_admin') ? 'block' : 'none';
-    addUserLink.style.display = getToken() && (getRole() === 'super_admin') ? 'block' : 'none';
-
-    logoutLink.addEventListener('click', () => {
-        localStorage.removeItem('token');
-        localStorage.removeItem('role');
-        localStorage.removeItem('username');
-        window.location.href = '/';
-    });
-};
-
 
 export const initTooltips = async () => {
   const tooltipElements = document.querySelectorAll('[data-tooltip]');
@@ -119,18 +81,4 @@ export const modalService = () => {
   }
 };
 
-
-export const handleNavLinks = async (templatePath) => {
-    // handle active nav link 
-    let navLinks = document.querySelectorAll('.navbar li');
-    console.log(navLinks);
-    let currentPage = templatePath.split('/').pop().split('.')[0];
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        let linkName = link.textContent.toLowerCase().split(' ').join('-');
-        if (linkName === currentPage) {
-            link.classList.add('active');
-        }
-    });
-};
 

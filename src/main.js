@@ -12,14 +12,14 @@ import { LtdsDivider } from './web-components/divider.js';
 import UniversalRouter from 'universal-router';
 import { routeConfigurations } from './utils/routeConfiguration.js';
 import { loadPage } from './utils/routerUtils.js';
-import { handleNavLinks, initializeBaseStructure, initTooltips, modalService } from './utils/uiUtils.js';
+import { initializeBaseStructure, initTooltips, modalService } from './utils/uiUtils.js';
 
 // helpers
 const initPageUI = async (template) => {
   await initializeBaseStructure();
   modalService();
   initTooltips();
-  handleNavLinks(template);
+  // handleNavLinks(template);
 };
 
 function mapRoutes(configs) {

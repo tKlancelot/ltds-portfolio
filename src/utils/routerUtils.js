@@ -15,7 +15,8 @@ export const loadPage = async (template, pageScript) => {
     document.getElementById('app').innerHTML = '<h1>404</h1>';
   } else {
     const html = await pages[pageKey](); // renvoie la string HTML
-    document.getElementById('app').innerHTML = html;
+    let main = document.getElementById('main');
+    main.innerHTML = html;
   }
 
 
