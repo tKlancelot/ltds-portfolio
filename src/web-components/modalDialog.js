@@ -32,7 +32,7 @@ export class ModalDialog extends HTMLElement {
   }
 
   open() {
-    const content = this.querySelector(".modal__content");
+    const content = this.querySelector(".modal-content");
     if (!content) return;
 
     this.classList.add("is-open");
@@ -44,7 +44,7 @@ export class ModalDialog extends HTMLElement {
   }
 
   close() {
-    const content = this.querySelector(".modal__content");
+    const content = this.querySelector(".modal-content");
     if (!content) return;
 
     content.classList.remove("animate-in");
@@ -91,23 +91,23 @@ _render() {
   modalWrapper.className = "modal";
 
   const modalContent = document.createElement("div");
-  modalContent.className = `modal__content ${extraClass}`;
+  modalContent.className = `modal-content ${extraClass}`;
   modalContent.style.maxWidth = `${maxWidth}px`;
 
   modalContent.innerHTML = `
-    <div class="modal__header">
-      <h3 class="modal__title">${title}</h3>
-      <button class="modal__close ltds-btn ltds-btn--ghost ltds-btn--shape ltds-btn-sm" aria-label="Fermer la modale" data-modal-dismiss>
+    <div class="modal-header">
+      <h3 class="modal-title">${title}</h3>
+      <button class="modal-close ltds-btn ltds-btn--ghost ltds-btn--shape ltds-btn--sm" aria-label="Fermer la modale" data-modal-dismiss>
         <i class="icon lt-icon-close lt-icon-style-solid icon-size-md"></i>
       </button>
     </div>
-    <div class="modal__slot"></div>
+    <div class="modal-slot"></div>
   `;
 
   modalWrapper.appendChild(modalContent);
   this.appendChild(modalWrapper);
 
-  const slotContainer = this.querySelector(".modal__slot");
+  const slotContainer = this.querySelector(".modal-slot");
   children.forEach((child) => slotContainer.appendChild(child));
 }
 
@@ -116,7 +116,7 @@ _render() {
     // Nettoyage des événements
     document.removeEventListener('keydown', this._onKeyDown);
 
-    this.querySelector('.modal__close')?.removeEventListener('click', () => this.close());
+    this.querySelector('.modal-close')?.removeEventListener('click', () => this.close());
     this.querySelector('.modal')?.removeEventListener('click', this._onClickBackdrop);
 
     // Suppression du DOM

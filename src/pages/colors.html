@@ -3,138 +3,268 @@
 
     <h1>Colors</h1>
     <p>
-      La palette de couleurs de l’usine fournit des <strong>tokens sémantiques</strong> 
-      (success, danger, info…) ainsi que des <strong>tokens de fond et d’UI</strong> 
-      (background, container, overlay, border…).  
-      Ces variables CSS constituent la base pour les utilitaires et les composants.
+      La palette LTDS expose des <strong>tokens sources</strong> (brand, UI), puis un <strong>remap officiel</strong>
+      vers des tokens consommables (<code>--color-*</code>, <code>--surface-*</code>, gradients, borders…).
+      Les <code>[data-scheme]</code> permettent de surcharger proprement le branding <em>et</em> les fonds.
     </p>
 
     <ltds-divider></ltds-divider>
 
-    <doc-section title="UI & backgrounds">
-        <p>Couleurs de base utilisées pour les surfaces et overlays.</p>
-        <ltds-code-block language="css" dedent>
-        :root {
+    <!-- UI & backgrounds (defaut) -->
+    <doc-section title="UI & Backgrounds (défaut)">
+      <p>Fonds plus contrastés (esprit GitHub Dark). Utilisés tels quels ou via alias <code>--surface-*</code>.</p>
+      <ltds-code-block language="css" dedent>
+      :root {
         --color-ui-white: #fff;
         --color-ui-black: #000;
 
-        --color-ui-white-opacity-92: rgba(255,255,255,.92);
-        --color-ui-white-opacity-80: rgba(255,255,255,.8);
-        --color-ui-white-opacity-60: rgba(255,255,255,.6);
-        --color-ui-white-opacity-40: rgba(255,255,255,.4);
-        --color-ui-white-opacity-20: rgba(255,255,255,.2);
+        --color-ui-white-opacity-92: rgba(255, 255, 255, 0.92);
+        --color-ui-white-opacity-80: rgba(255, 255, 255, 0.80);
+        --color-ui-white-opacity-60: rgba(255, 255, 255, 0.60);
+        --color-ui-white-opacity-40: rgba(255, 255, 255, 0.40);
+        --color-ui-white-opacity-20: rgba(255, 255, 255, 0.20);
 
-        --color-ui-border: var(--color-ui-white-opacity-20);
-
-        --color-background: #050b14;
-        --color-container:  #091420;
-        --color-overlay:    #12283d;
-        }
-        </ltds-code-block>
+        /* Fonds par défaut */
+        --color-background: #0d1117; /* page */
+        --color-container:  #161b22; /* surfaces */
+        --color-overlay:    #0c162d; /* overlays */
+      }
+      </ltds-code-block>
+      <p class="u-text-secondary u-fs-0">Conseil : vos composants peuvent pointer sur <code>--surface-page|container|overlay</code> (voir Remap).</p>
     </doc-section>
 
     <ltds-divider></ltds-divider>
 
+    <!-- Text colors -->
     <doc-section title="Couleurs de texte">
-        <p>Hiérarchie lisible : primaire, secondaire, tertiaire, inversée…</p>
-        <ltds-code-block language="css" dedent>
-        :root {
-        --color-text-primary:    var(--color-ui-white-opacity-92);
-        --color-text-secondary:  var(--color-ui-white-opacity-60);
-        --color-text-tertiary:   var(--color-ui-white-opacity-40);
-        --color-text-inverted:   var(--color-ui-black);
+      <p>Hiérarchie de lisibilité basée sur les opacités de blanc + sémantiques.</p>
+      <ltds-code-block language="css" dedent>
+      :root {
+        --color-text-primary:     var(--color-ui-white-opacity-92);
+        --color-text-secondary:   var(--color-ui-white-opacity-60);
+        --color-text-tertiary:    var(--color-ui-white-opacity-40);
+        --color-text-inverted:    var(--color-ui-black);
         --color-text-translucent: var(--color-ui-white-opacity-20);
 
-        --color-text-danger:     var(--color-danger);
-        --color-text-success:    var(--color-success);
-        --color-text-info:       var(--color-info);
-        --color-text-warning:    var(--color-warning);
-        }
-        </ltds-code-block>
-        <p class="u-text-secondary u-fs-0">
-        Exemple : <code>color: var(--color-text-secondary);</code>
-        </p>
+        --color-text-danger:   var(--color-danger);
+        --color-text-success:  var(--color-success);
+        --color-text-info:     var(--color-info);
+        --color-text-warning:  var(--color-warning);
+      }
+      </ltds-code-block>
     </doc-section>
 
     <ltds-divider></ltds-divider>
 
+    <!-- Semantic colors -->
     <doc-section title="Couleurs sémantiques">
-        <p>Pratiques pour les états (erreur, succès, information, avertissement).</p>
-        <ltds-code-block language="css" dedent>
-        :root {
+      <p>États classiques + opacités 10/20% pour fonds subtils.</p>
+      <ltds-code-block language="css" dedent>
+      :root {
         --color-danger: rgb(231, 76, 60);
         --color-danger-hover: rgb(192, 57, 43);
         --color-danger-active: rgb(169, 50, 38);
-        --color-danger-opacity-10: rgba(231, 76, 60, .1);
+        --color-danger-opacity-10: rgba(231, 76, 60, 0.10);
+        --color-danger-opacity-20: rgba(231, 76, 60, 0.20);
 
         --color-info: rgb(96, 135, 255);
         --color-info-active: rgb(49, 84, 189);
-        --color-info-opacity-10: rgba(96, 135, 255, .1);
+        --color-info-opacity-10: rgba(96, 135, 255, 0.10);
+        --color-info-opacity-20: rgba(96, 135, 255, 0.20);
 
         --color-success: rgb(46, 158, 91);
         --color-success-hover: rgb(39, 146, 79);
         --color-success-active: rgb(31, 122, 64);
-        --color-success-opacity-10: rgba(46, 158, 91, .1);
+        --color-success-opacity-10: rgba(46, 158, 91, 0.10);
+        --color-success-opacity-20: rgba(46, 158, 91, 0.20);
 
         --color-warning: rgb(245, 185, 59);
         --color-warning-hover: rgb(224, 167, 47);
         --color-warning-active: rgb(195, 141, 30);
-        --color-warning-opacity-10: rgba(245, 185, 59, .1);
-        }
-        </ltds-code-block>
+        --color-warning-opacity-10: rgba(245, 185, 59, 0.10);
+        --color-warning-opacity-20: rgba(245, 185, 59, 0.20);
+      }
+      </ltds-code-block>
     </doc-section>
 
     <ltds-divider></ltds-divider>
 
-    <doc-section title="Borders">
-        <p>Tokens génériques pour les bordures, sobres par défaut.</p>
-        <ltds-code-block language="css" dedent>
-        :root {
-        --color-border:         rgba(255,255,255,.12); /* standard */
-        --color-border-strong:  rgba(255,255,255,.25); /* plus visible */
-        --color-border-inverse: rgba(0,0,0,.25);       /* sur fond clair */
-        }
-        </ltds-code-block>
+    <!-- Borders -->
+    <doc-section title="Borders (génériques & sémantiques)">
+      <p>Tokens sobre par défaut, + variantes sémantiques alignées sur le brand (thème-aware).</p>
+      <ltds-code-block language="css" dedent>
+      :root {
+        --color-border:        rgba(255,255,255,0.12);
+        --color-border-strong: rgba(255,255,255,0.25);
+        --color-border-inverse:rgba(0,0,0,0.25);
+
+        /* sémantiques (remappées plus bas pour suivre les schemes) */
+        --color-border-primary:    var(--brand-primary);
+        --color-border-primary-20: var(--brand-primary-opacity-20);
+      }
+      </ltds-code-block>
     </doc-section>
 
     <ltds-divider></ltds-divider>
 
-    <doc-section title="Brand & gradients">
-        <p>Les couleurs de marque sont définies dans <code>brand-*</code>, puis remappées en <code>--color-primary</code>.</p>
-        <ltds-code-block language="css" dedent>
-        :root,
-        [data-scheme] {
+    <!-- Brand & gradients -->
+    <doc-section title="Brand & Gradients (source)">
+      <p>Couleurs de marque et dégradés source, remappés ensuite en tokens de consommation.</p>
+      <ltds-code-block language="css" dedent>
+      :root {
+        --brand-primary:        rgb(14, 120, 219);
+        --brand-primary-hover:  oklch(from var(--brand-primary) calc(l * .90) c h);
+        --brand-primary-active: oklch(from var(--brand-primary) calc(l * .80) c h);
+
+        --brand-primary-opacity-4:  rgba(14, 120, 219, 0.04);
+        --brand-primary-opacity-10: rgba(14, 120, 219, 0.10);
+        --brand-primary-opacity-20: rgba(14, 120, 219, 0.20);
+        --brand-primary-opacity-40: rgba(14, 120, 219, 0.40);
+
+        /* Gradients brand (source) */
+        --brand-gradient-surface-primary: linear-gradient(
+          to bottom,
+          oklch(from var(--brand-primary) calc(l * 1.10) c h),
+          var(--brand-primary)
+        );
+        --brand-gradient-surface-overlay: linear-gradient(
+          to bottom,
+          oklch(from var(--brand-primary) calc(l * 0.88) c h / 0.95),
+          oklch(from var(--brand-primary) calc(l * 0.42) c h / 0.98)
+        );
+        --brand-gradient-text-primary: linear-gradient(
+          135deg,
+          var(--brand-primary-active),
+          var(--brand-primary)
+        );
+      }
+      </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Remap officiel -->
+    <doc-section title="Remap officiel (tokens consommables)">
+      <p>Toutes les valeurs utilisées par les utilitaires et composants. Ce bloc est <em>theme-aware</em>.</p>
+      <ltds-code-block language="css" dedent>
+      :root,
+      [data-scheme] {
+        /* Primary */
         --color-primary:            var(--brand-primary);
         --color-primary-hover:      var(--brand-primary-hover);
         --color-primary-active:     var(--brand-primary-active);
-
         --color-primary-opacity-4:  var(--brand-primary-opacity-4);
         --color-primary-opacity-10: var(--brand-primary-opacity-10);
         --color-primary-opacity-20: var(--brand-primary-opacity-20);
         --color-primary-opacity-40: var(--brand-primary-opacity-40);
 
-        --gradient-primary: var(--brand-gradient-primary);
-        --text-gradient:    var(--brand-text-gradient-primary);
+        /* Borders (theme-aware) */
+        --color-border-primary:     var(--brand-primary);
+        --color-border-primary-20:  var(--brand-primary-opacity-20);
 
+        /* Surfaces (alias) */
+        --surface-page:      var(--color-background);
+        --surface-container: var(--color-container);
+        --surface-overlay:   var(--color-overlay);
+
+        /* Gradients remappés */
+        --gradient-surface-primary: var(--brand-gradient-surface-primary);
+        --gradient-surface-overlay: var(--brand-gradient-surface-overlay);
+        --text-gradient:            var(--brand-gradient-text-primary);
+        --gradient-primary:         var(--gradient-surface-primary);
+
+        /* Gradient secondaire basé sur les fonds */
         --gradient-secondary: linear-gradient(to bottom, var(--color-background), var(--color-container));
-        }
-        </ltds-code-block>
+      }
+      </ltds-code-block>
+      <p class="u-text-secondary u-fs-0">Tip : Branchez vos composants sur <code>--surface-*</code> (et non des couleurs en dur).</p>
     </doc-section>
 
     <ltds-divider></ltds-divider>
 
+    <!-- Schemes -->
     <doc-section title="Schemes (variantes)">
-        <p>Possibilité de surcharger via l’attribut <code>[data-scheme]</code>.</p>
-        <ltds-code-block language="css" dedent>
-        [data-scheme="1"] {
-        --brand-primary: rgb(136, 91, 241);
-        --brand-gradient-primary: linear-gradient(to top, rgb(56,40,100), rgb(30,23,53));
-        }
-        [data-scheme="2"] {
-        --brand-primary: rgb(54, 114, 229);
-        --brand-gradient-primary: linear-gradient(to top, #0B172D, #091428);
-        }
-        </ltds-code-block>
+      <p>Overrides par thème. Ici : 1) Violet/Plum, 2) Teal très foncé.</p>
+      <ltds-code-block language="css" dedent>
+      /* Schéma 1 (violet/plum) */
+      [data-scheme="1"] {
+        --brand-primary:               rgb(136, 91, 241);
+        --brand-primary-hover:         oklch(from var(--brand-primary) calc(l * .90) c h);
+        --brand-primary-active:        oklch(from var(--brand-primary) calc(l * .80) c h);
+        --brand-primary-opacity-4:     rgba(136, 91, 241, 0.04);
+        --brand-primary-opacity-10:    rgba(136, 91, 241, 0.1);
+        --brand-primary-opacity-20:    rgba(136, 91, 241, 0.2);
+        --brand-primary-opacity-40:    rgba(136, 91, 241, 0.4);
+
+        --brand-gradient-surface-primary: linear-gradient(
+          to bottom,
+          oklch(from var(--brand-primary) calc(l * 1.10) c h),
+          var(--brand-primary)
+        );
+        --brand-gradient-surface-overlay: linear-gradient(
+          to bottom,
+          oklch(from var(--brand-primary) calc(l * 0.88) c h / 0.95),
+          oklch(from var(--brand-primary) calc(l * 0.42) c h / 0.98)
+        );
+        --brand-gradient-text-primary: linear-gradient(
+          120deg,
+          var(--brand-primary-active),
+          var(--brand-primary),
+          var(--brand-primary)
+        );
+
+        /* Fonds (violet night) */
+        --color-background: #0f0c1b;
+        --color-container:  #17142a;
+        --color-overlay:    #211c3d;
+      }
+
+      /* Schéma 2 (cyan/teal très sombre) */
+      [data-scheme="2"] {
+        --brand-primary:               rgb(0, 186, 164);
+        --brand-primary-hover:         oklch(from var(--brand-primary) calc(l * .90) c h);
+        --brand-primary-active:        oklch(from var(--brand-primary) calc(l * .80) c h);
+        --brand-primary-opacity-4:     rgba(0, 186, 164, 0.04);
+        --brand-primary-opacity-10:    rgba(0, 186, 164, 0.10);
+        --brand-primary-opacity-20:    rgba(0, 186, 164, 0.20);
+        --brand-primary-opacity-40:    rgba(0, 186, 164, 0.40);
+
+        --brand-gradient-surface-primary: linear-gradient(
+          to bottom,
+          oklch(from var(--brand-primary) calc(l * 1.10) c h),
+          var(--brand-primary)
+        );
+        --brand-gradient-surface-overlay: linear-gradient(
+          to bottom,
+          oklch(from var(--brand-primary) calc(l * 0.88) c h / 0.95),
+          oklch(from var(--brand-primary) calc(l * 0.42) c h / 0.98)
+        );
+        --brand-gradient-text-primary: linear-gradient(
+          120deg,
+          var(--brand-primary-active),
+          var(--brand-primary),
+          var(--brand-primary-hover)
+        );
+
+        /* Fonds teal très sombres */
+        --color-background: #051816;
+        --color-container:  #0b2421;
+        --color-overlay:    #10312d;
+      }
+      </ltds-code-block>
+      <p class="u-text-secondary u-fs-0">Changer de thème : <code>&lt;body data-scheme="2"&gt;</code>.</p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Exemples d'usage -->
+    <doc-section title="Exemples d’usage rapide">
+      <p>Surfaces et textes via tokens.</p>
+      <ltds-code-block language="css" dedent>
+      .card   { background: var(--surface-container); border: 1px solid var(--color-border-primary-20); }
+      .modal  { background: var(--surface-overlay);  border: 1px solid var(--color-border-primary-20); }
+      .title  { background: var(--text-gradient); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+      </ltds-code-block>
     </doc-section>
 
   </div>

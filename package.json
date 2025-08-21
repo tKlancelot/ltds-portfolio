@@ -6,17 +6,22 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "release": "standard-version",
+    "release:patch": "standard-version --release-as patch",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major"
   },
   "devDependencies": {
     "fantasticon": "^3.0.0",
+    "standard-version": "^9.5.0",
     "vite": "^6.2.0",
     "vite-plugin-static-copy": "^3.0.2",
     "vite-plugin-string": "^1.2.3"
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
-    "@tarik-leviathan/ltds": "^0.1.16",
+    "@tarik-leviathan/ltds": "^0.1.23",
     "node-fetch": "^3.3.2",
     "tippy.js": "^6.3.7",
     "universal-router": "^9.2.1"

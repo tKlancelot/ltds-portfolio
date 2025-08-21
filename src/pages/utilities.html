@@ -3,38 +3,71 @@
 
     <h1>Utilitaires</h1>
     <p>
-      Ensemble de classes prêtes à l’emploi pour gérer couleurs, bordures, textes, 
-      tailles et comportements courants. Inspiré des utility-first frameworks 
-      (ex. Tailwind) mais limité à notre Design System.
+      Ensemble de classes prêtes à l’emploi pour gérer couleurs, bordures, textes,
+      tailles et comportements courants. Inspiré des utility-first frameworks (ex. Tailwind)
+      mais limité à notre Design System.
     </p>
 
     <ltds-divider></ltds-divider>
 
     <!-- Bordures -->
-    <doc-section title="Bordures">
-      <p>Utilitaires pour activer/désactiver ou ajuster l’épaisseur des bordures.</p>
+    <doc-section title="Bordures (largeur & couleur)">
+      <p>Largeurs standards et couleurs basées sur les tokens (dont variantes atténuées <code>-20</code>).</p>
       <ltds-code-block language="css" dedent>
-      .u-border { border-style: solid; border-width: 1px; }
+      /* Largeur */
       .u-border-0 { border-width: 0; }
       .u-border-1 { border-width: 1px; }
       .u-border-2 { border-width: 2px; }
+      .u-border   { border: 1px solid var(--color-border); }
+
+      /* Couleurs génériques */
+      .u-border-default { border-color: var(--color-border); }
+      .u-border-strong  { border-color: var(--color-border-strong); }
+      .u-border-inverse { border-color: var(--color-border-inverse); }
+
+      /* Sémantiques pleines */
+      .u-border-primary { border-color: var(--color-border-primary); }
+      .u-border-success { border-color: var(--color-border-success); }
+      .u-border-warning { border-color: var(--color-border-warning); }
+      .u-border-info    { border-color: var(--color-border-info); }
+      .u-border-danger  { border-color: var(--color-border-danger); }
+
+      /* Sémantiques atténuées (opacity-20) */
+      .u-border-primary-20 { border-color: var(--color-border-primary-20); }
+      .u-border-success-20 { border-color: var(--color-border-success-20); }
+      .u-border-warning-20 { border-color: var(--color-border-warning-20); }
+      .u-border-info-20    { border-color: var(--color-border-info-20); }
+      .u-border-danger-20  { border-color: var(--color-border-danger-20); }
       </ltds-code-block>
+
+      <p><strong>Exemple :</strong> bordure de modal légère → <code>border:1px solid var(--color-border-primary-20)</code> ou classe <code>u-border u-border-primary-20</code>.</p>
     </doc-section>
 
     <ltds-divider></ltds-divider>
 
     <!-- Couleurs de fond -->
     <doc-section title="Couleurs de fond">
-      <p>Classes pour appliquer rapidement des fonds colorés ou semi-transparents.</p>
+      <p>Classes pour appliquer rapidement des fonds colorés ou semi‑transparents.</p>
       <ltds-code-block language="css" dedent>
+      /* Solides */
       .u-bg-primary { background-color: var(--color-primary); }
       .u-bg-success { background-color: var(--color-success); }
       .u-bg-warning { background-color: var(--color-warning); }
       .u-bg-info    { background-color: var(--color-info); }
       .u-bg-danger  { background-color: var(--color-danger); }
 
-      .u-bg-primary-opacity-10 { background-color: var(--color-primary-opacity-10); }
-      .u-bg-success-opacity-10 { background-color: var(--color-success-opacity-10); }
+      /* Opacités */
+      .u-bg-primary-10 { background-color: var(--color-primary-opacity-10); }
+      .u-bg-primary-20 { background-color: var(--color-primary-opacity-20); }
+      .u-bg-primary-40 { background-color: var(--color-primary-opacity-40); }
+      .u-bg-success-10 { background-color: var(--color-success-opacity-10); }
+      .u-bg-success-20 { background-color: var(--color-success-opacity-20); }
+      .u-bg-warning-10 { background-color: var(--color-warning-opacity-10); }
+      .u-bg-warning-20 { background-color: var(--color-warning-opacity-20); }
+      .u-bg-info-10    { background-color: var(--color-info-opacity-10); }
+      .u-bg-info-20    { background-color: var(--color-info-opacity-20); }
+      .u-bg-danger-10  { background-color: var(--color-danger-opacity-10); }
+      .u-bg-danger-20  { background-color: var(--color-danger-opacity-20); }
       </ltds-code-block>
     </doc-section>
 
@@ -42,30 +75,76 @@
 
     <!-- Couleurs de texte -->
     <doc-section title="Couleurs de texte">
-      <p>Permet de changer la couleur du texte en fonction des tokens.</p>
+      <p>Couleurs de texte alignées sur les tokens (primaire, secondaires et sémantiques).</p>
       <ltds-code-block language="css" dedent>
-      .u-text-primary   { color: var(--color-text-primary); }
-      .u-text-secondary { color: var(--color-text-secondary); }
-      .u-text-danger    { color: var(--color-text-danger); }
-      .u-text-success   { color: var(--color-text-success); }
-      .u-text-warning   { color: var(--color-text-warning); }
+      .u-text-primary     { color: var(--color-text-primary); }
+      .u-text-secondary   { color: var(--color-text-secondary); }
+      .u-text-tertiary    { color: var(--color-text-tertiary); }
+      .u-text-inverted    { color: var(--color-text-inverted); }
+      .u-text-translucent { color: var(--color-text-translucent); }
+
+      .u-text-success { color: var(--color-text-success); }
+      .u-text-warning { color: var(--color-text-warning); }
+      .u-text-info    { color: var(--color-text-info); }
+      .u-text-danger  { color: var(--color-text-danger); }
+
+      /* Gradient basé sur --text-gradient */
+      .u-text-gradient-primary { background: var(--text-gradient); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
       </ltds-code-block>
     </doc-section>
 
     <ltds-divider></ltds-divider>
 
     <!-- Typographie -->
-    <doc-section title="Typographie">
-      <p>Helpers pour la casse, le style ou les tailles de texte.</p>
+    <doc-section title="Typographie (tailles & alignements)">
+      <p>Helpers de casse/style, tailles tokenisées et alignements (y compris responsives).</p>
       <ltds-code-block language="css" dedent>
-      .u-text-uppercase   { text-transform: uppercase; }
-      .u-text-capitalize  { text-transform: capitalize; }
+      /* Casse & style */
+      .u-text-uppercase { text-transform: uppercase; }
+      .u-text-capitalize { text-transform: capitalize; }
       .u-text-style-italic { font-style: italic; }
 
+      /* Poids (extraits) */
+      .u-fw-normal { font-weight: 400; }
+      .u-fw-medium { font-weight: 500; }
+      .u-fw-semibold { font-weight: 600; }
+      .u-fw-bold { font-weight: 700; }
+
+      /* Tailles (extraits) */
       .u-fs-1 { font-size: var(--font-size-1); }
       .u-fs-2 { font-size: var(--font-size-2); }
       .u-fs-3 { font-size: var(--font-size-3); }
+
+      /* Alignements */
+      .u-text-left { text-align: left; }
+      .u-text-center { text-align: center; }
+      .u-text-right { text-align: right; }
+      .u-text-justify { text-align: justify; }
+
+      /* Alignements responsives (≤ breakpoint) */
+      /* Exemple mobile : */
+      .u-text-mob-center { text-align: center; }
+      /* Idem dispo pour sm/tab/note/lap/desk */
       </ltds-code-block>
+      <p><strong>Exemple :</strong> <code>&lt;p class="u-text-left u-text-mob-center"&gt;</code> → gauche par défaut, centré en mobile (≤768px).</p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Affichage responsive -->
+    <doc-section title="Affichage responsive (display)">
+      <p>Contrôler l’affichage selon le breakpoint (pattern <code>.u-display-{bp}-{val}</code>).</p>
+      <ltds-code-block language="css" dedent>
+      /* Valeurs : none | block | flex | inline | inline-block */
+      /* Exemples */
+      .u-display-mob-none  { display: none !important; }
+      .u-display-mob-block { display: block !important; }
+      .u-display-desk-none { display: none !important; }
+      </ltds-code-block>
+      <p><strong>Exemples :</strong> 
+        <code>u-display-none u-display-mob-block</code> (mobile only), 
+        <code>u-display-block u-display-mob-none</code> (masqué en mobile).
+      </p>
     </doc-section>
 
     <ltds-divider></ltds-divider>
@@ -87,6 +166,8 @@
     <doc-section title="Rayons & Interlignes">
       <p>Arrondis standardisés et hauteurs de ligne basées sur nos tokens.</p>
       <ltds-code-block language="css" dedent>
+      .u-radius-0 { border-radius: var(--radius-0); }
+      .u-radius-1 { border-radius: var(--radius-1); }
       .u-radii-2 { border-radius: var(--radii-2); }
       .u-radii-3 { border-radius: var(--radii-3); }
       .u-radius-round { border-radius: var(--radii-round); }

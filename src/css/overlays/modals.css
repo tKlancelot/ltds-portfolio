@@ -19,18 +19,18 @@ modal-dialog.is-open .modal {
     display: flex;
 }
 
-.modal__header{
+.modal-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.modal__content {
-    background: var(--color-overlay);
+.modal-content {
+    background:var(--color-overlay);
     padding: var(--size-4);
-    border-radius: var(--radii-2);
+    border-radius: var(--radii-3);
     box-shadow: var(--shadow-2, 0 4px 8px rgba(0, 0, 0, 0.2));
-    border: 1px solid var(--color-ui-border);
+    border:1px solid var(--color-border-primary);
     min-width: 300px;
     opacity: 0;
     transform: translateY(40px);
@@ -41,31 +41,27 @@ modal-dialog.is-open .modal {
     gap: var(--size-4, 16px);
 }
 
-.modal.modal-color-scheme-primary .modal__content {
-    background: var(--brand-gradient-primary);
-}
 
-
-.modal__content.animate-in {
+.modal-content.animate-in {
     opacity: 1;
     transform: translateY(0);
 }
 
-.modal__content.perspective-10 {
+.modal-content.perspective-10 {
     transform: perspective(1000px) rotate3d(2, 60, -1, 0deg) translateY(40px);
 }
 
-.modal__content.animate-in {
+.modal-content.animate-in {
     opacity: 1;
     transform: translateY(0) !important;
 }
 
-.modal__content.animate-out {
+.modal-content.animate-out {
     opacity: 0;
     transform: translateY(40px) !important;
 }
 
-.modal__content.animate-in.perspective-10 {
+.modal-content.animate-in.perspective-10 {
     transform: perspective(1000px) rotate3d(2, 60, -1, 10deg) translateY(0) !important;
 }
 
@@ -77,3 +73,9 @@ modal-dialog.is-open .modal {
     }
 }
 
+@media screen and (max-width: 768px) {
+
+    modal-dialog .modal-content{
+        max-width: 360px!important;
+    }
+}
