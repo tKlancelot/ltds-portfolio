@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/tKlancelot/ltds-portfolio/compare/v0.0.2...v0.0.3) (2025-08-22)
+
+
+### Features
+
+* rework some page docs and add menu mobile webcomponent ([89d5370](https://github.com/tKlancelot/ltds-portfolio/commit/89d537054bff6cd21fc81d9a3cf8892c36492560))
+
 ### [0.0.2](https://github.com/tKlancelot/ltds-portfolio/compare/v0.0.1...v0.0.2) (2025-08-21)
 
 
