@@ -1,0 +1,158 @@
+<div class="lt-page">
+  <div class="lt-frame lt-frame--narrow">
+
+    <h1>Flexbox</h1>
+    <p>
+      Utilitaires <strong>Flexbox</strong> pour gérer disposition, alignements et responsive.
+      Ils couvrent <code>display</code>, <code>flex-direction</code>, <code>wrap</code>,
+      <code>justify-content</code>, <code>align-*</code>, <code>grow/shrink</code>, <code>basis</code>,
+      et <code>order</code>.  
+      Des variantes <em>responsive</em> sont générées pour les breakpoints (desk, lap, note, tab, mob, smob).
+    </p>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Display flex / inline-flex">
+      <ltds-code-block language="css" dedent>
+      .u-flex        { display: flex; }
+      .u-inline-flex { display: inline-flex; }
+      </ltds-code-block>
+      <p class="u-text-secondary u-fs-0">Exemple : <code>class="u-flex"</code> sur un container.</p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Direction des axes">
+      <p>Définir l’axe principal : horizontal/vertical, normal ou inversé.</p>
+      <ltds-code-block language="css" dedent>
+      .u-flex-row     { flex-direction: row; }
+      .u-flex-row-rev { flex-direction: row-reverse; }
+      .u-flex-col     { flex-direction: column; }
+      .u-flex-col-rev { flex-direction: column-reverse; }
+      </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Wrap">
+      <ltds-code-block language="css" dedent>
+      .u-flex-nowrap { flex-wrap: nowrap; }
+      .u-flex-wrap   { flex-wrap: wrap; }
+      .u-flex-wrap-rev { flex-wrap: wrap-reverse; }
+      </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Justify-content (axe principal)">
+      <ltds-code-block language="css" dedent>
+      .u-justify-start   { justify-content: flex-start; }
+      .u-justify-center  { justify-content: center; }
+      .u-justify-end     { justify-content: flex-end; }
+      .u-justify-between { justify-content: space-between; }
+      .u-justify-around  { justify-content: space-around; }
+      .u-justify-evenly  { justify-content: space-evenly; }
+      </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Align-items (axe secondaire)">
+      <ltds-code-block language="css" dedent>
+      .u-items-start   { align-items: flex-start; }
+      .u-items-center  { align-items: center; }
+      .u-items-end     { align-items: flex-end; }
+      .u-items-stretch { align-items: stretch; }
+      .u-items-baseline{ align-items: baseline; }
+      </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Align-content (multi-lignes)">
+      <ltds-code-block language="css" dedent>
+      .u-content-start   { align-content: flex-start; }
+      .u-content-center  { align-content: center; }
+      .u-content-end     { align-content: flex-end; }
+      .u-content-between { align-content: space-between; }
+      .u-content-around  { align-content: space-around; }
+      .u-content-evenly  { align-content: space-evenly; }
+      .u-content-stretch { align-content: stretch; }
+      </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Align-self (par item)">
+      <ltds-code-block language="css" dedent>
+      .u-self-auto     { align-self: auto; }
+      .u-self-start    { align-self: flex-start; }
+      .u-self-center   { align-self: center; }
+      .u-self-end      { align-self: flex-end; }
+      .u-self-stretch  { align-self: stretch; }
+      .u-self-baseline { align-self: baseline; }
+      </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Grow / Shrink">
+      <ltds-code-block language="css" dedent>
+      .u-grow    { flex-grow: 1; }
+      .u-grow-0  { flex-grow: 0; }
+      .u-shrink   { flex-shrink: 1; }
+      .u-shrink-0 { flex-shrink: 0; }
+      </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Flex-basis (tailles usuelles)">
+      <ltds-code-block language="css" dedent>
+      .u-basis-auto { flex-basis: auto; }
+      .u-basis-0    { flex-basis: 0; }
+      .u-basis-1-2  { flex-basis: 50%; }
+      .u-basis-1-3  { flex-basis: 33.3333%; }
+      .u-basis-2-3  { flex-basis: 66.6667%; }
+      .u-basis-1-4  { flex-basis: 25%; }
+      .u-basis-3-4  { flex-basis: 75%; }
+      </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Ordre">
+      <p>De <code>.u-order-0</code> à <code>.u-order-6</code>.</p>
+      <ltds-code-block language="css" dedent>
+      .u-order-0 { order: 0; }
+      .u-order-1 { order: 1; }
+      ...
+      .u-order-6 { order: 6; }
+      </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Responsive variants">
+      <p>
+        Pour chaque breakpoint max-width (<code>desk</code>, <code>lap</code>, <code>note</code>, <code>tab</code>, <code>mob</code>, <code>smob</code>),  
+        les variantes essentielles sont générées : display, direction (row/col), justify, items, content, grow/shrink.
+      </p>
+      <ltds-code-block language="css" dedent>
+      /* Exemple pour tab (≤1024px) */
+      @media (max-width: 1024px) {
+        .u-tab-flex       { display: flex; }
+        .u-tab-flex-row   { flex-direction: row; }
+        .u-tab-flex-col   { flex-direction: column; }
+        .u-tab-justify-between { justify-content: space-between; }
+        .u-tab-items-center    { align-items: center; }
+        .u-tab-content-start   { align-content: flex-start; }
+        .u-tab-grow            { flex-grow: 1; }
+        .u-tab-shrink-0        { flex-shrink: 0; }
+      }
+      </ltds-code-block>
+      <p class="u-text-secondary u-fs-0">Exemple : <code>class="u-flex u-tab-flex-col"</code> (colonne en ≤1024px).</p>
+    </doc-section>
+
+  </div>
+</div>

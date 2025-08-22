@@ -13,10 +13,9 @@ export class LtdsCodeBlock extends HTMLElement {
     if (enableCopy) {
       const btn = document.createElement("button");
       btn.type = "button";
-      btn.className = "ltds-copy-btn u-fs-0";
+      btn.className = "ltds-copy-btn ltds-btn ltds-btn--sm ltds-btn--shape ltds-btn--ghost u-fs-0";
       btn.setAttribute("aria-label", "Copier le code");
-      btn.title = "Copier";
-      btn.textContent = "Copier";
+      btn.innerHTML = `<i class="icon lt-icon-copy icon-size-md"></i>`
       btn.addEventListener("click", () => this.#copyToClipboard(cleaned, btn));
       this.appendChild(btn);
     }
@@ -59,15 +58,13 @@ export class LtdsCodeBlock extends HTMLElement {
         document.execCommand("copy");
         document.body.removeChild(ta);
       }
-      btn.textContent = "Copié !";
       btn.classList.add("is-copied");
       setTimeout(() => {
-        btn.textContent = "Copier";
         btn.classList.remove("is-copied");
       }, 1200);
     } catch (e) {
       btn.textContent = "Échec";
-      setTimeout(() => (btn.textContent = "Copier"), 1200);
+      setTimeout(() => (btn.innerHTML = `<i class="icon lt-icon-copy icon-size-md"></i>`), 1200);
       console.error("Copie impossible:", e);
     }
   }

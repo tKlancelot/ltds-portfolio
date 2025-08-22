@@ -1,22 +1,29 @@
 // PanelMenu.js
+const HEADER_TEMPLATE = (header) => `
+  <h3 class="u-text-primary">${header}</h3>
+  <button dismiss aria-label="Fermer"
+    class="ltds-btn ltds-btn--ghost ltds-btn--shape ltds-btn--sm">
+    <i class="icon lt-icon-close icon-size-md"></i>
+  </button>
+`;
+
 export class PanelMenu extends HTMLElement {
   constructor() {
     super();
     this.trigger = null;
-    this.panel = null;
-    this.origin = null;
-    this.title = null;
+    this.panel   = null;
+    this.origin  = this.getAttribute("origin") || "left";
+    this.header  = this.getAttribute("header") || "Menu";
 
+    // binding
     this._onTriggerClick   = this._onTriggerClick.bind(this);
     this._onDocPointerDown = this._onDocPointerDown.bind(this);
     this._onKeyDown        = this._onKeyDown.bind(this);
     this._onResize         = this._onResize.bind(this);
+    this._onPanelClick     = this._onPanelClick.bind(this);
   }
 
   connectedCallback() {
-    this.origin = this.getAttribute("origin") || "left";
-    this.title  = this.getAttribute("title")  || "Menu";
-
     this.trigger = this.querySelector(".panel-menu-trigger");
     this.panel   = this.querySelector(".panel-menu");
 
@@ -25,36 +32,55 @@ export class PanelMenu extends HTMLElement {
       return;
     }
 
-    // Applique l’origine (left|right|top)
-    this.panel.classList.add(`origin-${this.origin}`);
+    this._setupAccessibility();
+    this._injectHeader();
+    this._bindEvents();
 
-    // A11y minimal
+    this._onResize(); // init state
+  }
+
+  disconnectedCallback() {
+    this._unbindEvents();
+  }
+
+  // ---- API
+  open() {
+    this.panel.classList.add("is-open");
+    this.trigger?.setAttribute("aria-expanded", "true");
+  }
+  close() {
+    this.panel.classList.remove("is-open");
+    this.trigger?.setAttribute("aria-expanded", "false");
+  }
+
+  // ---- Private
+  _setupAccessibility() {
+    this.panel.classList.add(`origin-${this.origin}`);
     this.trigger.setAttribute("aria-expanded", "false");
     this.trigger.setAttribute("aria-controls", this.panel.id || "panel-menu");
     this.panel.setAttribute("role", "dialog");
     this.panel.setAttribute("aria-modal", "true");
     if (!this.panel.id) this.panel.id = "panel-menu";
+  }
 
-    // Délégation: tout clic sur un élément [dismiss] dans le panel ferme
-    this._onPanelClick = (e) => {
-      const dismisser = e.target.closest("[dismiss]");
-      if (dismisser) {
-        e.preventDefault();
-        this.close();
-      }
-    };
-    this.panel.addEventListener("click", this._onPanelClick);
+  _injectHeader() {
+    if (!this.panel.querySelector("[slot=header]")) {
+      const header = document.createElement("div");
+      header.setAttribute("slot", "header");
+      header.innerHTML = HEADER_TEMPLATE(this.header);
+      this.panel.prepend(header);
+    }
+  }
 
-    // Listeners
+  _bindEvents() {
     this.trigger.addEventListener("click", this._onTriggerClick);
+    this.panel.addEventListener("click", this._onPanelClick);
     document.addEventListener("pointerdown", this._onDocPointerDown);
     document.addEventListener("keydown", this._onKeyDown);
     window.addEventListener("resize", this._onResize);
-
-    this._onResize();
   }
 
-  disconnectedCallback() {
+  _unbindEvents() {
     this.trigger?.removeEventListener("click", this._onTriggerClick);
     this.panel?.removeEventListener("click", this._onPanelClick);
     document.removeEventListener("pointerdown", this._onDocPointerDown);
@@ -65,14 +91,20 @@ export class PanelMenu extends HTMLElement {
   // ---- Handlers
   _onTriggerClick(e) {
     e.preventDefault();
-    e.stopPropagation(); // évite fermeture immédiate par le handler global
-    const willOpen = !this.panel.classList.contains("is-open");
+    e.stopPropagation();
     this.panel.classList.toggle("is-open");
-    this.trigger.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    const expanded = this.panel.classList.contains("is-open");
+    this.trigger.setAttribute("aria-expanded", expanded ? "true" : "false");
+  }
+
+  _onPanelClick(e) {
+    if (e.target.closest("[dismiss]")) {
+      e.preventDefault();
+      this.close();
+    }
   }
 
   _onDocPointerDown(e) {
-    // ne ferme pas si on clique à l'intérieur du composant (trigger ou panel)
     if (this.contains(e.target) || this.panel.contains(e.target)) return;
     if (this.panel.classList.contains("is-open")) this.close();
   }
@@ -88,16 +120,6 @@ export class PanelMenu extends HTMLElement {
     const isDesktop = window.innerWidth > 768;
     this.style.display = isDesktop ? "none" : "block";
     if (isDesktop) this.close();
-  }
-
-  // ---- API
-  open() {
-    this.panel.classList.add("is-open");
-    this.trigger?.setAttribute("aria-expanded", "true");
-  }
-  close() {
-    this.panel.classList.remove("is-open");
-    this.trigger?.setAttribute("aria-expanded", "false");
   }
 }
 

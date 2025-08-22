@@ -1,0 +1,177 @@
+<div class="lt-page">
+  <div class="lt-frame lt-frame--narrow">
+
+    <h1>Dimensions</h1>
+    <p>
+      Utilitaires pour contrôler <strong>width / height</strong>, leurs min/max,
+      les <strong>tailles logiques</strong> (RTL-friendly), les <strong>ratios</strong> et
+      des <strong>containers</strong> centrés basés sur les tokens.  
+      Générés depuis les échelles <code>--size-*</code> et <code>--large-size-*</code>.
+    </p>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Width -->
+    <doc-section title="Largeurs (width)">
+      <p>Raccourcis courants + échelles “small” et “large”.</p>
+      <ltds-code-block language="css" dedent>
+      /* width helpers */
+      .u-w-auto   { width: auto; }
+      .u-w-full   { width: 100%; }
+      .u-w-screen { width: 100vw; }
+      .u-w-fit    { width: fit-content; }
+      .u-w-min    { width: min-content; }
+      .u-w-max    { width: max-content; }
+
+      /* échelle compacte (tokens --size-*) */
+      .u-w-s-0  { width: 0; }
+      .u-w-s-1  { width: var(--size-1); }  /* 4px par défaut */
+      .u-w-s-2  { width: var(--size-2); }
+      ...
+      .u-w-s-10 { width: var(--size-10); } /* 64px par défaut */
+
+      /* échelle large (tokens --large-size-*) */
+      .u-w-l-1  { width: var(--large-size-1); }   /* 96px */
+      .u-w-l-2  { width: var(--large-size-2); }   /* 120px */
+      ...
+      .u-w-l-10 { width: var(--large-size-10); }  /* 1280px */
+
+      /* pourcentages usuels */
+      .u-w-25-prc { width: 25%; }
+      .u-w-33-prc { width: 33.3333%; }
+      .u-w-50-prc { width: 50%; }
+      .u-w-66-prc { width: 66.6667%; }
+      .u-w-75-prc { width: 75%; }
+      </ltds-code-block>
+      <p class="u-text-secondary u-fs-0">Exemples : <code>class="u-w-full"</code>, <code>class="u-w-l-5"</code>, <code>class="u-w-50-prc"</code>.</p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Min/Max Width -->
+    <doc-section title="Min / Max Width">
+      <p>Contraindre la largeur minimale ou maximale via tokens.</p>
+      <ltds-code-block language="css" dedent>
+      .u-min-w-0     { min-width: 0; }
+      .u-max-w-none  { max-width: none; }
+      .u-max-w-full  { max-width: 100%; }
+      .u-max-w-screen{ max-width: 100vw; }
+
+      /* min-width depuis échelles */
+      .u-min-w-s-3 { min-width: var(--size-3); }
+      .u-min-w-l-5 { min-width: var(--large-size-5); }
+
+      /* max-width depuis échelles */
+      .u-max-w-s-6 { max-width: var(--size-6); }
+      .u-max-w-l-8 { max-width: var(--large-size-8); }
+      </ltds-code-block>
+      <p class="u-text-secondary u-fs-0">Exemple carte : <code>class="u-max-w-l-5 u-w-full"</code>.</p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Height -->
+    <doc-section title="Hauteurs (height)">
+      <p>Inclut les variantes <code>vh</code> et <code>dvh</code> (recommandé mobile).</p>
+      <ltds-code-block language="css" dedent>
+      .u-h-auto   { height: auto; }
+      .u-h-full   { height: 100%; }
+      .u-h-screen { height: 100vh; }
+      .u-h-dvh    { height: 100dvh; } /* viewport dynamique mobile */
+      .u-h-fit    { height: fit-content; }
+      .u-h-min    { height: min-content; }
+      .u-h-max    { height: max-content; }
+
+      /* échelles */
+      .u-h-s-4  { height: var(--size-4); }
+      .u-h-l-6  { height: var(--large-size-6); }
+      </ltds-code-block>
+      <p class="u-text-secondary u-fs-0">Exemple section plein écran : <code>class="u-min-h-dvh"</code>.</p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Min/Max Height -->
+    <doc-section title="Min / Max Height">
+      <p>Bornes de hauteur, y compris “plein écran”.</p>
+      <ltds-code-block language="css" dedent>
+      .u-min-h-screen { min-height: 100vh; }
+      .u-min-h-dvh    { min-height: 100dvh; }
+
+      .u-max-h-none   { max-height: none; }
+      .u-max-h-full   { max-height: 100%; }
+      .u-max-h-screen { max-height: 100vh; }
+
+      /* via échelles */
+      .u-min-h-s-5 { min-height: var(--size-5); }
+      .u-max-h-l-8 { max-height: var(--large-size-8); }
+      </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Logical sizes -->
+    <doc-section title="Tailles logiques (inline/block)">
+      <p>Compatibles RTL : préférez <code>inline-size</code>/<code>block-size</code> quand c’est pertinent.</p>
+      <ltds-code-block language="css" dedent>
+      .u-inline-size-auto { inline-size: auto; }
+      .u-inline-size-full { inline-size: 100%; }
+      .u-block-size-auto  { block-size: auto; }
+      .u-block-size-full  { block-size: 100%; }
+
+      .u-min-inline-size-0 { min-inline-size: 0; }
+      .u-min-block-size-0  { min-block-size: 0; }
+
+      .u-max-inline-size-full { max-inline-size: 100%; }
+      .u-max-block-size-full  { max-block-size: 100%; }
+      </ltds-code-block>
+      <p class="u-text-secondary u-fs-0">Ex : <code>class="u-inline-size-full"</code> sur des champs texte.</p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Aspect ratio -->
+    <doc-section title="Ratios (aspect-ratio)">
+      <p>Proportions d’images/vidéos + helper <code>.u-aspect-cover</code>.</p>
+      <ltds-code-block language="css" dedent>
+      .u-aspect-ratio-1-1  { aspect-ratio: 1 / 1; }
+      .u-aspect-ratio-16-9 { aspect-ratio: 16 / 9; }
+      .u-aspect-ratio-4-3  { aspect-ratio: 4 / 3; }
+      .u-aspect-ratio-3-2  { aspect-ratio: 3 / 2; }
+      .u-aspect-ratio-2-3  { aspect-ratio: 2 / 3; }
+      .u-aspect-ratio-21-9 { aspect-ratio: 21 / 9; }
+
+      .u-aspect-cover > img,
+      .u-aspect-cover > video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      </ltds-code-block>
+      <p class="u-text-secondary u-fs-0">Ex : <code>&lt;figure class="u-aspect-ratio-16-9 u-aspect-cover"&gt;…&lt;/figure&gt;</code></p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Containers -->
+    <doc-section title="Containers centrés (tokenisés)">
+      <p>Largeur maximale contrôlée par <code>--large-size-*</code>, centrée et paddée.</p>
+      <ltds-code-block language="css" dedent>
+      .u-container    { width: min(100%, var(--large-size-10)); margin-inline: auto; padding-inline: var(--size-4); }
+      .u-container-sm { width: min(100%, var(--large-size-5));  margin-inline: auto; padding-inline: var(--size-4); }
+      .u-container-md { width: min(100%, var(--large-size-6));  margin-inline: auto; padding-inline: var(--size-4); }
+      .u-container-lg { width: min(100%, var(--large-size-8));  margin-inline: auto; padding-inline: var(--size-4); }
+      .u-container-xl { width: min(100%, var(--large-size-9));  margin-inline: auto; padding-inline: var(--size-4); }
+      .u-container-2xl{ width: min(100%, var(--large-size-10)); margin-inline: auto; padding-inline: var(--size-4); }
+
+      /* Modifiers */
+      .u-container--no-pad { padding-inline: 0; }
+      .u-container--pad-sm { padding-inline: var(--size-2); }
+      .u-container--pad-lg { padding-inline: var(--size-6); }
+      .u-container--full   { width: 100%; }
+      </ltds-code-block>
+      <p class="u-text-secondary u-fs-0">Ex : <code>class="u-container-md u-container--pad-lg"</code>.</p>
+    </doc-section>
+
+  </div>
+</div>

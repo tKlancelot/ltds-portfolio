@@ -5,7 +5,7 @@ export const cards = [
     title: "Reset",
     subtitle: "base",
     content: "Normalisation CSS pour un rendu cohérent entre navigateurs.",
-    extraClass: "ltds-card--glass",
+    extraClass: "ltds-card--success",
     href: "/design-system/reset"
   },
   {
@@ -45,7 +45,7 @@ export const cards = [
     title: "Dimensions",
     subtitle: "sizes",
     content: "Utilitaires pour contraindre largeur/hauteur et ratios.",
-    extraClass: "ltds-card--danger",
+    extraClass: "ltds-card--warning",
     href: "/design-system/dimensions"
   },
   {
@@ -77,7 +77,7 @@ export const cards = [
     title: "Layout",
     subtitle: "stack / frame",
     content: "Compositions rapides et responsives.",
-    extraClass: "ltds-card--danger",
+    extraClass: "ltds-card--glass",
     href: "/design-system/layout"
   }
 ];

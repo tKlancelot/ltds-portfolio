@@ -1,6 +1,6 @@
 .ltds-menu-item{
-    --item-padding-inline: var(--size-4);
-    --item-line-height: var(--lh-2);
+    --item-padding-inline: var(--size-2);
+    --item-line-height: var(--lh-4);
     padding-inline: var(--item-padding-inline);
     line-height: var(--item-line-height);
     display: flex;
@@ -8,4 +8,5 @@
     gap: var(--size-2);
     cursor: pointer;
     list-style-type: none;
+    text-transform: capitalize;
 }

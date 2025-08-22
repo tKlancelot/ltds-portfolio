@@ -46,7 +46,6 @@
 }
 
 .panel-menu [slot="header"]{
-  background-color: var(--color-container);
   padding: var(--size-4);
   display: flex;
   justify-content: space-between;
