@@ -1,12 +1,13 @@
-<nav class="navbar u-mob-p-3">
+<nav class="navbar u-mob-p-3" style="position: sticky;">
     <div class="navbar-left">
         <a href="/" class="u-display-flex">
-            <img id="page-logotype" class="u-object-fit-cover" src="/assets/pictures/logotype.svg" alt="logo" width="48">
+            <img id="page-logotype" src="/assets/pictures/logotype.svg" alt="logo" width="48">
         </a>
     </div>
-    <ul class="navbar-right">
-        <!-- menu desktop  -->
-        <div class="ltds-menu u-display-mob-none">
+    <div class="navbar-right">
+        <!-- menu desktop  -->  
+
+        <ul class="ltds-menu u-display-mob-none">
             <li class="ltds-menu-item">
                 <div class="ltds-menu-label">Bases<i class="icon lt-icon-caret-down icon-size-lg"></i></div>
                 <ul class="ltds-menu-submenu u-grid u-grid-12">
@@ -25,64 +26,45 @@
                     <a href="/design-system/accessibility" class="u-col-span-6">
                         <li>Accessibility</li>
                     </a>
-                    <a href="/design-system/dimensions" class="u-col-span-6">
-                        <li>Dimensions</li>
-                    </a>
-                    <a href="/design-system/flexboxes" class="u-col-span-6">
-                        <li>Flexboxes</li>
-                    </a>
-                    <a href="/design-system/grids" class="u-col-span-6">
-                        <li>Grids</li>
-                    </a>
-                    <a href="/design-system/layouts" class="u-col-span-6">
-                        <li>Layouts</li>
-                    </a>
-                    <a href="/design-system/spacings" class="u-col-span-6">
-                        <li>Spacings</li>
-                    </a>
                 </ul>
             </li>
     
-            <li class="ltds-menu-item">
+            <div class="ltds-menu-item">
                 <div class="ltds-menu-label">Atoms<i class="icon lt-icon-caret-down icon-size-lg"></i></div>
                 <ul class="ltds-menu-submenu u-grid u-grid-12">
                     <a href="/design-system/buttons" class="u-col-span-6">
                         <li>Buttons</li>
                     </a>
-                    <a href="/design-system/inputs" class="u-col-span-6">
-                        <li>Inputs</li>
-                    </a>
-                    <a href="/design-system/links" class="u-col-span-6">
-                        <li>Links</li>
-                    </a>
-                    <a href="/design-system/avatars" class="u-col-span-6">
-                        <li>Avatars</li>
-                    </a>
-                    <a href="/design-system/icons" class="u-col-span-6">
-                        <li>Icons</li>
-                    </a>
                 </ul>
-            </li>
-            <li class="ltds-menu-item">
-                <div class="ltds-menu-label">Molecules<i class="icon lt-icon-caret-down icon-size-lg"></i></div>
-                <ul class="ltds-menu-submenu u-grid u-grid-12">
-                    <a href="/design-system/cards" class="u-col-span-12">
-                        <li>Cards</li>
-                    </a>
-                </ul>
-            </li>
+            </div>
             <a href="/">
-                <li>
-                    <!-- home -->
+                <li class="ltds-menu-item">
                     <i class="icon lt-icon-home icon-size-lg"></i>
                 </li>
             </a>
-        </div>
+        </ul>
         <!-- menu mobile burger  -->
-        <div class="ltds-menu u-display-none u-display-mob-flex">
-            <button class="ltds-btn ltds-btn--sm ltds-btn--ghost ltds-btn--shape">
-                <i class="icon lt-icon-burger icon-size-xl"></i>
-            </button>
+        <panel-menu origin="left" title="Navigation">
+        <button class="ltds-btn ltds-btn--sm ltds-btn--ghost ltds-btn--shape panel-menu-trigger">
+            <i class="icon lt-icon-burger icon-size-xl"></i>
+        </button>
+
+        <div class="panel-menu">
+            <div slot="header">
+                <h3 class="u-text-primary">Navigation</h3>
+                <button dismiss aria-label="Fermer" class="ltds-btn ltds-btn--ghost ltds-btn--shape ltds-btn--sm">
+                    <i class="icon lt-icon-close icon-size-sm"></i>
+                </button>
+            </div>
+            <ul class="lt-stack u-p-4 lt-stack--gap-2">
+                <li><a href="/design-system/reset">Reset</a></li>
+                <li><a href="/design-system/tokens">Tokens</a></li>
+                <li><a href="/design-system/colors">Colors</a></li>
+                <li><a href="/design-system/utilities">Utilities</a></li>
+                <li><a href="/design-system/accessibility">Accessibility</a></li>
+            </ul>
         </div>
-    </ul>
+        </panel-menu>
+
+    </div>
 </nav>

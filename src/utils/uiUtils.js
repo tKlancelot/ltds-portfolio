@@ -6,6 +6,7 @@ import { apiUrl } from './config.js';
 
 // 👉 Vite importe le HTML comme string
 import navbarTpl from '../parts/navbar.html?raw';
+import footerTpl from '../parts/footer.html?raw';
 
 export const initializeBaseStructure = async () => {
   const app = document.getElementById('app');
@@ -18,7 +19,12 @@ export const initializeBaseStructure = async () => {
   if (!menuNav.parentElement) app.prepend(menuNav);
   else if (menuNav.parentElement !== app) app.prepend(menuNav);
 
-  console.log('✅ Navbar injectée (import ?raw)');
+  // injecter footer 
+  let footer = document.getElementById('footer');
+  if (footer) footer.innerHTML = footerTpl;
+  console.log('footer', footer);
+  app.append(footer);
+
 };
 
 export const initTooltips = async () => {
@@ -82,3 +88,20 @@ export const modalService = () => {
 };
 
 
+export const setupStickyNavbar = () => {
+  const nav = document.getElementById('menu-nav');
+  const scrollToTop = document.getElementById('scrollToTop');
+  if (!nav) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      nav.classList.add('scrolled');
+      // display scrollToTop button
+      scrollToTop.style.display = 'block';
+    } else {
+      nav.classList.remove('scrolled');
+      // hide scrollToTop button
+      scrollToTop.style.display = 'none';
+    }
+  });
+};

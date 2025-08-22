@@ -21,23 +21,6 @@
     font-weight: 400;
 }
 
-body{
-    overflow: hidden;
-}
-
-/* APP  */
-
-#app{
-    display: flex;
-    height: 100vh;
-    min-height: 0;
-    flex-direction: column;
-}
-
-#app main{
-    overflow-y: auto;
-    height: 100%;
-}
 
 #page-gradient {
   /* contrôles */
@@ -58,7 +41,7 @@ body{
     ),
     linear-gradient(
       to bottom,
-      var(--color-primary-opacity-10) 0%,
+      var(--color-overlay) 0%,
       var(--color-background) 100%
     );
 }
@@ -173,3 +156,8 @@ h1,h2,h3{
 }
 
 
+#scrollToTop{
+    position: fixed;
+    bottom: 4%;
+    right: 4%;
+}

@@ -1,6 +1,7 @@
 /* MENU BAR ITEMS && MENU BAR ITEMS SUB-MENUS */
 /* DEFINED BY LTDS  */
 
+
 .ltds-menu{
     display: flex;
     gap: var(--size-4);
@@ -10,6 +11,7 @@
 .ltds-menu-item{
     position: relative;
     cursor: pointer;
+    list-style-type:none;
 }
 
 .ltds-menu-label{
@@ -19,8 +21,8 @@
 }
 
 .ltds-menu-submenu{
-    --menu-offset-y: 108%;
-    --menu-offset-x: -32px;
+    --menu-offset-y: 104%;
+    --menu-offset-x: 0px;
     --menu-text-color: var(--color-text-inverted);
     top: var(--menu-offset-y);
     right: var(--menu-offset-x);
@@ -41,6 +43,10 @@
 .ltds-menu-submenu li{
     min-width: var(--large-size-2);
     line-height: var(--lh-4);
+    &:hover{
+        color: var(--color-primary);
+        /* text-decoration: underline; */
+    }
 }
 
 .ltds-menu-item:hover .ltds-menu-submenu{
