@@ -6,13 +6,11 @@
     display: flex;
     gap: var(--size-4);
     align-items: center;
+    > li{
+        position: relative;
+    }
 }
 
-.ltds-menu-item{
-    position: relative;
-    cursor: pointer;
-    list-style-type:none;
-}
 
 .ltds-menu-label{
     display: flex;
@@ -42,14 +40,12 @@
 
 .ltds-menu-submenu li{
     min-width: var(--large-size-2);
-    line-height: var(--lh-4);
     &:hover{
         color: var(--color-primary);
-        /* text-decoration: underline; */
     }
 }
 
-.ltds-menu-item:hover .ltds-menu-submenu{
+.ltds-menu > li:hover .ltds-menu-submenu{
     opacity: 1;
     visibility: visible;
     transform: translateY(0) scale(1);

@@ -8,7 +8,7 @@
         <!-- menu desktop  -->  
 
         <ul class="ltds-menu u-display-mob-none">
-            <li class="ltds-menu-item">
+            <li>
                 <div class="ltds-menu-label">Bases<i class="icon lt-icon-caret-down icon-size-lg"></i></div>
                 <ul class="ltds-menu-submenu u-grid u-grid-12">
                     <a href="/design-system/reset" class="u-col-span-6">
@@ -29,22 +29,27 @@
                 </ul>
             </li>
     
-            <div class="ltds-menu-item">
+            <!-- <li>
                 <div class="ltds-menu-label">Atoms<i class="icon lt-icon-caret-down icon-size-lg"></i></div>
                 <ul class="ltds-menu-submenu u-grid u-grid-12">
                     <a href="/design-system/buttons" class="u-col-span-6">
                         <li>Buttons</li>
                     </a>
                 </ul>
-            </div>
-            <a href="/">
+            </li> -->
+            <button class="ltds-btn ltds-btn--ghost ltds-btn--shape" data-modal-ref="modal-test">
+                <!-- <span>À propos</span> -->
+                <!-- data-lt-style="solid" -->
+                <i class="icon lt-icon-expertise icon-size-lg"></i>
+            </button>
+            <!-- <a href="/">
                 <li class="ltds-menu-item">
                     <i class="icon lt-icon-home icon-size-lg"></i>
                 </li>
-            </a>
+            </a> -->
         </ul>
         <!-- menu mobile burger  -->
-        <panel-menu origin="left" title="Navigation">
+        <panel-menu origin="right" title="Navigation">
         <button class="ltds-btn ltds-btn--sm ltds-btn--ghost ltds-btn--shape panel-menu-trigger">
             <i class="icon lt-icon-burger icon-size-xl"></i>
         </button>
@@ -62,6 +67,7 @@
                 <li><a href="/design-system/colors">Colors</a></li>
                 <li><a href="/design-system/utilities">Utilities</a></li>
                 <li><a href="/design-system/accessibility">Accessibility</a></li>
+                <ltds-menu-item></ltds-menu-item>
             </ul>
         </div>
         </panel-menu>

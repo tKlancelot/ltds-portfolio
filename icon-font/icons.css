@@ -1,7 +1,7 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.woff?cc4cf049be8a4aca1fc3ac25e3b14cce") format("woff"),
-url("./icons.woff2?cc4cf049be8a4aca1fc3ac25e3b14cce") format("woff2");
+    src: url("./icons.woff?2637c84e2972a1db2ce8cd6065c87f42") format("woff"),
+url("./icons.woff2?2637c84e2972a1db2ce8cd6065c87f42") format("woff2");
 }
 
 i[class^="lt-icon-"]:before, i[class*=" lt-icon-"]:before {
@@ -21,54 +21,60 @@ i[class^="lt-icon-"]:before, i[class*=" lt-icon-"]:before {
 .lt-icon-utils:before {
     content: "\f102";
 }
-.lt-icon-send:before {
+.lt-icon-top-arrow:before {
     content: "\f103";
 }
-.lt-icon-search:before {
+.lt-icon-send:before {
     content: "\f104";
 }
-.lt-icon-organisms:before {
+.lt-icon-search:before {
     content: "\f105";
 }
-.lt-icon-molecules:before {
+.lt-icon-organisms:before {
     content: "\f106";
 }
-.lt-icon-home:before {
+.lt-icon-molecules:before {
     content: "\f107";
 }
-.lt-icon-font-system:before {
+.lt-icon-home:before {
     content: "\f108";
 }
-.lt-icon-expertise:before {
+.lt-icon-font-system:before {
     content: "\f109";
 }
-.lt-icon-download-test:before {
+.lt-icon-expertise:before {
     content: "\f10a";
 }
-.lt-icon-door-logout:before {
+.lt-icon-download-test:before {
     content: "\f10b";
 }
-.lt-icon-close:before {
+.lt-icon-door-logout:before {
     content: "\f10c";
 }
-.lt-icon-caret-down:before {
+.lt-icon-copy:before {
     content: "\f10d";
 }
-.lt-icon-burger:before {
+.lt-icon-close:before {
     content: "\f10e";
 }
-.lt-icon-breakpoints:before {
+.lt-icon-caret-down:before {
     content: "\f10f";
 }
-.lt-icon-base:before {
+.lt-icon-burger:before {
     content: "\f110";
 }
-.lt-icon-back-arrow:before {
+.lt-icon-breakpoints:before {
     content: "\f111";
 }
-.lt-icon-atoms:before {
+.lt-icon-base:before {
     content: "\f112";
 }
-.lt-icon-about:before {
+.lt-icon-back-arrow:before {
     content: "\f113";
+}
+.lt-icon-atoms:before {
+    content: "\f114";
+}
+.lt-icon-about:before {
+    content: "\f115";
 }

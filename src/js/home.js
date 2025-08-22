@@ -41,4 +41,18 @@ export default async function initHomePage(params) {
         grid.appendChild(el);
     });
 
+
+    // copy npm button 
+    let btn = document.querySelector('#copy-npm');
+    if (btn) {
+        btn.addEventListener('click', () => {
+            let span = btn.querySelector('span');
+            navigator.clipboard.writeText('npm i @tarik-leviathan/ltds');
+            span.textContent = 'Copied !';
+            setTimeout(() => {
+                span.textContent = 'npm i @tarik-leviathan/ltds';
+            }, 2000);
+        });
+    }
+
 }

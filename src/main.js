@@ -9,11 +9,12 @@ import { DocSection } from './web-components/docSection.js';
 import { LtdsCodeBlock } from './web-components/codeBlock.js';
 import { LtdsDivider } from './web-components/divider.js';
 import { PanelMenu } from './web-components/panelMenu.js';
+import { LtdsMenuItem } from './web-components/menuItem.js';
 
 import UniversalRouter from 'universal-router';
 import { routeConfigurations } from './utils/routeConfiguration.js';
 import { loadPage } from './utils/routerUtils.js';
-import { initializeBaseStructure, initTooltips, modalService, setupStickyNavbar } from './utils/uiUtils.js';
+import { initializeBaseStructure, initTooltips, modalService, scrollToTop, setupStickyNavbar } from './utils/uiUtils.js';
 
 // helpers
 const initPageUI = async (template) => {
@@ -21,6 +22,7 @@ const initPageUI = async (template) => {
   modalService();
   initTooltips();
   setupStickyNavbar();
+  scrollToTop();
   // handleNavLinks(template);
 };
 

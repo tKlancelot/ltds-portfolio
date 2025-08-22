@@ -97,7 +97,7 @@ export const setupStickyNavbar = () => {
     if (window.scrollY > 10) {
       nav.classList.add('scrolled');
       // display scrollToTop button
-      scrollToTop.style.display = 'block';
+      scrollToTop.style.display = 'flex';
     } else {
       nav.classList.remove('scrolled');
       // hide scrollToTop button
@@ -105,3 +105,13 @@ export const setupStickyNavbar = () => {
     }
   });
 };
+
+export const scrollToTop = () => {
+  let scrollTop = document.getElementById('scrollToTop');
+  scrollTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}

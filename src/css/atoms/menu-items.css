@@ -1,0 +1,11 @@
+.ltds-menu-item{
+    --item-padding-inline: var(--size-4);
+    --item-line-height: var(--lh-2);
+    padding-inline: var(--item-padding-inline);
+    line-height: var(--item-line-height);
+    display: flex;
+    align-items: center;
+    gap: var(--size-2);
+    cursor: pointer;
+    list-style-type: none;
+}

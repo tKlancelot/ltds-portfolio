@@ -52,15 +52,3 @@
   justify-content: space-between;
   align-items: center;
 }
-
-.panel-menu li{
-  padding-inline: var(--size-4);
-  line-height: var(--lh-4);
-  background-color: var(--color-container);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radii-3);
-  list-style-type: none;
-  &:hover{
-    background-color: var(--color-overlay);
-  }
-}
