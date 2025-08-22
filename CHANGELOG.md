@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/tKlancelot/ltds-portfolio/compare/v0.0.3...v0.0.4) (2025-08-22)
+
+
+### Features
+
+* add scroll to top btn func + rework buttons ([486254f](https://github.com/tKlancelot/ltds-portfolio/commit/486254f72f8b74854e4d53f33cddcfa6b2b74e35))
+
 ### [0.0.3](https://github.com/tKlancelot/ltds-portfolio/compare/v0.0.2...v0.0.3) (2025-08-22)
 
 
