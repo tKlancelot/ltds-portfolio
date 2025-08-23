@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/tKlancelot/ltds-portfolio/compare/v0.0.8...v0.0.9) (2025-08-23)
+
+
+### Features
+
+* adding grid page ([d6a2779](https://github.com/tKlancelot/ltds-portfolio/commit/d6a277955f7e545f5d0cc13cf163c582e824bf7e))
+
 ### [0.0.8](https://github.com/tKlancelot/ltds-portfolio/compare/v0.0.7...v0.0.8) (2025-08-23)
 
 
