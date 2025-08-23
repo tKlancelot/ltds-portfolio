@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/tKlancelot/ltds-portfolio/compare/v0.1.3...v0.1.4) (2025-08-23)
+
+
+### Features
+
+* fix alert titles style ([f48b97f](https://github.com/tKlancelot/ltds-portfolio/commit/f48b97f56434e6fce699082090158a32d87dc06f))
+
 ### [0.1.3](https://github.com/tKlancelot/ltds-portfolio/compare/v0.1.2...v0.1.3) (2025-08-23)
 
 
