@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/tKlancelot/ltds-portfolio/compare/v0.1.1...v0.1.2) (2025-08-23)
+
+
+### Features
+
+* improve portfolio s responsiveness ([80349ab](https://github.com/tKlancelot/ltds-portfolio/commit/80349ab4832ca3ec7462400719450f2db9546bbe))
+
 ### [0.1.1](https://github.com/tKlancelot/ltds-portfolio/compare/v0.1.0...v0.1.1) (2025-08-23)
 
 ### [0.0.9](https://github.com/tKlancelot/ltds-portfolio/compare/v0.0.8...v0.0.9) (2025-08-23)
