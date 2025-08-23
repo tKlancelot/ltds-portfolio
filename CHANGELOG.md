@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/tKlancelot/ltds-portfolio/compare/v0.0.7...v0.0.8) (2025-08-23)
+
+
+### Features
+
+* rework font accent replacing anton by rubik ([eab1ed6](https://github.com/tKlancelot/ltds-portfolio/commit/eab1ed6ac521867c486b129aeb1ae905286aefc7))
+
 ### [0.0.7](https://github.com/tKlancelot/ltds-portfolio/compare/v0.0.6...v0.0.7) (2025-08-23)
 
 ### [0.0.6](https://github.com/tKlancelot/ltds-portfolio/compare/v0.0.5...v0.0.6) (2025-08-23)
