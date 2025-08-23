@@ -1,0 +1,171 @@
+<div class="lt-page">
+  <div class="lt-frame lt-frame--narrow">
+
+    <h1>Grids</h1>
+    <p>
+      Système de grille minimal basé sur CSS Grid : colonnes 1→12, spans ligne/colonne,
+      alignements utiles et variantes responsives (max-width) : <code>desk</code>, <code>lap</code>, <code>note</code>, <code>tab</code>, <code>mob</code>, <code>smob</code>.
+      Idéal pour structurer des pages et des cartes sans surcouche CSS.
+    </p>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Base -->
+    <doc-section title="Base">
+      <p>Active CSS Grid sur un conteneur, puis choisis le nombre de colonnes.</p>
+      <ltds-code-block language="css" dedent>
+      .u-grid { display: grid; }
+      .u-grid-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+      .u-grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } /* 1 → 12 */
+      </ltds-code-block>
+      <div class="lt-frame lt-frame--gap-2">
+            <p>.u-grid + .u-grid-12</p>
+            <div class="u-grid u-grid-12 u-gap-2">
+                <div class="u-col-span-6 u-container u-container--danger">u-col-span-6</div>
+                <div class="u-col-span-3 u-container u-container--warning">u-col-span-3</div>
+                <div class="u-col-span-3 u-container u-container--warning">u-col-span-3</div>
+            </div>
+            <p>.u-grid + .u-grid-cols-12</p>
+            <div class="u-grid u-grid-cols-12 u-gap-2">
+                <div class="u-col-span-2 u-container u-container--info">u-col-span-2</div>
+                <div class="u-col-span-6 u-container u-container--danger">u-col-span-6</div>
+                <div class="u-col-span-4 u-container u-container--warning">u-col-span-4</div>
+            </div>
+            <p>.u-grid + .u-grid-cols-3</p>
+            <div class="u-grid u-grid-cols-3 u-gap-2">
+                <div class="u-col-span-1 u-container u-container--warning">u-col-span-1</div>
+                <div class="u-col-span-1 u-container u-container--warning">u-col-span-1</div>
+                <div class="u-col-span-1 u-container u-container--warning">u-col-span-1</div>
+            </div>
+      </div>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Spans -->
+    <doc-section title="Spans (colonnes & lignes)">
+        <p>Étendre un item sur N colonnes (1→12) ou N lignes (1→3).</p>
+        <ltds-code-block language="css" dedent>
+        .u-col-span-6 { grid-column: span 6 / span 6; }   /* 1 → 12 */
+        .u-row-span-2 { grid-row: span 2 / span 2; }      /* 1 → 3  */
+        .u-col-auto   { grid-column: auto; }
+        .u-row-auto   { grid-row: auto; }
+        </ltds-code-block>
+        <div class="lt-frame lt-frame--gap-2">
+            <div class="u-grid u-grid-cols-3" style="gap: var(--gap-2);">
+                <div class="u-col-auto u-container u-container--warning">col auto</div>
+                <div class="u-col-auto u-container u-container--warning">col auto</div>
+                <div class="u-col-auto u-container u-container--warning">col auto</div>
+            </div>
+            <p>Spans sur plusieurs lignes</p>
+            <div class="u-grid u-row-span-2" style="gap: var(--gap-2);">
+                <div class="u-container u-container--warning">row 1</div>
+                <div class="u-container u-container--warning">row 2</div>
+            </div>
+        </div>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Alignements -->
+    <doc-section title="Alignements utiles">
+    <p>Aligner les items et le contenu du grid selon vos besoins.</p>
+    <ltds-code-block language="css" dedent>
+    .u-items-start  { align-items: start; }
+    .u-items-center { align-items: center; }
+    .u-items-end    { align-items: end; }
+
+    .u-justify-start  { justify-items: start; }
+    .u-justify-center { justify-items: center; }
+    .u-justify-end    { justify-items: end; }
+
+    .u-content-start  { align-content: start; }
+    .u-content-center { align-content: center; }
+    .u-content-end    { align-content: end; }
+
+    .u-place-center { place-items: center; }
+    .u-place-self-start  { place-self: start; }
+    .u-place-self-center { place-self: center; }
+    .u-place-self-end    { place-self: end; }
+    </ltds-code-block>
+
+    <div class="lt-frame lt-frame--gap-2">
+        <p>.u-items-start</p>
+        <div class="u-grid u-grid-cols-3 u-items-start u-gap-2 u-min-h-l-2">
+        <div class="u-container u-container--danger">from parent -> item start</div>
+        <div class="u-container u-container--warning u-place-self-center">child -> place self center</div>
+        <div class="u-container u-container--info u-place-self-end">child -> place self end</div>
+        </div>
+
+        <p>.u-place-center</p>
+        <div class="u-grid u-grid-cols-3 u-gap-2 u-place-center u-min-h-l-2">
+        <div class="u-col-span-3 u-container u-container--success">
+            centré avec place-items
+        </div>
+        </div>
+    </div>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Responsive -->
+    <doc-section title="Responsive (max-width)">
+    <p>
+        Variantes par palier : <code>desk</code> (≤1919), <code>lap</code> (≤1439), 
+        <code>note</code> (≤1199), <code>tab</code> (≤1024), 
+        <code>mob</code> (≤768), <code>smob</code> (≤414).<br>
+        On préfixe les classes : <code>.u-{bp}-grid-cols-N</code>, <code>.u-{bp}-col-span-N</code>, etc.
+    </p>
+    <ltds-code-block language="css" dedent>
+    /* Exemple */
+    .u-mob-grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .u-mob-col-span-2  { grid-column: span 2 / span 2; }
+    .u-tab-grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    </ltds-code-block>
+
+    <div class="lt-frame lt-frame--gap-2">
+        <p>.u-grid-cols-6 → .u-mob-grid-cols-2</p>
+        <div class="u-grid u-grid-cols-6 u-mob-grid-cols-2 u-gap-2">
+        <div class="u-col-auto u-container u-container--info">A</div>
+        <div class="u-col-auto u-container u-container--warning">B</div>
+        <div class="u-col-auto u-container u-container--danger">C</div>
+        <div class="u-col-auto u-container u-container--success">D</div>
+        <div class="u-col-auto u-container u-container--success">E</div>
+        <div class="u-col-auto u-container u-container--success">F</div>
+        </div>
+
+        <p>.u-grid-cols-4 → .u-tab-grid-cols-3 → .u-mob-grid-cols-6</p>
+        <div class="u-grid u-grid-cols-4 u-tab-grid-cols-3 u-mob-grid-cols-6 u-gap-2">
+        <div class="u-col-auto u-container u-container--info">1</div>
+        <div class="u-col-auto u-container u-container--danger">2</div>
+        <div class="u-col-auto u-container u-container--warning">3</div>
+        <div class="u-col-auto u-container u-container--success">4</div>
+        <div class="u-col-auto u-container u-container--success">5</div>
+        <div class="u-col-auto u-container u-container--success">6</div>
+        <div class="u-col-auto u-container u-container--success">7</div>
+        <div class="u-col-auto u-container u-container--success">8</div>
+        <div class="u-col-auto u-container u-container--success">9</div>
+        <div class="u-col-auto u-container u-container--success">10</div>
+        <div class="u-col-auto u-container u-container--success">11</div>
+        <div class="u-col-auto u-container u-container--success">12</div>
+        </div>
+    </div>
+
+    <p class="u-text-secondary u-fs-0">
+        Astuce : combinez <code>u-grid-12</code> + <code>u-mob-grid-cols-2</code> pour un layout fluide.
+    </p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Bonnes pratiques -->
+    <doc-section title="Bonnes pratiques">
+      <ul>
+        <li>Utilisez <code>u-grid-12</code> comme base “maillage” et des <code>u-col-span-*</code> pour rythmer les blocs.</li>
+        <li>Pour la lisibilité, préférez peu de paliers (ex. <code>tab</code> et <code>mob</code>) plutôt que tous à la fois.</li>
+        <li>Composez avec vos tokens : <code>style="gap: var(--gap-4)"</code> ou via une classe utilitaire si prévue.</li>
+      </ul>
+    </doc-section>
+
+  </div>
+</div>

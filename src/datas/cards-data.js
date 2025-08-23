@@ -71,13 +71,13 @@ export const cards = [
     content: "Échelle d’espacement cohérente : u-mt-1, u-px-4, etc.",
     extraClass: "ltds-card--danger",
     href: "/design-system/spacings"
-  },
-  {
-    slug: "layout",
-    title: "Layout",
-    subtitle: "stack / frame",
-    content: "Compositions rapides et responsives.",
-    extraClass: "ltds-card--glass",
-    href: "/design-system/layout"
   }
+  // {
+  //   slug: "layout",
+  //   title: "Layout",
+  //   subtitle: "stack / frame",
+  //   content: "Compositions rapides et responsives.",
+  //   extraClass: "ltds-card--glass",
+  //   href: "/design-system/layout"
+  // }
 ];

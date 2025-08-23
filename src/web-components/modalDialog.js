@@ -76,6 +76,7 @@ _render() {
 
   const maxWidth = this.getAttribute("max-width") || "400";
   const extraClass = this.getAttribute("extra-class") || "";
+  const titleIcon = this.getAttribute("title-icon") || "";
   const title = this.getAttribute("modal-title") || "Titre de la modale";
 
   // Détache et stocke seulement les *vrais* enfants initiaux une fois
@@ -96,7 +97,10 @@ _render() {
 
   modalContent.innerHTML = `
     <div class="modal-header">
-      <h3 class="modal-title">${title}</h3>
+      <h3 class="modal-title lt-stack lt-stack--center">
+        ${titleIcon ? `<i class="${titleIcon} icon icon-size-lg"></i>` : ""} 
+        ${title}
+      </h3>
       <button class="modal-close ltds-btn ltds-btn--ghost ltds-btn--shape ltds-btn--sm" aria-label="Fermer la modale" data-modal-dismiss>
         <i class="icon lt-icon-close lt-icon-style-solid icon-size-md"></i>
       </button>

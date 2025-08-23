@@ -9,9 +9,9 @@
 
 @font-face {
     font-family: "Rubik";
-    src: url("/fonts/Rubik/static/Rubik-Bold.ttf") format("truetype");
+    src: url("/fonts/Rubik/static/Rubik-SemiBold.ttf") format("truetype");
     font-display: swap;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 @font-face {
@@ -31,7 +31,7 @@
 
 h1,h2,h3{
     font-family: var(--font-family-accent);
-    /* font-weight: var(--font-weight-regular); */
+    font-weight: var(--font-weight-semibold);
 }
 
 #page-title{

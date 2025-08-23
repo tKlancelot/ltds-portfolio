@@ -12,6 +12,7 @@ export const routeConfigurations = [
   { path: "/design-system/accessibility", template: "accessibility", pageScript: "accessibility.js" },
   { path: "/design-system/dimensions", template: "dimensions", pageScript: "dimensions.js" },
   { path: "/design-system/flexboxes", template: "flexboxes", pageScript: "flexboxes.js" },
+  { path: "/design-system/grids", template: "grids", pageScript: "grids.js" },
 
   { path: "/404", template: "404", pageScript: null }
 ];
