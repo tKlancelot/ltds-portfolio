@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/tKlancelot/ltds-portfolio/compare/v0.0.5...v0.0.6) (2025-08-23)
+
+
+### Features
+
+* improve global ui ([c9d7a73](https://github.com/tKlancelot/ltds-portfolio/commit/c9d7a7385dbd6a63e75f7c709cb978121a467aff))
+
 ### [0.0.5](https://github.com/tKlancelot/ltds-portfolio/compare/v0.0.4...v0.0.5) (2025-08-22)
 
 
