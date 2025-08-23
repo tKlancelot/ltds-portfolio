@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    background-color: var(--color-background);
+    background-color: var(--surface-overlay);
     width: 80%;
     max-width: 360px;
     height: 100%;

@@ -39,9 +39,10 @@
 }
 
 .ltds-menu-submenu li{
-    min-width: var(--large-size-2);
+    min-width: var(--large-size-1);
     &:hover{
         color: var(--color-primary);
+        text-decoration: underline;    
     }
 }
 

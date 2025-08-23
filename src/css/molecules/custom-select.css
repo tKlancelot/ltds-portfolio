@@ -17,7 +17,7 @@ custom-select {
     justify-content: space-between;
     align-items: center;
     border: 1px solid var(--color-ui-border);
-    background-color: var(--color-background);
+    background-color: var(--surface-page);
     padding: var(--size-2);
     color: var(--color-primary);
     cursor: pointer;
@@ -39,7 +39,7 @@ custom-select {
     left: 0;
     right: 0;
     z-index: 9;
-    background-color: var(--color-background);
+    background-color: var(--surface-page);
     border: 1px solid var(--color-ui-border);
     display: none;
     max-height: 200px;
@@ -50,11 +50,11 @@ custom-select {
 .custom-select-option {
     padding: var(--size-2);
     cursor: pointer;
-    background-color: var(--color-background);
+    background-color: var(--surface-page);
 }
 
 .custom-select-option:hover {
-    background-color: var(--color-overlay);
+    background-color: var(--surface-overlay);
     color: var(--color-primary);
 }
 

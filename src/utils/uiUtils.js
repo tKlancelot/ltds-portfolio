@@ -115,3 +115,24 @@ export const scrollToTop = () => {
     });
   });
 }
+
+export const changeTheme = () => {
+
+  let allThemeBtns = document.querySelectorAll('.theme-switch');
+  console.log('allThemeBtns', allThemeBtns);
+  // on regarde si localstorage contient une clé de theme
+  const scheme = localStorage.getItem('scheme');
+
+  // si oui, on l'applique
+  if (scheme) {
+    document.body.dataset.scheme = scheme
+  } 
+
+  // sinon allThemeBtns.foreach 
+  allThemeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.body.dataset.scheme = btn.dataset.scheme;
+      localStorage.setItem('scheme', btn.dataset.scheme);
+    })
+  })
+}

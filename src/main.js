@@ -14,7 +14,7 @@ import { LtdsMenuItem } from './web-components/menuItem.js';
 import UniversalRouter from 'universal-router';
 import { routeConfigurations } from './utils/routeConfiguration.js';
 import { loadPage } from './utils/routerUtils.js';
-import { initializeBaseStructure, initTooltips, modalService, scrollToTop, setupStickyNavbar } from './utils/uiUtils.js';
+import { changeTheme, initializeBaseStructure, initTooltips, modalService, scrollToTop, setupStickyNavbar } from './utils/uiUtils.js';
 
 // helpers
 const initPageUI = async (template) => {
@@ -23,6 +23,7 @@ const initPageUI = async (template) => {
   initTooltips();
   setupStickyNavbar();
   scrollToTop();
+  changeTheme();
   // handleNavLinks(template);
 };
 
