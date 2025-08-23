@@ -19,7 +19,7 @@ import { applyPageGradient, changeTheme, initializeBaseStructure, initTooltips, 
 
 // helpers
 const initPageUI = async (template) => {
-  await initializeBaseStructure();
+  await initializeBaseStructure(template);
   modalService();
   initTooltips();
   setupStickyNavbar();

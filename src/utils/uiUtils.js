@@ -1,14 +1,13 @@
 // utils/uiUtils.js
 import tippy from 'tippy.js';
 import 'tippy.js/dist/tippy.css';
-import { getRole, getToken } from './userUtils';
-import { apiUrl } from './config.js';
 
 // 👉 Vite importe le HTML comme string
 import navbarTpl from '../parts/navbar.html?raw';
 import footerTpl from '../parts/footer.html?raw';
+import { createDesktopMenu, createMobileMenu } from './menuUtils';
 
-export const initializeBaseStructure = async () => {
+export const initializeBaseStructure = async (template) => {
   const app = document.getElementById('app');
   if (!app) return;
 
@@ -19,11 +18,18 @@ export const initializeBaseStructure = async () => {
   if (!menuNav.parentElement) app.prepend(menuNav);
   else if (menuNav.parentElement !== app) app.prepend(menuNav);
 
+  // construire les menus 
+  createMobileMenu();
+  createDesktopMenu();
+
   // injecter footer 
   let footer = document.getElementById('footer');
   if (footer) footer.innerHTML = footerTpl;
   console.log('footer', footer);
   app.append(footer);
+
+  // ajouter la classe du template sur body
+  document.body.classList.add(template);
 
 };
 

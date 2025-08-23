@@ -5,7 +5,7 @@ export const cards = [
     title: "Reset",
     subtitle: "base",
     content: "Normalisation CSS pour un rendu cohérent entre navigateurs.",
-    extraClass: "ltds-card--glass",
+    // extraClass: "ltds-card--glass",
     href: "/design-system/reset"
   },
   {
@@ -45,7 +45,7 @@ export const cards = [
     title: "Dimensions",
     subtitle: "sizes",
     content: "Utilitaires pour contraindre largeur/hauteur et ratios.",
-    extraClass: "ltds-card--success",
+    // extraClass: "ltds-card--success",
     href: "/design-system/dimensions"
   },
   {
@@ -53,7 +53,7 @@ export const cards = [
     title: "Flexboxes",
     subtitle: "layout",
     content: "Alignements rapides, direction, gap et distribution des éléments.",
-    extraClass: "ltds-card--warning",
+    // extraClass: "ltds-card--warning",
     href: "/design-system/flexboxes"
   },
   {
@@ -61,7 +61,7 @@ export const cards = [
     title: "Grids",
     subtitle: "layout",
     content: "Système responsive basé sur 12 colonnes et breakpoints personnalisés.",
-    extraClass: "ltds-card--danger",
+    // extraClass: "ltds-card--danger",
     href: "/design-system/grids"
   },
   {
@@ -69,7 +69,7 @@ export const cards = [
     title: "Spacings",
     subtitle: "margin / padding",
     content: "Échelle d’espacement cohérente : u-mt-1, u-px-4, etc.",
-    extraClass: "ltds-card--danger",
+    // extraClass: "ltds-card--danger",
     href: "/design-system/spacings"
   }
   // {

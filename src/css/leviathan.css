@@ -37,7 +37,7 @@ h1,h2,h3{
 #page-title{
     /* #6A028C */
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--color-primary);
+    -webkit-text-stroke-color: var(--brand-primary-active);
     letter-spacing:1px; 
     color: transparent;
 }
@@ -48,6 +48,9 @@ h1,h2,h3{
     padding: var(--size-2);
 }
 
+.spacings #app{
+    overflow: hidden;
+}
 
 
 @keyframes expand{
