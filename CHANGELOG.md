@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/tKlancelot/ltds-portfolio/compare/v0.1.4...v0.1.5) (2025-08-23)
+
+
+### Features
+
+* insert menu nav from menuUtils.js + add spacings page ([8d0a6eb](https://github.com/tKlancelot/ltds-portfolio/commit/8d0a6eb445761fa38c034771ef9ae2706df3b9e2))
+
 ### [0.1.4](https://github.com/tKlancelot/ltds-portfolio/compare/v0.1.3...v0.1.4) (2025-08-23)
 
 
