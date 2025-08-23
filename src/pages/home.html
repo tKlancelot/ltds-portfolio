@@ -36,3 +36,52 @@
         </div>
      </div>
 </section>
+
+<section class="section lt-page">
+  <div class="lt-frame lt-frame--wide">
+
+    <doc-section title="Get Started">
+      <p>
+        Installez le Design System via npm et commencez à l’utiliser immédiatement.  
+        Vous pouvez importer la feuille de style complète ou seulement les parties qui vous intéressent grâce au <em>tree-shaking</em>.
+      </p>
+      <ltds-code-block language="bash" dedent>
+      npm install @tarik-leviathan/ltds@latest
+      </ltds-code-block>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <doc-section title="Usage CSS">
+      <p>Importer tout le Design System :</p>
+      <ltds-code-block language="js" dedent>
+      import '@tarik-leviathan/ltds/dist/ltds.css';
+      </ltds-code-block>
+
+      <p>Ou seulement les modules dont vous avez besoin :</p>
+      <ltds-code-block language="js" dedent>
+      import '@tarik-leviathan/ltds/styles/core';     // reset, tokens de base
+      import '@tarik-leviathan/ltds/styles/buttons';  // styles de boutons
+      import '@tarik-leviathan/ltds/styles/utils';    // utilitaires
+      </ltds-code-block>
+    </doc-section>
+
+    <!-- <ltds-divider></ltds-divider> -->
+
+    <!-- <doc-section title="Composants Web">
+      <p>
+        Le Design System fournit également des Web Components.  
+        Importez uniquement ceux nécessaires à votre projet :
+      </p>
+      <ltds-code-block language="js" dedent>
+      import { ModalDialog } from '@tarik-leviathan/ltds';
+      import { PanelMenu } from '@tarik-leviathan/ltds';
+      </ltds-code-block>
+
+      <p class="u-text-secondary u-fs-0">
+        Astuce : grâce au <em>tree shaking</em>, seuls les composants importés sont inclus dans votre build final.
+      </p>
+    </doc-section> -->
+
+  </div>
+</section>
