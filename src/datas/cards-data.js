@@ -5,7 +5,7 @@ export const cards = [
     title: "Reset",
     subtitle: "base",
     content: "Normalisation CSS pour un rendu cohérent entre navigateurs.",
-    extraClass: "ltds-card--success",
+    extraClass: "ltds-card--glass",
     href: "/design-system/reset"
   },
   {
@@ -13,7 +13,7 @@ export const cards = [
     title: "Tokens",
     subtitle: "design values",
     content: "Couleurs, typographie, tailles, radius, shadows et autres variables globales.",
-    extraClass: "ltds-card--success",
+    // extraClass: "ltds-card--success" ,
     href: "/design-system/tokens"
   },
   {
@@ -21,7 +21,7 @@ export const cards = [
     title: "Colors",
     subtitle: "palette",
     content: "Jeux de couleurs sémantiques et dynamiques, avec modes et thèmes.",
-    extraClass: "ltds-card--success",
+    // extraClass: "ltds-card--success",
     href: "/design-system/colors"
   },
   {
@@ -29,7 +29,7 @@ export const cards = [
     title: "Utilities",
     subtitle: "helpers",
     content: "Classes rapides : marges, paddings, line-height, font-size, backgrounds…",
-    extraClass: "ltds-card--success",
+    // extraClass: "ltds-card--success",
     href: "/design-system/utilities"
   },
   {

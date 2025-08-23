@@ -112,6 +112,15 @@ ltds-card:focus-within .ltds-card {
     border: none;
 }
 
+
+/* LEVELS  */
+
+.ltds-card--lg{
+    --card-padding: var(--size-5);
+    --card-radius: var(--radii-5);
+}
+
+
 /* ================================
    Sous-blocs (via classes)
    ================================ */
@@ -167,4 +176,9 @@ ltds-card .ltds-card-footer {
     .ltds-card-grid>ltds-card {
         grid-column: span 12;
     }
+
+    .ltds-card--lg{
+        --card-padding: var(--size-4);
+    }
+
 }

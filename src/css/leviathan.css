@@ -97,6 +97,15 @@ h1,h2,h3{
     }
 }
 
+@media screen and (max-width: 768px) {
+
+    .lt-page{
+        > .lt-frame {
+            padding: var(--size-4);
+        }
+    }
+
+}
 
 #scrollToTop{
     position: fixed;
