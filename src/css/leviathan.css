@@ -8,10 +8,10 @@
 
 
 @font-face {
-    font-family: "Anton";
-    src: url("/fonts/Anton/Anton-Regular.ttf") format("truetype");
+    font-family: "Rubik";
+    src: url("/fonts/Rubik/static/Rubik-Bold.ttf") format("truetype");
     font-display: swap;
-    font-weight: 400;
+    font-weight: 800;
 }
 
 @font-face {
@@ -21,35 +21,17 @@
     font-weight: 800;
 }
 
+/* DEBUG OVERWRITE  */
 
-#page-gradient {
-  /* contrôles */
-  --halo-size-x: 120%;
-  --halo-size-y: 100%;
-  --halo-strength: 0.8;          /* intensité du halo */
-  --halo-shift-y: -8%;           /* pousse le halo au-dessus du top */
-  --halo-color: var(--color-primary-opacity-40);
+/* :root{
+    --font-family-accent: "Mona Sans", var(--font-family-base);
+} */
 
-  /* halo + dégradé d'ambiance */
-  background:
-    radial-gradient(
-      ellipse var(--halo-size-x) var(--halo-size-y) at 50% var(--halo-shift-y),
-      color-mix(in oklab, var(--halo-color), transparent 45%) 0%,
-      color-mix(in oklab, var(--halo-color), transparent 65%) 35%,
-      rgba(0,0,0, calc(0.35 * (1 - var(--halo-strength)))) 55%,
-      transparent 70%
-    ),
-    linear-gradient(
-      to bottom,
-      var(--surface-overlay) 0%,
-      var(--surface-page) 60%
-    );
-}
 
 
 h1,h2,h3{
     font-family: var(--font-family-accent);
-    font-weight: var(--font-weight-regular);
+    /* font-weight: var(--font-weight-regular); */
 }
 
 #page-title{

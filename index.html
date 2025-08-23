@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" data-font="leviathan">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog Leviathan</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="src/css/leviathan.css">
-    <link rel="stylesheet" href="/icon-font/icons.css">
-    <!-- <link rel="stylesheet" href="src/vendors/splide-slide.min.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- LTDS depuis node_modules -->
+    <link rel="stylesheet" href="/src/css/vendor-ltds.css" />
+
+    <!-- Ton CSS custom (après pour overrides) -->
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/leviathan.css" />
+    <link rel="stylesheet" href="/icon-font/icons.css" />
+
+    <!-- Prism -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-js.min.js"></script>
   </head>
-  <!-- data-scheme="2" -->
-  <body id="page-gradient">
+  <body>
     <div id="menu-nav"></div>
     <div id="app">
       <main id="main"></main>
     </div>
     <div id="footer"></div>
     <div id="overlays">
-      <button class="ltds-btn ltds-btn--gradient ltds-btn--shape-circle" id="scrollToTop" style="display: none">
+      <button class="ltds-btn ltds-btn--gradient ltds-btn--shape-circle" id="scrollToTop" style="display: flex;">
         <i class="icon lt-icon-top-arrow icon-size-lg"></i>
       </button>
     </div>
@@ -39,7 +52,7 @@
       </div>
     </modal-dialog>
 
+    <!-- Script -->
+    <script type="module" src="/src/main.js"></script>
   </body>
-  <script type="module" src="/src/main.js"></script>
-  <!-- <script type="module" src="src/vendors/splide-slide.min.js"></script> -->
 </html>

@@ -1,6 +1,6 @@
 // import '@tarik-leviathan/ltds/dist/ltds.css';
 // import '@tarik-leviathan/ltds/styles/core';
-import '@tarik-leviathan/ltds/styles';
+// import '@tarik-leviathan/ltds/styles';
 
 import { CustomSelect } from './web-components/customSelect.js';
 import { ModalDialog } from './web-components/modalDialog.js';
@@ -14,7 +14,7 @@ import { LtdsMenuItem } from './web-components/menuItem.js';
 import UniversalRouter from 'universal-router';
 import { routeConfigurations } from './utils/routeConfiguration.js';
 import { loadPage } from './utils/routerUtils.js';
-import { changeTheme, initializeBaseStructure, initTooltips, modalService, scrollToTop, setupStickyNavbar } from './utils/uiUtils.js';
+import { applyPageGradient, changeTheme, initializeBaseStructure, initTooltips, modalService, scrollToTop, setupStickyNavbar } from './utils/uiUtils.js';
 
 // helpers
 const initPageUI = async (template) => {
@@ -24,6 +24,21 @@ const initPageUI = async (template) => {
   setupStickyNavbar();
   scrollToTop();
   changeTheme();
+  if(template === 'home') {
+    applyPageGradient({
+        haloSizeX: '150%',
+        haloShiftY: '-20%',
+        haloStrength: 0.9
+    });
+  } else {
+    applyPageGradient({
+        haloSizeY: '100%',
+        haloSizeX: '150%',
+        haloShiftY: '-20%',
+        haloStrength: 0.8,
+        haloColor: 'var(--color-primary-opacity-10)'
+    });
+  }
   // handleNavLinks(template);
 };
 

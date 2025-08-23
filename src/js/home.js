@@ -1,10 +1,12 @@
 import Splide from '@splidejs/splide';
 import '@splidejs/splide/css'; // optionnel si tu veux le CSS par défaut
 import { cards } from '../datas/cards-data.js';
+import { applyPageGradient } from '../utils/uiUtils.js';
 
 export default async function initHomePage(params) {
 
     console.log('🏠 Script home.js chargé avec params:', params);
+
 
     // Initialisation du carousel Splide
     const carousel = document.querySelector('.splide');
@@ -54,5 +56,7 @@ export default async function initHomePage(params) {
             }, 2000);
         });
     }
+
+
 
 }

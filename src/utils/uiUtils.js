@@ -136,3 +136,49 @@ export const changeTheme = () => {
     })
   })
 }
+
+
+/**
+ * Applique un halo/dégradé à l’élément cible (par défaut <body>)
+ * @param {Object} options - Options de personnalisation
+ * @param {string|HTMLElement} [options.target='body'] - Sélecteur ou élément
+ * @param {string} [options.haloSizeX='120%']   - Largeur du halo (ellipse)
+ * @param {string} [options.haloSizeY='100%']   - Hauteur du halo
+ * @param {number} [options.haloStrength=0.8]   - Intensité du halo (0–1)
+ * @param {string} [options.haloShiftY='-8%']   - Décalage vertical du halo
+ * @param {string} [options.haloColor='var(--color-primary-opacity-40)'] - Couleur du halo
+ */
+export function applyPageGradient({
+  target = 'body',
+  haloSizeX = '120%',
+  haloSizeY = '100%',
+  haloStrength = 0.8,
+  haloShiftY = '-8%',
+  haloColor = 'var(--color-primary-opacity-40)'
+} = {}) {
+  const el = typeof target === 'string' ? document.querySelector(target) : target;
+  if (!el) return;
+
+  // Applique les custom properties
+  el.style.setProperty('--halo-size-x', haloSizeX);
+  el.style.setProperty('--halo-size-y', haloSizeY);
+  el.style.setProperty('--halo-strength', haloStrength);
+  el.style.setProperty('--halo-shift-y', haloShiftY);
+  el.style.setProperty('--halo-color', haloColor);
+
+  // Applique le background complet (halo + gradient)
+  el.style.background = `
+    radial-gradient(
+      ellipse var(--halo-size-x) var(--halo-size-y) at 50% var(--halo-shift-y),
+      color-mix(in oklab, var(--halo-color), transparent 45%) 0%,
+      color-mix(in oklab, var(--halo-color), transparent 65%) 35%,
+      rgba(0,0,0, calc(0.35 * (1 - var(--halo-strength)))) 55%,
+      transparent 70%
+    ),
+    linear-gradient(
+      to bottom,
+      var(--surface-overlay) 0%,
+      var(--surface-page) 320px
+    )
+  `;
+}

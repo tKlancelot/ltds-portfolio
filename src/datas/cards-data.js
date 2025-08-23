@@ -45,7 +45,7 @@ export const cards = [
     title: "Dimensions",
     subtitle: "sizes",
     content: "Utilitaires pour contraindre largeur/hauteur et ratios.",
-    extraClass: "ltds-card--warning",
+    extraClass: "ltds-card--success",
     href: "/design-system/dimensions"
   },
   {
@@ -53,7 +53,7 @@ export const cards = [
     title: "Flexboxes",
     subtitle: "layout",
     content: "Alignements rapides, direction, gap et distribution des éléments.",
-    extraClass: "ltds-card--danger",
+    extraClass: "ltds-card--warning",
     href: "/design-system/flexboxes"
   },
   {
