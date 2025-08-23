@@ -1,0 +1,38 @@
+/* ltds-alert -> alert component */
+
+.ltds-alert {
+    --alert-bg: var(--brand-primary-opacity-10);
+    --alert-border:1px solid var(--color-border-primary-20);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-1);
+    padding: var(--size-2);
+    background-color: var(--alert-bg);
+    border: var(--alert-border);
+    border-radius: var(--radii-3);
+    .ltds-alert-title{
+        display: flex;
+        align-items: center;
+        gap: var(--size-1);
+    }
+}
+
+.ltds-alert--success {
+    --alert-bg: var(--color-success-opacity-10);
+    --alert-border:1px solid var(--color-success-opacity-10);
+}
+
+.ltds-alert--danger {
+    --alert-bg: var(--color-danger-opacity-10);
+    --alert-border:1px solid var(--color-danger-opacity-10);
+}
+
+.ltds-alert--warning {
+    --alert-bg: var(--color-warning-opacity-10);
+    --alert-border:1px solid var(--color-warning-opacity-10);
+}
+
+.ltds-alert--info {
+    --alert-bg: var(--color-info-opacity-10);
+    --alert-border:1px solid var(--color-info-opacity-10);
+}

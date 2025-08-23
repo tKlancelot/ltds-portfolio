@@ -105,6 +105,10 @@ h1,h2,h3{
         }
     }
 
+    .u-container{
+        font-size: var(--font-size-1);
+    }
+
 }
 
 #scrollToTop{

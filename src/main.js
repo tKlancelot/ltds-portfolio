@@ -10,6 +10,7 @@ import { LtdsCodeBlock } from './web-components/codeBlock.js';
 import { LtdsDivider } from './web-components/divider.js';
 import { PanelMenu } from './web-components/panelMenu.js';
 import { LtdsMenuItem } from './web-components/menuItem.js';
+import { LtdsAlert } from './web-components/alertComponent.js';
 
 import UniversalRouter from 'universal-router';
 import { routeConfigurations } from './utils/routeConfiguration.js';

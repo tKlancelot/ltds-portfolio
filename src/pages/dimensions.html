@@ -157,29 +157,30 @@
         object-fit: cover;
       }
       </ltds-code-block>
-      <p class="u-text-secondary u-fs-0">Ex : <code>&lt;figure class="u-aspect-ratio-16-9 u-aspect-cover"&gt;…&lt;/figure&gt;</code></p>
     </doc-section>
 
     <ltds-divider></ltds-divider>
 
     <!-- Containers -->
-    <doc-section title="Containers centrés (tokenisés)">
-      <p>Largeur maximale contrôlée par <code>--large-size-*</code>, centrée et paddée.</p>
+    <doc-section title="Containers (tokenisés)">
+      <p>Largeur maximale contrôlée par <code>--large-size-*</code></p>
       <ltds-code-block language="css" dedent>
-      .u-container    { width: min(100%, var(--large-size-10)); margin-inline: auto; padding-inline: var(--size-4); }
-      .u-container-sm { width: min(100%, var(--large-size-5));  margin-inline: auto; padding-inline: var(--size-4); }
-      .u-container-md { width: min(100%, var(--large-size-6));  margin-inline: auto; padding-inline: var(--size-4); }
-      .u-container-lg { width: min(100%, var(--large-size-8));  margin-inline: auto; padding-inline: var(--size-4); }
-      .u-container-xl { width: min(100%, var(--large-size-9));  margin-inline: auto; padding-inline: var(--size-4); }
-      .u-container-2xl{ width: min(100%, var(--large-size-10)); margin-inline: auto; padding-inline: var(--size-4); }
+      .u-container    { width: min(100%, var(--large-size-10)); padding: var(--size-3); }
+      .u-container-sm { width: min(100%, var(--large-size-5));  padding: var(--size-3); }
+      .u-container-md { width: min(100%, var(--large-size-6));  padding: var(--size-3); }
+      .u-container-lg { width: min(100%, var(--large-size-8));  padding: var(--size-3); }
+      .u-container-xl { width: min(100%, var(--large-size-9));  padding: var(--size-3); }
+      .u-container-2xl{ width: min(100%, var(--large-size-10)); padding: var(--size-3); }
 
       /* Modifiers */
-      .u-container--no-pad { padding-inline: 0; }
-      .u-container--pad-sm { padding-inline: var(--size-2); }
-      .u-container--pad-lg { padding-inline: var(--size-6); }
+      .u-container--no-pad { padding: 0; }
+      .u-container--pad-sm { padding: var(--size-1); }
+      .u-container--pad-lg { padding: var(--size-4); }
       .u-container--full   { width: 100%; }
       </ltds-code-block>
-      <p class="u-text-secondary u-fs-0">Ex : <code>class="u-container-md u-container--pad-lg"</code>.</p>
+      <div class="u-container--danger u-container-md u-container--pad-lg">
+        .u-container-md .u-container--pad-lg
+      </div>
     </doc-section>
 
   </div>
