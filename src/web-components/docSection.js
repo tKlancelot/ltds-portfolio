@@ -6,7 +6,7 @@ export class DocSection extends HTMLElement {
 
     if (title) {
       const h2 = document.createElement("h2");
-      h2.className = "doc-section-title u-smob-fs-3";
+      h2.className = "doc-section-title u-mob-fs-3";
       h2.textContent = title;
       wrapper.appendChild(h2);
     }
