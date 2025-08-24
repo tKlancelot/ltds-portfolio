@@ -1,9 +1,10 @@
 #page-title{
     /* #6A028C */
-    -webkit-text-stroke-width: 1px;
+    /* -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--brand-primary-active);
     letter-spacing:1px; 
-    color: transparent;
+    color: transparent; */
+    line-height: normal;
 }
 
 

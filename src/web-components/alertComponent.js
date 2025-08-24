@@ -37,11 +37,15 @@ export class LtdsAlert extends HTMLElement {
     // Squelette HTML
     this.innerHTML = `
       <div class="ltds-alert ltds-alert--${scheme}" role="${role}">
-        <div class="ltds-alert-title">
+        <div class="ltds-alert-icon">
           <i class="icon lt-icon-${icon} icon-size-lg" aria-hidden="true" style="color: var(--color-${scheme})"></i>
-          <span class="ltds-alert-heading">${title}</span>
         </div>
-        <div class="ltds-alert-content"></div>
+        <div class="ltds-alert-main">
+          <div class="ltds-alert-title">
+            <span class="ltds-alert-heading">${title}</span>
+          </div>
+          <div class="ltds-alert-content"></div>
+        </div>
       </div>
     `;
 

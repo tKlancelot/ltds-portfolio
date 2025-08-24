@@ -8,3 +8,10 @@ h1,h2,h3{
     font-family: var(--font-family-accent);
     font-weight: var(--font-weight-semibold);
 }
+
+blockquote{
+    border-left: 2px solid var(--color-primary-opacity-40);
+    padding-left: var(--size-6);
+    font-style: italic;
+    font-weight: 300;
+}

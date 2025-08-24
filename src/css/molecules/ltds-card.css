@@ -177,8 +177,13 @@ ltds-card .ltds-card-footer {
         grid-column: span 12;
     }
 
+    .ltds-card{
+        --card-padding: var(--size-3);
+    }
+
     .ltds-card--lg{
         --card-padding: var(--size-4);
     }
+
 
 }

@@ -2,14 +2,28 @@
 
 .ltds-alert {
     --alert-bg: var(--brand-primary-opacity-10);
-    --alert-border:1px solid var(--color-border-primary-20);
+    --alert-border-color:var(--color-border-primary-20);
+    --alert-border:1px solid var(--alert-border-color);
+    --alert-left-border-color:var(--color-border-primary);
     display: flex;
-    flex-direction: column;
-    gap: var(--size-1);
-    padding: var(--size-2);
+    flex-direction: row;
+    gap: var(--size-2);
+    padding-block: var(--size-2);
+    padding-inline: var(--size-3) var(--size-2);
     background-color: var(--alert-bg);
     border: var(--alert-border);
-    border-radius: var(--radii-3);
+    /* border-radius: var(--radii-3); */
+    position: relative;
+    overflow: hidden;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background-color: var(--alert-left-border-color);
+    }
     .ltds-alert-title{
         display: flex;
         align-items: center;
@@ -17,24 +31,43 @@
         font-weight: var(--font-weight-semibold);
         font-family: var(--font-family-accent);
     }
+    .ltds-alert-icon{
+        padding-top: 1px;
+    }
 }
 
 .ltds-alert--success {
     --alert-bg: var(--color-success-opacity-10);
-    --alert-border:1px solid var(--color-success-opacity-10);
+    --alert-border-color:var(--color-success-opacity-20);
+    --alert-left-border-color:var(--color-success);
 }
 
 .ltds-alert--danger {
     --alert-bg: var(--color-danger-opacity-10);
-    --alert-border:1px solid var(--color-danger-opacity-10);
+    --alert-border-color:var(--color-danger-opacity-20);
+    --alert-left-border-color:var(--color-danger);
 }
 
 .ltds-alert--warning {
     --alert-bg: var(--color-warning-opacity-10);
-    --alert-border:1px solid var(--color-warning-opacity-10);
+    --alert-border-color:var(--color-warning-opacity-20);
+    --alert-left-border-color:var(--color-warning);
 }
 
 .ltds-alert--info {
     --alert-bg: var(--color-info-opacity-10);
-    --alert-border:1px solid var(--color-info-opacity-10);
+    --alert-border-color:var(--color-info-opacity-20);
+    --alert-left-border-color:var(--color-info);
+}
+
+@media screen and (max-width: 768px) {
+
+    .ltds-alert{
+        gap: var(--size-1);
+    }
+    
+    .ltds-alert-content{
+        font-size: var(--font-size-1);
+    }
+
 }

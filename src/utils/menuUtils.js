@@ -15,7 +15,7 @@ export function createMobileMenu() {
     let menu = document.getElementById('mobile-menu');
     let menuItems = '';
     cards.forEach(card => {
-        menuItems += `<ltds-menu-item is-btn-like href="design-system/${card.slug}" content="${card.title}"></ltds-menu-item>`;
+        menuItems += `<ltds-menu-item is-btn-like href="/design-system/${card.slug}" content="${card.title}"></ltds-menu-item>`;
     });
     menu.innerHTML = menuItems;
 }

@@ -19,8 +19,8 @@
 
 
 .reveal.--delay-1{
-    --delay: 120ms;
+    --delay: 160ms;
 }
 .reveal.--delay-2{
-    --delay: 240ms;
+    --delay: 320ms;
 }
