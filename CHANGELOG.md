@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/tKlancelot/ltds-portfolio/compare/v0.2.1...v0.2.2) (2025-08-24)
+
+
+### Features
+
+* remove overflow hidden on #app and testing alert danger icon ([a6659e5](https://github.com/tKlancelot/ltds-portfolio/commit/a6659e5ee4e03d0e3b833857d0aa0ca547649b69))
+
 ### [0.2.1](https://github.com/tKlancelot/ltds-portfolio/compare/v0.2.0...v0.2.1) (2025-08-24)
 
 ### [0.1.5](https://github.com/tKlancelot/ltds-portfolio/compare/v0.1.4...v0.1.5) (2025-08-23)
