@@ -1,7 +1,7 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.woff?f8ecbf2d9e31436216fc75537a50dc74") format("woff"),
-url("./icons.woff2?f8ecbf2d9e31436216fc75537a50dc74") format("woff2");
+    src: url("./icons.woff?f4e8173949035b00151716531e26254e") format("woff"),
+url("./icons.woff2?f4e8173949035b00151716531e26254e") format("woff2");
 }
 
 i[class^="lt-icon-"]:before, i[class*=" lt-icon-"]:before {
@@ -45,39 +45,42 @@ i[class^="lt-icon-"]:before, i[class*=" lt-icon-"]:before {
 .lt-icon-expertise:before {
     content: "\f10a";
 }
-.lt-icon-download-test:before {
+.lt-icon-error:before {
     content: "\f10b";
 }
-.lt-icon-door-logout:before {
+.lt-icon-download-test:before {
     content: "\f10c";
 }
-.lt-icon-copy:before {
+.lt-icon-door-logout:before {
     content: "\f10d";
 }
-.lt-icon-close:before {
+.lt-icon-copy:before {
     content: "\f10e";
 }
-.lt-icon-check:before {
+.lt-icon-close:before {
     content: "\f10f";
 }
-.lt-icon-caret-down:before {
+.lt-icon-check:before {
     content: "\f110";
 }
-.lt-icon-burger:before {
+.lt-icon-caret-down:before {
     content: "\f111";
 }
-.lt-icon-breakpoints:before {
+.lt-icon-burger:before {
     content: "\f112";
 }
-.lt-icon-base:before {
+.lt-icon-breakpoints:before {
     content: "\f113";
 }
-.lt-icon-back-arrow:before {
+.lt-icon-base:before {
     content: "\f114";
 }
-.lt-icon-atoms:before {
+.lt-icon-back-arrow:before {
     content: "\f115";
 }
-.lt-icon-about:before {
+.lt-icon-atoms:before {
     content: "\f116";
+}
+.lt-icon-about:before {
+    content: "\f117";
 }

@@ -97,7 +97,7 @@ _render() {
 
   modalContent.innerHTML = `
     <div class="modal-header">
-      <h3 class="modal-title lt-stack lt-stack--center">
+      <h3 class="modal-title lt-stack lt-stack--center lt-stack--gap-2">
         ${titleIcon ? `<i class="${titleIcon} icon icon-size-lg"></i>` : ""} 
         ${title}
       </h3>

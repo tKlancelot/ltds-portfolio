@@ -15,6 +15,13 @@
 }
 
 @font-face {
+    font-family: "Oswald";
+    src: url("/fonts/Oswald/static/Oswald-SemiBold.ttf") format("truetype");
+    font-display: swap;
+    font-weight: 600;
+}
+
+@font-face {
     font-family: "Mona Sans";
     src: url("/fonts/Mona_Sans/static/MonaSans-Bold.ttf") format("truetype");
     font-display: swap;
@@ -23,9 +30,9 @@
 
 /* DEBUG OVERWRITE  */
 
-/* :root{
-    --font-family-accent: "Mona Sans", var(--font-family-base);
-} */
+:root{
+    --font-family-accent: "Oswald", var(--font-family-base);
+}
 
 
 
@@ -48,7 +55,8 @@ h1,h2,h3{
     padding: var(--size-2);
 }
 
-.spacings #app{
+/* .spacings  */
+#app{
     overflow: hidden;
 }
 

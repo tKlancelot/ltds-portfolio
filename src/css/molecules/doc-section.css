@@ -3,9 +3,6 @@
 }
 
 .doc-section-title {
-  font-family: var(--font-family-accent, sans-serif);
-  font-size: var(--font-size-4, 1.25rem);
-  font-weight: 500;
   margin-bottom: var(--size-3);
   color: var(--color-text-primary);
 }
