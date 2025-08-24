@@ -11,7 +11,8 @@
 #menu-nav.scrolled {
     top: 0;
     background: var(--surface-page);
-    backdrop-filter: blur(6px);
+    /* background: var(--color-ui-white-opacity-10); */
+    /* backdrop-filter: blur(2px); */
     z-index: 1000;        /* au-dessus du contenu */
     /* border-bottom: 1px solid var(--color-border); */
 
@@ -32,4 +33,13 @@
 .navbar a {
     text-underline-offset: 8px;
     transition: var(--transition-ease);
+}
+
+@media screen and (max-width: 768px) {
+
+    #page-logotype {
+        width: 40px;
+        height: 40px;
+    }
+
 }
