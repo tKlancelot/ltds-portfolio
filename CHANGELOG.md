@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.4](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.3...v0.3.4) (2025-08-24)
+
+
+### Bug Fixes
+
+* broken lineheights and improve frame get started ui ([5c25b0e](https://github.com/tKlancelot/ltds-portfolio/commit/5c25b0e2f83c5ac6e1ca0ee1a8faf8772b0f0a49))
+
 ### [0.3.3](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.2...v0.3.3) (2025-08-24)
 
 
