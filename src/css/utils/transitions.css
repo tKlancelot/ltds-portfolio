@@ -1,6 +1,6 @@
 /* état initial */
 .reveal {
-  --delay: 0ms;
+  --delay: 96ms;
   --dur: 800ms;
   --easing: cubic-bezier(.22,.61,.36,1);
   opacity: 0;
@@ -19,8 +19,8 @@
 
 
 .reveal.--delay-1{
-    --delay: 160ms;
+    --delay: 192ms;
 }
 .reveal.--delay-2{
-    --delay: 320ms;
+    --delay: 288ms;
 }

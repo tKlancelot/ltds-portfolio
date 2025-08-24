@@ -33,6 +33,20 @@
     }
 }
 
+.lt-page .lt-frame--fantasy {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    url(/assets/textures/fabric-dark.png),
+    linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+    radial-gradient(circle at 20% 20%, var(--brand-primary-opacity-20), transparent 70%),
+    radial-gradient(circle at 80% 90%, var(--color-info-opacity-10), transparent 60%),
+    linear-gradient(180deg, var(--brand-primary-opacity-20) 0%, var(--brand-primary-opacity-10) 100%);
+  background-blend-mode: overlay, multiply, normal;
+  opacity: 0.98; /* léger voile */
+}
+
 @media screen and (max-width: 768px) {
 
     .lt-page{

@@ -15,33 +15,29 @@ import { LtdsAlert } from './web-components/alertComponent.js';
 import UniversalRouter from 'universal-router';
 import { routeConfigurations } from './utils/routeConfiguration.js';
 import { loadPage } from './utils/routerUtils.js';
-import { applyPageGradient, changeTheme, initializeBaseStructure, initReveals, initTooltips, modalService, scrollToTop, setupStickyNavbar } from './utils/uiUtils.js';
+import * as UI from './utils/uiUtils.js';
+
 
 // helpers
+const defaultUI = [
+  UI.initializeBaseStructure,
+  UI.modalService,
+  UI.initTooltips,
+  UI.setupStickyNavbar,
+  UI.scrollToTop,
+  UI.changeTheme,
+  () => UI.initReveals({ resetOnExit: true }),
+];
+
 const initPageUI = async (template) => {
-  await initializeBaseStructure(template);
-  modalService();
-  initTooltips();
-  setupStickyNavbar();
-  scrollToTop();
-  changeTheme();
-  initReveals({resetOnExit:true});
-  if(template === 'home') {
-    applyPageGradient({
-        haloSizeX: '150%',
-        haloShiftY: '-20%',
-        haloStrength: 0.9
-    });
-  } else {
-    applyPageGradient({
-        haloSizeY: '100%',
-        haloSizeX: '150%',
-        haloShiftY: '-20%',
-        haloStrength: 0.8,
-        haloColor: 'var(--color-primary-opacity-10)'
-    });
-  }
-  // handleNavLinks(template);
+  for (let fn of defaultUI) await fn(template);
+
+  // gradient spécifique
+  UI.applyPageGradient(
+    template === 'home'
+      ? { haloSizeX: '150%', haloShiftY: '-20%', haloStrength: 0.9 }
+      : { haloSizeY: '100%', haloSizeX: '150%', haloShiftY: '-20%', haloStrength: 0.8, haloColor: 'var(--color-primary-opacity-10)' }
+  );
 };
 
 function mapRoutes(configs) {
