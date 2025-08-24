@@ -1,5 +1,5 @@
 .table{
-    --table-head-bg-color: var(--color-primary);
+    --table-head-bg-color: var(--brand-primary-opacity-40);
     --table-collapse: collapse;
     width: 100%;
     border-collapse: var(--table-collapse);
@@ -9,11 +9,14 @@
     background-color: var(--table-head-bg-color);
 }
 
+.table thead th{
+    font-weight: unset;
+}
+
 .table th,
 .table td{
-    font-weight: unset;
     padding: var(--size-2);
-    border-bottom: 1px solid var(--color-primary-opacity-20);  
+    border-bottom: 1px solid var(--color-border-primary-20);  
 }
 
 .table td .u-text-clamp *{

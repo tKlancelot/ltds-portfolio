@@ -101,6 +101,7 @@
         /* sémantiques (remappées plus bas pour suivre les schemes) */
         --color-border-primary:    var(--brand-primary);
         --color-border-primary-20: var(--brand-primary-opacity-20);
+        --color-border-primary-40: var(--brand-primary-opacity-40);
       }
       </ltds-code-block>
     </doc-section>
@@ -122,21 +123,9 @@
         --brand-primary-opacity-40: rgba(14, 120, 219, 0.40);
 
         /* Gradients brand (source) */
-        --brand-gradient-surface-primary: linear-gradient(
-          to bottom,
-          oklch(from var(--brand-primary) calc(l * 1.10) c h),
-          var(--brand-primary)
-        );
-        --brand-gradient-surface-overlay: linear-gradient(
-          to bottom,
-          oklch(from var(--brand-primary) calc(l * 0.88) c h / 0.95),
-          oklch(from var(--brand-primary) calc(l * 0.42) c h / 0.98)
-        );
-        --brand-gradient-text-primary: linear-gradient(
-          135deg,
-          var(--brand-primary-active),
-          var(--brand-primary)
-        );
+        --brand-gradient-surface-primary: linear-gradient(to bottom,oklch(from var(--brand-primary) calc(l * 1.10) c h),var(--brand-primary));
+        --brand-gradient-surface-overlay: linear-gradient(to bottom,oklch(from var(--brand-primary) calc(l * 0.88) c h / 0.95),oklch(from var(--brand-primary) calc(l * 0.42) c h / 0.98));
+        --brand-gradient-text-primary: linear-gradient(135deg,var(--brand-primary-active),var(--brand-primary));
       }
       </ltds-code-block>
     </doc-section>
@@ -161,6 +150,7 @@
         /* Borders (theme-aware) */
         --color-border-primary:     var(--brand-primary);
         --color-border-primary-20:  var(--brand-primary-opacity-20);
+        --color-border-primary-40:  var(--brand-primary-opacity-40);
 
         /* Surfaces (alias) */
         --surface-page:      var(--color-background);
@@ -177,7 +167,7 @@
         --gradient-secondary: linear-gradient(to bottom, var(--color-background), var(--color-container));
       }
       </ltds-code-block>
-      <ltds-alert scheme="info" title="Tip" content="Branchez vos composants sur --surface-* (et non des couleurs en dur)."></ltds-alert>
+      <ltds-alert scheme="info" content="Branchez vos composants sur --surface-* (et non des couleurs en dur)."></ltds-alert>
     </doc-section>
 
     <ltds-divider></ltds-divider>
@@ -196,22 +186,9 @@
         --brand-primary-opacity-20:    rgba(136, 91, 241, 0.2);
         --brand-primary-opacity-40:    rgba(136, 91, 241, 0.4);
 
-        --brand-gradient-surface-primary: linear-gradient(
-          to bottom,
-          oklch(from var(--brand-primary) calc(l * 1.10) c h),
-          var(--brand-primary)
-        );
-        --brand-gradient-surface-overlay: linear-gradient(
-          to bottom,
-          oklch(from var(--brand-primary) calc(l * 0.88) c h / 0.95),
-          oklch(from var(--brand-primary) calc(l * 0.42) c h / 0.98)
-        );
-        --brand-gradient-text-primary: linear-gradient(
-          120deg,
-          var(--brand-primary-active),
-          var(--brand-primary),
-          var(--brand-primary)
-        );
+        --brand-gradient-surface-primary: linear-gradient(to bottom,oklch(from var(--brand-primary) calc(l * 1.10) c h),var(--brand-primary));
+        --brand-gradient-surface-overlay: linear-gradient(to bottom,oklch(from var(--brand-primary) calc(l * 0.88) c h / 0.95),oklch(from var(--brand-primary) calc(l * 0.42) c h / 0.98));
+        --brand-gradient-text-primary: linear-gradient(120deg,var(--brand-primary-active),var(--brand-primary),var(--brand-primary));
 
         /* Fonds (violet night) */
         --color-background: #0f0c1b;
@@ -229,22 +206,9 @@
         --brand-primary-opacity-20:    rgba(0, 186, 164, 0.20);
         --brand-primary-opacity-40:    rgba(0, 186, 164, 0.40);
 
-        --brand-gradient-surface-primary: linear-gradient(
-          to bottom,
-          oklch(from var(--brand-primary) calc(l * 1.10) c h),
-          var(--brand-primary)
-        );
-        --brand-gradient-surface-overlay: linear-gradient(
-          to bottom,
-          oklch(from var(--brand-primary) calc(l * 0.88) c h / 0.95),
-          oklch(from var(--brand-primary) calc(l * 0.42) c h / 0.98)
-        );
-        --brand-gradient-text-primary: linear-gradient(
-          120deg,
-          var(--brand-primary-active),
-          var(--brand-primary),
-          var(--brand-primary-hover)
-        );
+        --brand-gradient-surface-primary: linear-gradient(to bottom,oklch(from var(--brand-primary) calc(l * 1.10) c h),var(--brand-primary));
+        --brand-gradient-surface-overlay: linear-gradient(to bottom,oklch(from var(--brand-primary) calc(l * 0.88) c h / 0.95),oklch(from var(--brand-primary) calc(l * 0.42) c h / 0.98));
+        --brand-gradient-text-primary: linear-gradient(120deg,var(--brand-primary-active),var(--brand-primary),var(--brand-primary-hover));
 
         /* Fonds teal très sombres */
         --color-background: #051816;
@@ -252,7 +216,7 @@
         --color-overlay:    #10312d;
       }
       </ltds-code-block>
-      <ltds-alert scheme="info" title="Tip" content='Changer de thème : <body data-scheme="2">'></ltds-alert>
+      <ltds-alert scheme="info" content='Changer de thème : <body data-scheme="2">'></ltds-alert>
     </doc-section>
 
     <ltds-divider></ltds-divider>

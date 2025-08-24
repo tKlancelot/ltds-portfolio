@@ -6,7 +6,7 @@
 
     <ltds-divider></ltds-divider>
     <doc-section title="Import couleurs">
-      <p>Les couleurs (brand, UI, sémantiques, borders, gradients) sont déclarées dans un fichier séparé pour faciliter les thèmes.</p>
+      <p>Dans le code usine, les couleurs (brand, UI, sémantiques, borders, gradients) sont déclarées dans un fichier séparé pour faciliter les thèmes.</p>
       <ltds-code-block language="css" dedent>
       @import './colors.css';
       </ltds-code-block>
@@ -15,18 +15,21 @@
     <ltds-divider></ltds-divider>
 
     <doc-section title="Typographie : familles & graisses">
-      <p>Familles et échelle de poids cohérente. Les projets peuvent surcharger <code>--font-family-*</code> côté app.</p>
+      <p>Familles et échelle de poids cohérente. Les projets peuvent surcharger <code>--font-family-*</code> et <code>--font-weight-*</code> côté app.</p>
       <ltds-code-block language="css" dedent>
-      :root {
-        --font-family-base: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
-        --font-family-accent: "Work Sans", var(--font-family-base);
-        --font-family-alt: "Mona Sans", var(--font-family-base);
-
-        --font-weight-regular: 400;
-        --font-weight-medium:  500;
-        --font-weight-semibold:600;
-        --font-weight-bold:    700;
-      }
+        :root {
+            --font-family-base: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+            --font-family-accent: "Work Sans", var(--font-family-base);
+            --font-family-alt: "Mona Sans", var(--font-family-base);
+        }
+      </ltds-code-block>
+      <ltds-code-block language="css" dedent>
+        :root {
+            --font-weight-regular: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+        }
       </ltds-code-block>
     </doc-section>
 
@@ -39,21 +42,21 @@
         Les tokens <code>--font-size-*</code> suivent cette progression mathématique.
       </p>
       <ltds-code-block language="css" dedent>
-      :root {
-        --font-size-0: 0.75rem;  /* 12px  — Caption */
-        --font-size-1: 0.875rem; /* 14px  — Small text */
-        --font-size-2: 1rem;     /* 16px  — Body */
-        --font-size-3: 1.25rem;  /* 20px  — H6 / subtitle */
-        --font-size-4: 1.563rem; /* 25px  — H5 */
-        --font-size-5: 1.953rem; /* 31px  — H4 */
-        --font-size-6: 2.441rem; /* 39px  — H3 */
-        --font-size-7: 3.052rem; /* 49px  — H2 */
-        --font-size-8: 3.815rem; /* 61px  — H1 */
-        --font-size-9: 4.768rem; /* 76px  — Display */
-        --font-size-10: 5.96rem; /* 95px  — Hero */
-      }
+        :root {
+            --font-size-0: 0.75rem;  /* 12px  — Caption */
+            --font-size-1: 0.875rem; /* 14px  — Small text */
+            --font-size-2: 1rem;     /* 16px  — Body */
+            --font-size-3: 1.25rem;  /* 20px  — H6 / subtitle */
+            --font-size-4: 1.563rem; /* 25px  — H5 */
+            --font-size-5: 1.953rem; /* 31px  — H4 */
+            --font-size-6: 2.441rem; /* 39px  — H3 */
+            --font-size-7: 3.052rem; /* 49px  — H2 */
+            --font-size-8: 3.815rem; /* 61px  — H1 */
+            --font-size-9: 4.768rem; /* 76px  — Display */
+            --font-size-10: 5.96rem; /* 95px  — Hero */
+        }
       </ltds-code-block>
-      <p class="u-text-secondary u-fs-0">Utilitaires : <code>.u-fs-*</code> + variantes responsives.</p>
+      <p class="u-text-secondary">Utilitaires : <code>.u-fs-*</code> + variantes responsives.</p>
     </doc-section>
 
     <ltds-divider></ltds-divider>
@@ -65,21 +68,25 @@
         Les tokens <code>--tfs-*</code> sont fournis en parallèle.
       </p>
       <ltds-code-block language="css" dedent>
-      :root {
-        --tfs-0: 0.75rem;  /* 12px */
-        --tfs-1: 0.875rem; /* 14px */
-        --tfs-2: 1rem;     /* 16px */
-        --tfs-3: 1.125rem; /* 18px */
-        --tfs-4: 1.5rem;   /* 24px */
-        --tfs-5: 2rem;     /* 32px */
-        --tfs-6: 2.5rem;   /* 40px */
-        --tfs-7: 3rem;     /* 48px */
-        --tfs-8: 4rem;     /* 64px */
-        --tfs-9: 5rem;     /* 80px */
-        --tfs-10: 6rem;    /* 96px */
-      }
+        :root {
+            --fs-0: 0.75rem;  /* 12px */
+            --fs-1: 0.875rem; /* 14px */
+            --fs-2: 1rem;     /* 16px */
+            --fs-3: 1.125rem; /* 18px */
+            --fs-4: 1.5rem;   /* 24px */
+            --fs-5: 2rem;     /* 32px */
+            --fs-6: 2.5rem;   /* 40px */
+            --fs-7: 3rem;     /* 48px */
+            --fs-8: 4rem;     /* 64px */
+            --fs-9: 5rem;     /* 80px */
+            --fs-10: 6rem;    /* 96px */
+        }
       </ltds-code-block>
-      <p class="u-text-secondary u-fs-0">Utilitaires : <code>.u-fs-*</code> pointent désormais sur <code>--tfs-*</code> (fallback sur <code>--font-size-*</code>).</p>
+        <p class="u-text-secondary">
+            Utilitaires : <code>.u-fs-*</code> pointent vers <code>--tfs-*</code>.
+            Par défaut <code>--tfs-*</code> remappe <code>--fs-*</code>;
+            avec <code>[data-type-scale="mt"]</code>, <code>--tfs-*</code> remappe <code>--font-size-*</code>.
+        </p>
     </doc-section>
 
     <ltds-divider></ltds-divider>
@@ -90,26 +97,27 @@
       <table class="u-w-full u-text-left table u-my-4">
         <thead>
           <tr>
-            <th>Token</th>
+            <th class="u-text-center" style="width: 40px;">Token</th>
             <th>Modular Scale (<code>--font-size-*</code>)</th>
-            <th>Simple Scale (<code>--tfs-*</code>)</th>
+            <th>Simple Scale (<code>--fs-*</code>)</th>
+            <th>Remapped token</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>0</td><td>0.75rem (12px)</td><td>0.75rem (12px)</td></tr>
-          <tr><td>1</td><td>0.875rem (14px)</td><td>0.875rem (14px)</td></tr>
-          <tr><td>2</td><td>1rem (16px)</td><td>1rem (16px)</td></tr>
-          <tr><td>3</td><td>1.25rem (20px)</td><td>1.125rem (18px)</td></tr>
-          <tr><td>4</td><td>1.563rem (25px)</td><td>1.5rem (24px)</td></tr>
-          <tr><td>5</td><td>1.953rem (31px)</td><td>2rem (32px)</td></tr>
-          <tr><td>6</td><td>2.441rem (39px)</td><td>2.5rem (40px)</td></tr>
-          <tr><td>7</td><td>3.052rem (49px)</td><td>3rem (48px)</td></tr>
-          <tr><td>8</td><td>3.815rem (61px)</td><td>4rem (64px)</td></tr>
-          <tr><td>9</td><td>4.768rem (76px)</td><td>5rem (80px)</td></tr>
-          <tr><td>10</td><td>5.96rem (95px)</td><td>6rem (96px)</td></tr>
+          <tr><td class="u-text-center">0</td><td>0.75rem (12px)</td><td>0.75rem (12px)</td><td>--tfs-0</td></tr>
+          <tr><td class="u-text-center">1</td><td>0.875rem (14px)</td><td>0.875rem (14px)</td><td>--tfs-1</td></tr>
+          <tr><td class="u-text-center">2</td><td>1rem (16px)</td><td>1rem (16px)</td><td>--tfs-2</td></tr>
+          <tr><td class="u-text-center">3</td><td>1.25rem (20px)</td><td>1.125rem (18px)</td><td>--tfs-3</td></tr>
+          <tr><td class="u-text-center">4</td><td>1.563rem (25px)</td><td>1.5rem (24px)</td><td>--tfs-4</td></tr>
+          <tr><td class="u-text-center">5</td><td>1.953rem (31px)</td><td>2rem (32px)</td><td>--tfs-5</td></tr>
+          <tr><td class="u-text-center">6</td><td>2.441rem (39px)</td><td>2.5rem (40px)</td><td>--tfs-6</td></tr>
+          <tr><td class="u-text-center">7</td><td>3.052rem (49px)</td><td>3rem (48px)</td><td>--tfs-7</td></tr>
+          <tr><td class="u-text-center">8</td><td>3.815rem (61px)</td><td>4rem (64px)</td><td>--tfs-8</td></tr>
+          <tr><td class="u-text-center">9</td><td>4.768rem (76px)</td><td>5rem (80px)</td><td>--tfs-9</td></tr>
+          <tr><td class="u-text-center">10</td><td>5.96rem (95px)</td><td>6rem (96px)</td><td>--tfs-10</td></tr>
         </tbody>
       </table>
-      <ltds-alert scheme="info" title="Tip" content="Utilisez la Modular Scale pour un rendu typographique harmonieux, et la Simple Scale pour une lisibilité et une adoption rapide."></ltds-alert>
+      <ltds-alert scheme="info" content="Utilisez la Modular Scale pour un rendu typographique harmonieux, et la Simple Scale pour une lisibilité et une adoption rapide."></ltds-alert>
     </doc-section>
 
     <ltds-divider></ltds-divider>
@@ -118,31 +126,34 @@
     <doc-section title="Échelles de tailles (espaces unitaires)">
       <p>Échelle compacte pour marges/paddings, gaps et composants.</p>
       <ltds-code-block language="css" dedent>
-      :root {
-        --size-0: 0px;
-        --size-1: 4px;
-        --size-2: 8px;
-        --size-3: 12px;
-        --size-4: 16px;
-        --size-5: 20px;
-        --size-6: 24px;
-        --size-7: 32px;
-        --size-8: 40px;
-        --size-9: 48px;
-        --size-10: 64px;
-
-        /* alias gap */
-        --gap-1: var(--size-1);
-        --gap-2: var(--size-2);
-        --gap-3: var(--size-3);
-        --gap-4: var(--size-4);
-        --gap-5: var(--size-5);
-        --gap-6: var(--size-6);
-        --gap-7: var(--size-7);
-        --gap-8: var(--size-8);
-        --gap-9: var(--size-9);
-        --gap-10: var(--size-10);
-      }
+        :root {
+            --size-0: 0px;
+            --size-1: 4px;
+            --size-2: 8px;
+            --size-3: 12px;
+            --size-4: 16px;
+            --size-5: 20px;
+            --size-6: 24px;
+            --size-7: 32px;
+            --size-8: 40px;
+            --size-9: 48px;
+            --size-10: 64px;
+        }
+      </ltds-code-block>
+      <p>Alias gap</p>
+      <ltds-code-block language="css" dedent>
+        :root{
+            --gap-1: var(--size-1);
+            --gap-2: var(--size-2);
+            --gap-3: var(--size-3);
+            --gap-4: var(--size-4);
+            --gap-5: var(--size-5);
+            --gap-6: var(--size-6);
+            --gap-7: var(--size-7);
+            --gap-8: var(--size-8);
+            --gap-9: var(--size-9);
+            --gap-10: var(--size-10);
+        }
       </ltds-code-block>
     </doc-section>
 
@@ -161,10 +172,6 @@
         --radii-6: 24px;      /* pill / gros bouton */
         --radii-round: 50%;   /* cercle */
         }
-        </ltds-code-block>
-        <ltds-code-block language="css" dedent>
-        .btn { border-radius: var(--radii-3); }
-        .avatar { border-radius: var(--radii-round); }
         </ltds-code-block>
     </doc-section>
 
@@ -235,7 +242,7 @@
             }
         </ltds-code-block>
 
-        <ltds-alert scheme="info" title="Tip" content="En pratique : laissez la basic scale pour les paragraphes et textes longs, et activez <code>data-type-scale=&quot;mt&quot;</code> pour vos pages vitrines ou headers typographiques."></ltds-alert>
+        <ltds-alert scheme="info" content="En pratique : laissez la basic scale pour les paragraphes et textes longs, et activez data-type-scale=&quot;mt&quot; pour vos pages vitrines ou headers typographiques."></ltds-alert>
     </doc-section>
 
     <ltds-divider></ltds-divider>
@@ -244,15 +251,10 @@
         <p>Tokens utilitaires pour obtenir une cohérence d’élévation et d’animations.</p>
         <ltds-code-block language="css" dedent>
         :root{
-        --shadow-1: 0 2px 4px rgba(0,0,0,0.1);
-        --shadow-2: 0 4px 8px rgba(0,0,0,0.2);
-
-        --transition-ease: 0.32s ease-in-out;
+            --shadow-1: 0 2px 4px rgba(0,0,0,0.1);
+            --shadow-2: 0 4px 8px rgba(0,0,0,0.2);
+            --transition-ease: 0.32s ease-in-out;
         }
-        </ltds-code-block>
-        <ltds-code-block language="css" dedent>
-        .card { box-shadow: var(--shadow-1); transition: transform var(--transition-ease); }
-        .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); }
         </ltds-code-block>
     </doc-section>
 
