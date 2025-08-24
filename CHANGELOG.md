@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.8](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.7...v0.3.8) (2025-08-24)
+
+
+### Bug Fixes
+
+* color-border-primary-40 + button gradient hover ([3d48b4e](https://github.com/tKlancelot/ltds-portfolio/commit/3d48b4e36138914b5599d67592fafb844f08225d))
+
 ### [0.3.7](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.6...v0.3.7) (2025-08-24)
 
 
