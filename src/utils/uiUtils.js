@@ -6,6 +6,8 @@ import 'tippy.js/dist/tippy.css';
 import navbarTpl from '../parts/navbar.html?raw';
 import footerTpl from '../parts/footer.html?raw';
 import { createDesktopMenu, createMobileMenu } from './menuUtils';
+import { portfolioVersion, ldsVersion } from './version';
+
 
 export const initializeBaseStructure = async (template) => {
   const app = document.getElementById('app');
@@ -206,4 +208,16 @@ export function initReveals({
   }, { root, rootMargin, threshold });
 
   els.forEach(el => io.observe(el));
+}
+
+export function showVersions() {
+  // Emplacements dans ton HTML
+  const elDs  = document.querySelector('[data-version="ltds"]');
+  const elApp = document.querySelector('[data-version="portfolio"]');
+
+  if (elDs)  elDs.textContent  = ldsVersion;
+  if (elApp) elApp.textContent = portfolioVersion;
+
+  // Option: log
+  console.log(`[versions] portfolio ${portfolioVersion} — ltds ${ldsVersion}`);
 }

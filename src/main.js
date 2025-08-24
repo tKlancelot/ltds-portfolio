@@ -26,6 +26,7 @@ const defaultUI = [
   UI.setupStickyNavbar,
   UI.scrollToTop,
   UI.changeTheme,
+  UI.showVersions,
   () => UI.initReveals({ resetOnExit: true }),
 ];
 
