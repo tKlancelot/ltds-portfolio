@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.3](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.2...v0.3.3) (2025-08-24)
+
+
+### Features
+
+* rework main heading and alerts responsiveness and structure ([6c8d88d](https://github.com/tKlancelot/ltds-portfolio/commit/6c8d88d6dc6538a20562dad6a70d109e98135e9a))
+
 ### [0.3.2](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.1...v0.3.2) (2025-08-24)
 
 
