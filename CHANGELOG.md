@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.9](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.8...v0.3.9) (2025-08-24)
+
+
+### Features
+
+* rework font size system tokens utilities and update doc ([f194734](https://github.com/tKlancelot/ltds-portfolio/commit/f1947346d8260761804d4a90eb45f5cfd55918ca))
+
 ### [0.3.8](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.7...v0.3.8) (2025-08-24)
 
 
