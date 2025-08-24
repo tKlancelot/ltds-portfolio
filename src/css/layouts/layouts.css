@@ -39,8 +39,7 @@
   border: 1px solid var(--color-border-primary-40);
   border-radius:var(--radii-4);
   background:
-    url(/assets/textures/fabric-dark.png),
-    linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)),
     radial-gradient(circle at 40% 20%, var(--brand-primary-opacity-40), transparent 70%),
     radial-gradient(circle at 80% 90%, var(--color-info-opacity-20), transparent 60%),
     linear-gradient(180deg, var(--brand-primary-opacity-40) 0%, var(--brand-primary-opacity-20) 100%);
@@ -58,7 +57,7 @@
     }
 
     .u-container{
-        font-size: var(--font-size-1);
+        font-size: var(--tfs-1);
     }
 
 }

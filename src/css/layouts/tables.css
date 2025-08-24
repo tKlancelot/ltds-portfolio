@@ -7,17 +7,17 @@
 
 .table thead{
     background-color: var(--table-head-bg-color);
-    font-weight: unset;
 }
 
 .table th,
 .table td{
+    font-weight: unset;
     padding: var(--size-2);
     border-bottom: 1px solid var(--color-primary-opacity-20);  
 }
 
 .table td .u-text-clamp *{
-    font-size: var(--font-size-1)!important;
+    font-size: var(--tfs-1)!important;
     line-height: normal !important;
 }
 

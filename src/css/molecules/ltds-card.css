@@ -138,7 +138,7 @@ ltds-card .ltds-card-title {
 }
 
 ltds-card .ltds-card-subtitle {
-    font-size: var(--font-size-1);
+    font-size: var(--tfs-1);
     color: var(--color-text-secondary);
 }
 

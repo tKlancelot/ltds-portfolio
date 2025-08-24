@@ -5,65 +5,120 @@
     <p>Ces variables CSS constituent la source de vérité du système (typo, tailles, espaces, arrondis, etc.). Elles sont consommées par les utilitaires et composants.</p>
 
     <ltds-divider></ltds-divider>
-
-
     <doc-section title="Import couleurs">
-        <p>Les couleurs (brand, UI, sémantiques, borders, gradients) sont déclarées dans un fichier séparé pour faciliter les thèmes.</p>
-        <ltds-code-block language="css" dedent>
-        @import './colors.css';
-        </ltds-code-block>
+      <p>Les couleurs (brand, UI, sémantiques, borders, gradients) sont déclarées dans un fichier séparé pour faciliter les thèmes.</p>
+      <ltds-code-block language="css" dedent>
+      @import './colors.css';
+      </ltds-code-block>
     </doc-section>
 
     <ltds-divider></ltds-divider>
 
     <doc-section title="Typographie : familles & graisses">
-        <p>Familles et échelle de poids cohérente. Les projets peuvent surcharger <code>--font-family-*</code> côté app.</p>
-        <ltds-code-block language="css" dedent>
-        :root {
-        /* familles */
+      <p>Familles et échelle de poids cohérente. Les projets peuvent surcharger <code>--font-family-*</code> côté app.</p>
+      <ltds-code-block language="css" dedent>
+      :root {
         --font-family-base: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
-        --font-family-accent: "Rubik", var(--font-family-base);
+        --font-family-accent: "Work Sans", var(--font-family-base);
         --font-family-alt: "Mona Sans", var(--font-family-base);
 
-        /* poids */
         --font-weight-regular: 400;
         --font-weight-medium:  500;
         --font-weight-semibold:600;
         --font-weight-bold:    700;
-        }
-        </ltds-code-block>
-        <p class="u-text-secondary u-fs-0">Exemples :</p>
-        <ltds-code-block language="css" dedent>
-        .title { font-family: var(--font-family-accent); font-weight: var(--font-weight-bold); }
-        .body  { font-family: var(--font-family-base);   font-weight: var(--font-weight-regular); }
-        </ltds-code-block>
+      }
+      </ltds-code-block>
     </doc-section>
 
     <ltds-divider></ltds-divider>
 
-    <doc-section title="Échelle de tailles de police">
-        <p>Échelle typographique simple (rem). Des utilitaires <code>u-fs-*</code> existent côté “utilities”.</p>
-        <ltds-code-block language="css" dedent>
-        :root {
-        --font-size-0: 0.75rem;
-        --font-size-1: 0.875rem;
-        --font-size-2: 1rem;
-        --font-size-3: 1.25rem;
-        --font-size-4: 1.5rem;
-        --font-size-5: 2rem;
-        --font-size-6: 3rem;
-        --font-size-7: 4rem;
-        --font-size-8: 5rem;
-        }
-        </ltds-code-block>
+    <!-- Échelle Modular Scale -->
+    <doc-section title="Échelle typographique — Modular Scale (major third)">
+      <p>
+        Échelle harmonieuse basée sur un ratio de <code>1.25</code> (major third).  
+        Les tokens <code>--font-size-*</code> suivent cette progression mathématique.
+      </p>
+      <ltds-code-block language="css" dedent>
+      :root {
+        --font-size-0: 0.75rem;  /* 12px  — Caption */
+        --font-size-1: 0.875rem; /* 14px  — Small text */
+        --font-size-2: 1rem;     /* 16px  — Body */
+        --font-size-3: 1.25rem;  /* 20px  — H6 / subtitle */
+        --font-size-4: 1.563rem; /* 25px  — H5 */
+        --font-size-5: 1.953rem; /* 31px  — H4 */
+        --font-size-6: 2.441rem; /* 39px  — H3 */
+        --font-size-7: 3.052rem; /* 49px  — H2 */
+        --font-size-8: 3.815rem; /* 61px  — H1 */
+        --font-size-9: 4.768rem; /* 76px  — Display */
+        --font-size-10: 5.96rem; /* 95px  — Hero */
+      }
+      </ltds-code-block>
+      <p class="u-text-secondary u-fs-0">Utilitaires : <code>.u-fs-*</code> + variantes responsives.</p>
     </doc-section>
 
     <ltds-divider></ltds-divider>
 
+    <!-- Échelle Simple -->
+    <doc-section title="Échelle typographique — Simple Scale (arrondie)">
+      <p>
+        Échelle arrondie, plus lisible et prévisible pour les projets qui préfèrent des valeurs simples.  
+        Les tokens <code>--tfs-*</code> sont fournis en parallèle.
+      </p>
+      <ltds-code-block language="css" dedent>
+      :root {
+        --tfs-0: 0.75rem;  /* 12px */
+        --tfs-1: 0.875rem; /* 14px */
+        --tfs-2: 1rem;     /* 16px */
+        --tfs-3: 1.125rem; /* 18px */
+        --tfs-4: 1.5rem;   /* 24px */
+        --tfs-5: 2rem;     /* 32px */
+        --tfs-6: 2.5rem;   /* 40px */
+        --tfs-7: 3rem;     /* 48px */
+        --tfs-8: 4rem;     /* 64px */
+        --tfs-9: 5rem;     /* 80px */
+        --tfs-10: 6rem;    /* 96px */
+      }
+      </ltds-code-block>
+      <p class="u-text-secondary u-fs-0">Utilitaires : <code>.u-fs-*</code> pointent désormais sur <code>--tfs-*</code> (fallback sur <code>--font-size-*</code>).</p>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Tableau d’équivalence -->
+    <doc-section title="Équivalence des deux échelles">
+      <p>Comparaison rapide entre la Modular Scale et la Simple Scale :</p>
+      <table class="u-w-full u-text-left table u-my-4">
+        <thead>
+          <tr>
+            <th>Token</th>
+            <th>Modular Scale (<code>--font-size-*</code>)</th>
+            <th>Simple Scale (<code>--tfs-*</code>)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>0</td><td>0.75rem (12px)</td><td>0.75rem (12px)</td></tr>
+          <tr><td>1</td><td>0.875rem (14px)</td><td>0.875rem (14px)</td></tr>
+          <tr><td>2</td><td>1rem (16px)</td><td>1rem (16px)</td></tr>
+          <tr><td>3</td><td>1.25rem (20px)</td><td>1.125rem (18px)</td></tr>
+          <tr><td>4</td><td>1.563rem (25px)</td><td>1.5rem (24px)</td></tr>
+          <tr><td>5</td><td>1.953rem (31px)</td><td>2rem (32px)</td></tr>
+          <tr><td>6</td><td>2.441rem (39px)</td><td>2.5rem (40px)</td></tr>
+          <tr><td>7</td><td>3.052rem (49px)</td><td>3rem (48px)</td></tr>
+          <tr><td>8</td><td>3.815rem (61px)</td><td>4rem (64px)</td></tr>
+          <tr><td>9</td><td>4.768rem (76px)</td><td>5rem (80px)</td></tr>
+          <tr><td>10</td><td>5.96rem (95px)</td><td>6rem (96px)</td></tr>
+        </tbody>
+      </table>
+      <ltds-alert scheme="info" title="Tip" content="Utilisez la Modular Scale pour un rendu typographique harmonieux, et la Simple Scale pour une lisibilité et une adoption rapide."></ltds-alert>
+    </doc-section>
+
+    <ltds-divider></ltds-divider>
+
+    <!-- Échelles de tailles (espaces unitaires) -->
     <doc-section title="Échelles de tailles (espaces unitaires)">
-        <p>Échelle compacte pour marges/paddings, gaps et composants.</p>
-        <ltds-code-block language="css" dedent>
-        :root {
+      <p>Échelle compacte pour marges/paddings, gaps et composants.</p>
+      <ltds-code-block language="css" dedent>
+      :root {
         --size-0: 0px;
         --size-1: 4px;
         --size-2: 8px;
@@ -87,32 +142,8 @@
         --gap-8: var(--size-8);
         --gap-9: var(--size-9);
         --gap-10: var(--size-10);
-        }
-        </ltds-code-block>
-    </doc-section>
-
-    <ltds-divider></ltds-divider>
-
-    <doc-section title="Grandes tailles (layouts, composants media)">
-        <p>Tokens utilitaires pour contraindre rapidement dimensions max/min.</p>
-        <ltds-code-block language="css" dedent>
-        :root {
-        --large-size-1: 96px;
-        --large-size-2: 120px;
-        --large-size-3: 192px;
-        --large-size-4: 240px;
-        --large-size-5: 320px;
-        --large-size-6: 480px;
-        --large-size-7: 640px;
-        --large-size-8: 768px;
-        --large-size-9: 1024px;
-        --large-size-10: 1280px;
-        }
-        </ltds-code-block>
-        <ltds-code-block language="css" dedent>
-        .card { max-width: var(--large-size-5); } /* 320px */
-        .avatar { width: var(--large-size-1); height: var(--large-size-1); }
-        </ltds-code-block>
+      }
+      </ltds-code-block>
     </doc-section>
 
     <ltds-divider></ltds-divider>
@@ -139,19 +170,72 @@
 
     <ltds-divider></ltds-divider>
 
+    <!-- Interlignage -->
     <doc-section title="Interlignage (line-heights)">
-        <p>Échelle simple, reliée à des utilitaires <code>u-lh-*</code> et <code>u-lh-prc-*</code>.</p>
+        <p>
+            Deux échelles de line-height sont fournies : une <strong>basic</strong> (classique, confortable) et une <strong>alternative</strong> (plus compacte, pensée pour accompagner la Modular Scale).
+            Les utilitaires <code>.u-lh-*</code> pointent vers les tokens <code>--tlh-*</code> qui sont <em>remappés</em> selon le mode choisi.
+        </p>
+
+        <h3>Line Heights — Basic</h3>
         <ltds-code-block language="css" dedent>
-        :root{
-        --lh-0: 1;
-        --lh-1: 1.25;
-        --lh-2: 1.5;
-        --lh-3: 1.75;
-        --lh-4: 2;
+        :root {
+            --lh-0: 1;
+            --lh-1: 1.25;
+            --lh-2: 1.5;
+            --lh-3: 1.75;
+            --lh-4: 2;
+
+            /* en pourcentage */
+            --lh-prc-0: 100%;
+            --lh-prc-1: 125%;
+            --lh-prc-2: 150%;
+            --lh-prc-3: 175%;
+            --lh-prc-4: 200%;
         }
         </ltds-code-block>
-        <p class="u-lh-2">Texte avec line-height 1.5</p>
-        <p class="u-lh-prc-4">Texte avec line-height 200%</p>
+        <h3>Line Heights — Alternative (Modular Scale pairing)</h3>
+        <ltds-code-block language="css" dedent>
+        :root {
+            --line-height-0: 1.1;
+            --line-height-1: 1.25;
+            --line-height-2: 1.4;
+            --line-height-3: 1.5;
+            --line-height-4: 1.6;
+
+            --line-height-prc-0: 110%;
+            --line-height-prc-1: 125%;
+            --line-height-prc-2: 140%;
+            --line-height-prc-3: 150%;
+            --line-height-prc-4: 160%;
+        }
+        </ltds-code-block>
+        <p>
+            Les utilitaires <code>.u-lh-*</code> utilisent par défaut la <strong>Basic scale</strong>.  
+            Vous pouvez basculer en <strong>Modular scale</strong> via un attribut <code>data-type-scale="mt"</code> sur <code>&lt;body&gt;</code> ou un container.
+        </p>
+        <ltds-code-block language="css" dedent>
+            /* Remap par défaut → basic LH */
+            :root,
+            [data-type-scale] {
+                --tlh-0: var(--lh-0);
+                --tlh-1: var(--lh-1);
+                --tlh-2: var(--lh-2);
+                --tlh-3: var(--lh-3);
+                --tlh-4: var(--lh-4);
+            }
+
+            /* Variante Modular Scale (mt) */
+            [data-type-scale="mt"] {
+                --tlh-0: 1.05;
+                --tlh-1: 1.2;
+                --tlh-2: 1.4;
+                --tlh-3: 1.5;
+                --tlh-4: 1.6;
+            }
+        </ltds-code-block>
+
+        <ltds-alert scheme="info" title="Tip" content="En pratique : laissez la basic scale pour les paragraphes et textes longs, et activez <code>data-type-scale=&quot;mt&quot;</code> pour vos pages vitrines ou headers typographiques."></ltds-alert>
     </doc-section>
 
     <ltds-divider></ltds-divider>

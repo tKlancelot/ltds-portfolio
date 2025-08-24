@@ -17,7 +17,7 @@ ltds-code-block pre[class*="language-"] {
 code[class*=language-],
 pre[class*=language-] {
   /* font-family: var(--font-family-alt)!important; */
-  font-size: var(--font-size-1) !important;
+  font-size: var(--tfs-1) !important;
 }
 
 

@@ -13,18 +13,18 @@ i[class^="lt-icon-"].lt-icon-style-solid:before, i[class*=" lt-icon-"].lt-icon-s
     width: 24px;
     height: 24px;
     &::before{
-        font-size: var(--font-size-3);
+        font-size: var(--tfs-3);
     }
 }
 
 .icon.icon-size-sm::before{
-    font-size: var(--font-size-1);
+    font-size: var(--tfs-1);
 }
 
 .icon.icon-size-lg::before{
-    font-size: var(--font-size-4);
+    font-size: var(--tfs-4);
 }
 
 .icon.icon-size-xl::before{
-    font-size: var(--font-size-5);
+    font-size: var(--tfs-5);
 }

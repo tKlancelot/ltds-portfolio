@@ -42,7 +42,7 @@
     min-width: var(--large-size-2);
     &:hover{
         color: var(--color-primary);
-        text-decoration: underline;    
+        /* text-decoration: underline;     */
     }
 }
 

@@ -23,8 +23,7 @@ export class LtdsMenuItem extends HTMLElement {
     const isBtnLike = this.hasAttribute('is-btn-like'); // ✅ vrai booléen
 
     const liClasses = [
-      'ltds-menu-item',
-      isBtnLike ? 'ltds-btn ltds-btn--sm ltds-btn--rounded' : '',
+      isBtnLike ? 'ltds-btn ltds-btn--sm ltds-btn--rounded' : 'ltds-menu-item',
       extraClass
     ].filter(Boolean).join(' ');
 
