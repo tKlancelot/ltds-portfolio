@@ -55,10 +55,6 @@ h1,h2,h3{
     padding: var(--size-2);
 }
 
-/* .spacings  */
-#app{
-    overflow: hidden;
-}
 
 
 @keyframes expand{
