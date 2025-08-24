@@ -1,0 +1,48 @@
+/* ================================
+   LT PAGE LAYOUT
+   ================================ */
+
+.lt-page {
+  padding-block: var(--size-8);
+  padding-inline: var(--size-6);
+  display: flex;
+  justify-content: center;
+}
+
+.lt-page{
+    /* Cadre de base */
+    > .lt-frame {
+        background-color: var(--color-primary-opacity-10);
+        width: 100%;
+        max-width: 100ch; /* par défaut : lecture confortable */
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-4);
+        padding: var(--size-6);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radii-3);
+    }
+    
+    /* Variantes de largeur */
+    .lt-frame--narrow {
+      max-width: 108ch; /* idéal pour de la doc textuelle */
+    }
+    
+    .lt-frame--wide {
+      max-width: 1200px; /* idéal pour des grilles / composants visuels */
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .lt-page{
+        > .lt-frame {
+            padding: var(--size-4);
+        }
+    }
+
+    .u-container{
+        font-size: var(--font-size-1);
+    }
+
+}

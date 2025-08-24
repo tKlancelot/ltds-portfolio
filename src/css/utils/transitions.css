@@ -1,0 +1,26 @@
+/* état initial */
+.reveal {
+  --delay: 0ms;
+  --dur: 800ms;
+  --easing: cubic-bezier(.22,.61,.36,1);
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity var(--dur) var(--easing) var(--delay),
+    transform var(--dur) var(--easing) var(--delay);
+  will-change: opacity, transform;
+}
+
+/* quand visible */
+.reveal.is-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.reveal.--delay-1{
+    --delay: 120ms;
+}
+.reveal.--delay-2{
+    --delay: 240ms;
+}

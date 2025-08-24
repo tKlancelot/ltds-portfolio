@@ -144,16 +144,6 @@ export const changeTheme = () => {
 }
 
 
-/**
- * Applique un halo/dégradé à l’élément cible (par défaut <body>)
- * @param {Object} options - Options de personnalisation
- * @param {string|HTMLElement} [options.target='body'] - Sélecteur ou élément
- * @param {string} [options.haloSizeX='120%']   - Largeur du halo (ellipse)
- * @param {string} [options.haloSizeY='100%']   - Hauteur du halo
- * @param {number} [options.haloStrength=0.8]   - Intensité du halo (0–1)
- * @param {string} [options.haloShiftY='-8%']   - Décalage vertical du halo
- * @param {string} [options.haloColor='var(--color-primary-opacity-40)'] - Couleur du halo
- */
 export function applyPageGradient({
   target = 'body',
   haloSizeX = '120%',
@@ -187,4 +177,33 @@ export function applyPageGradient({
       var(--surface-page) 320px
     )
   `;
+}
+
+
+// reveal.js
+export function initReveals({
+  selector = '.reveal',
+  root = null,
+  rootMargin = '0px 0px -12% 0px',
+  threshold = 0.1,
+  resetOnExit = true,   // ← retire la classe quand on sort
+} = {}) {
+  const els = Array.from(document.querySelectorAll(selector));
+  if (!('IntersectionObserver' in window) || els.length === 0) {
+    els.forEach(el => el.classList.add('is-in'));
+    return;
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const el = entry.target;
+      if (entry.isIntersecting) {
+        el.classList.add('is-in');     // entre → joue l’anim
+      } else if (resetOnExit) {
+        el.classList.remove('is-in');  // sort → reset, rejouera plus tard
+      }
+    });
+  }, { root, rootMargin, threshold });
+
+  els.forEach(el => io.observe(el));
 }

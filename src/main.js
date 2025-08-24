@@ -15,7 +15,7 @@ import { LtdsAlert } from './web-components/alertComponent.js';
 import UniversalRouter from 'universal-router';
 import { routeConfigurations } from './utils/routeConfiguration.js';
 import { loadPage } from './utils/routerUtils.js';
-import { applyPageGradient, changeTheme, initializeBaseStructure, initTooltips, modalService, scrollToTop, setupStickyNavbar } from './utils/uiUtils.js';
+import { applyPageGradient, changeTheme, initializeBaseStructure, initReveals, initTooltips, modalService, scrollToTop, setupStickyNavbar } from './utils/uiUtils.js';
 
 // helpers
 const initPageUI = async (template) => {
@@ -25,6 +25,7 @@ const initPageUI = async (template) => {
   setupStickyNavbar();
   scrollToTop();
   changeTheme();
+  initReveals({resetOnExit:true});
   if(template === 'home') {
     applyPageGradient({
         haloSizeX: '150%',
