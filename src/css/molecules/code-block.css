@@ -9,8 +9,8 @@ ltds-code-block {
 ltds-code-block pre[class*="language-"] {
   padding: 1rem !important;
   ;
-  background: var(--surface-overlay);
-  border: 1px solid var(--color-border-primary-20);
+  background: var(--surface-container);
+  border: 1px solid var(--color-border);
   border-radius: var(--radii-2);
 }
 
