@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.12](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.11...v0.3.12) (2025-08-25)
+
+
+### Features
+
+* add more data scheme + testing theme ([3e4785a](https://github.com/tKlancelot/ltds-portfolio/commit/3e4785a2500d6ba84d99415bcb9a20409cf44280))
+
 ### [0.3.11](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.10...v0.3.11) (2025-08-25)
 
 
