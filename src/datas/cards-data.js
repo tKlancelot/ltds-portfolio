@@ -37,7 +37,7 @@ export const cards = [
     title: "Accessibility",
     subtitle: "a11y",
     content: "Helpers visuels comme u-hidden, display-flex/block pour l’accessibilité.",
-    extraClass: "ltds-card--warning",
+    // extraClass: "ltds-card--warning",
     href: "/design-system/accessibility"
   },
   {

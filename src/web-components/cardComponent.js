@@ -16,12 +16,14 @@ export class LtdsCard extends HTMLElement {
 
         this.innerHTML = `
             <${wrapper} class="ltds-card ltds-card--interactive ${props.extraClass}" ${hrefAttr} ${roleAttr}>
-                <header class="ltds-card-header">
-                <h3 class="ltds-card-title"><slot name="title">${props.title}</slot></h3>
-                <span class="u-text-secondary u-fs-0"><slot name="subtitle">${props.subtitle}</slot></span>
-                </header>
-                <div class="ltds-card-body">
-                <slot name="content">${props.content}</slot>
+                <div class="ltds-card-overlay">
+                    <header class="ltds-card-header">
+                    <h3 class="ltds-card-title"><slot name="title">${props.title}</slot></h3>
+                    <span class="u-text-secondary u-fs-0"><slot name="subtitle">${props.subtitle}</slot></span>
+                    </header>
+                    <div class="ltds-card-body">
+                    <slot name="content">${props.content}</slot>
+                    </div>
                 </div>
             </${wrapper}>
         `;

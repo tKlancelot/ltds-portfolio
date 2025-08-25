@@ -36,7 +36,7 @@
 .lt-page .lt-frame--fantasy {
   position: relative;
   overflow: hidden;
-  border:1px solid var(--brand-primary-opacity-20);
+  border:1px solid var(--brand-primary-opacity-10);
   border-radius:var(--radii-5);
   padding: 8px;
   background-color: var(--surface-container);
@@ -46,13 +46,14 @@
 .lt-page .lt-frame--fantasy .lt-frame-content{
   border-radius: calc(var(--radii-5) - 8px);
   padding:16px;
-  background-blend-mode: overlay, normal;
+  background-blend-mode: overlay;
   background-size: auto;
+  /* background-image:linear-gradient(180deg,var(--brand-primary-opacity-20), var(--brand-primary-opacity-20), var(--brand-primary-opacity-10)); */
+  /* background-image:var(--brand-gradient-surface-overlay); */
   background:
-    radial-gradient(circle at 40% 20%, var(--brand-primary-opacity-10), transparent 70%),
-    radial-gradient(circle at 80% 90%, var(--color-info-opacity-10), transparent 60%),
-    linear-gradient(180deg, var(--brand-primary-opacity-20) 0%, var(--brand-primary-opacity-10) 100%);
-  opacity: 0.98;
+    radial-gradient(circle at 40% 20%, var(--brand-primary-opacity-20), transparent 70%),
+    radial-gradient(circle at 40% 90%, var(--brand-primary-opacity-20), transparent 60%),
+    var(--brand-gradient-surface-overlay);
   &::before,
   &::after{
     content: "";
@@ -60,7 +61,7 @@
     inset-inline: 0;
     inset-block: 0;
     height:1px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 5%, var(--brand-primary-opacity-20) 25%, var(--brand-primary) 50%, var(--brand-primary-opacity-20) 75%, rgba(0, 0, 0, 0) 95%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 5%, var(--brand-primary-opacity-10) 20%, var(--brand-primary) 50%, var(--brand-primary-opacity-10) 80%, rgba(0, 0, 0, 0) 95%);
   }
   &::after{
     top: calc(100% - 1px);
@@ -77,11 +78,9 @@
 
     .lt-page .lt-frame--fantasy{
       padding:6px;
-      border-radius: var(--radii-4);
       border-color: var(--brand-primary-opacity-20);
       .lt-frame-content{
         padding: 12px;
-        border-radius: calc(var(--radii-4) - 6px);
       }
     }
 

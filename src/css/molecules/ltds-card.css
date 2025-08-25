@@ -15,25 +15,34 @@ ltds-card a {
     --card-padding: var(--size-4);
     --card-radius: var(--radii-3);
     --card-bg: var(--color-primary-opacity-10);
-    --card-bg2: var(--color-primary-opacity-10);
+    --card-bg2: var(--color-primary-opacity-20);
     --card-border: color-mix(in oklab, var(--color-primary) 96%, transparent);
     --card-border-hover: color-mix(in oklab, var(--color-primary) 100%, transparent);
     --card-outline-focus-visible: 2px solid color-mix(in oklab, var(--color-primary) 55%, transparent);
-    /* --card-shadow: var(--shadow-1); */
+    --card-overlay-padding: var(--size-3);
+    --card-overlay-gap: var(--size-2);
+    --card-shadow: var(--shadow-1);
 
     position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: var(--size-3);
-    padding: var(--card-padding);
     border-radius: var(--card-radius);
     background-color: var(--card-bg);
+    padding: var(--card-padding);
     height: 100%;
     border: 1px solid transparent;
     background-clip: padding-box;
+    overflow: hidden;
     transition: transform .18s ease, box-shadow .18s ease,
         background .25s ease, border-color .18s ease;
 }
+
+
+.ltds-card .ltds-card-overlay{
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-2);
+    transition: all .18s ease;
+}
+
 
 /* fine bordure (overlay) */
 .ltds-card::before {
@@ -53,7 +62,7 @@ ltds-card a {
 
 .ltds-card--interactive:hover {
     transform: translateY(-4px);
-    backdrop-filter: saturate(120%) blur(10px);
+    box-shadow: var(--card-shadow);
 }
 
 .ltds-card--interactive:hover::before {
@@ -157,6 +166,7 @@ ltds-card .ltds-card-footer {
 /* ================================
    Helper grid
    ================================ */
+
 .ltds-card-grid {
     display: grid;
     gap: var(--gap-4);
@@ -187,4 +197,25 @@ ltds-card .ltds-card-footer {
     }
 
 
+}
+
+
+.splide__slide .ltds-card{
+    padding: var(--card-padding) var(--card-padding) 0;
+    background-image: var(--brand-gradient-surface-overlay);
+}
+
+
+.splide__slide .ltds-card .ltds-card-overlay{
+    background-color: var(--card-bg2);
+    box-shadow: var(--card-shadow);
+    padding: var(--size-2);
+}
+
+
+.splide__slide .ltds-card--interactive:hover {
+    backdrop-filter: saturate(120%) blur(10px);
+    .ltds-card-overlay{
+        transform: rotate(-3deg);
+    }
 }
