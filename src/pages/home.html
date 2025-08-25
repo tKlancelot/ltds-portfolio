@@ -1,5 +1,5 @@
 <section class="section u-flex u-tab-flex-col" style="min-height: 88vh;height: auto;">
-     <div class="u-p-11 u-tab-p-6 u-m-auto lt-stack u-h-full u-basis-2-3">
+     <div class="u-p-12 u-tab-p-6 u-m-auto lt-stack u-h-full u-basis-2-3">
          <div class="lt-frame lt-frame--gap-8 lt-frame--tab-items-center u-m-auto">
             <!-- class="u-text-gradient-primary" -->
              <h1 id="page-title" class="u-fs-8 u-mob-fs-6 u-text-tab-center reveal">LTDS Design System</h1>
@@ -39,33 +39,37 @@
 </section>
 
 <section class="section lt-page">
-  <div class="lt-frame lt-frame--wide lt-frame--fantasy">
 
-    <doc-section title="Get started !">
-      <p>
-        Installez le Design System via npm et commencez à l’utiliser immédiatement.  
-        Vous pouvez importer la feuille de style complète ou seulement les parties qui vous intéressent grâce au <em>tree-shaking</em>.
-      </p>
-      <ltds-code-block language="bash" dedent>
-      npm install @tarik-leviathan/ltds@latest
-      </ltds-code-block>
-    </doc-section>
-
-    <ltds-divider></ltds-divider>
-
-    <doc-section title="Usage CSS">
-      <p>Importer tout le Design System :</p>
-      <ltds-code-block language="js" dedent>
-      import '@tarik-leviathan/ltds/dist/ltds.css';
-      </ltds-code-block>
-
-      <p>Ou seulement les modules dont vous avez besoin :</p>
-      <ltds-code-block language="js" dedent>
-      import '@tarik-leviathan/ltds/styles/core';     // reset, tokens de base
-      import '@tarik-leviathan/ltds/styles/buttons';  // styles de boutons
-      import '@tarik-leviathan/ltds/styles/utils';    // utilitaires
-      </ltds-code-block>
-    </doc-section>
+  <div class="lt-frame lt-frame--fantasy reveal" style="position: relative;">
+    <!-- <div class="lt-frame-inset-gradient"></div> -->
+    <div class="lt-frame-content">
+      <doc-section title="Get started !">
+        <p>
+          Installez le Design System via npm et commencez à l’utiliser immédiatement.  
+          Vous pouvez importer la feuille de style complète ou seulement les parties qui vous intéressent grâce au <em>tree-shaking</em>.
+        </p>
+        <ltds-code-block language="bash" dedent>
+        npm install @tarik-leviathan/ltds@latest
+        </ltds-code-block>
+      </doc-section>
+  
+      <ltds-divider></ltds-divider>
+  
+      <doc-section title="Usage CSS">
+        <p>Importer tout le Design System :</p>
+        <ltds-code-block language="js" dedent>
+        import '@tarik-leviathan/ltds/dist/ltds.css';
+        </ltds-code-block>
+  
+        <p>Ou seulement les modules dont vous avez besoin :</p>
+        <ltds-code-block language="js" dedent>
+        import '@tarik-leviathan/ltds/styles/core';     // reset, tokens de base
+        import '@tarik-leviathan/ltds/styles/buttons';  // styles de boutons
+        import '@tarik-leviathan/ltds/styles/utils';    // utilitaires
+        </ltds-code-block>
+      </doc-section>
+    </div>
+    <!-- <div class="lt-frame-inset-gradient lt-frame-inset-gradient--bottom"></div> -->
 
     <!-- <ltds-divider></ltds-divider> -->
 

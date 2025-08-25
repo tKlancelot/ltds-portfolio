@@ -1,0 +1,4 @@
+.theme-switch.selected{
+    background-image: var(--brand-gradient-surface-primary);
+    color: var(--color-text-primary);
+}

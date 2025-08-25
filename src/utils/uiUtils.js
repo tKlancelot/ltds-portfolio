@@ -134,13 +134,24 @@ export const changeTheme = () => {
   // si oui, on l'applique
   if (scheme) {
     document.body.dataset.scheme = scheme
+    // ajouter selected sur le bouton correspondant
+    allThemeBtns.forEach(btn => {
+      if (btn.dataset.scheme === scheme) {
+        btn.classList.add('selected');
+      }
+    })
   } 
 
   // sinon allThemeBtns.foreach 
   allThemeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+      // remove all selected 
+      allThemeBtns.forEach(btn => {
+        btn.classList.remove('selected');
+      })
       document.body.dataset.scheme = btn.dataset.scheme;
       localStorage.setItem('scheme', btn.dataset.scheme);
+      btn.classList.add('selected');
     })
   })
 }
