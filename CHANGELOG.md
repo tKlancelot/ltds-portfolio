@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.15](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.14...v0.3.15) (2025-08-25)
+
+
+### Features
+
+* reshape layout page and fix code block rendering ([c747084](https://github.com/tKlancelot/ltds-portfolio/commit/c747084b1328f31254fd611a792fb5fef5b67614))
+
 ### [0.3.14](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.13...v0.3.14) (2025-08-25)
 
 
