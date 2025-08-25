@@ -46,14 +46,14 @@
       <div class="lt-frame">
         <h3>Exemples</h3>
         <div class="u-flex">
-          <div class="u-radii-2 u-container--info u-p-1 u-w-auto">u-w-auto inside flex container</div>
+          <div class="u-container u-container u-container--info u-w-auto">u-w-auto inside flex container</div>
         </div>
-        <div class="u-radii-2 u-container--info u-p-1 u-w-auto">u-w-auto inside block container</div>
-        <div class="u-radii-2 u-container--success u-p-1 u-w-66-prc">u-w-66-prc</div>
-        <div class="u-radii-2 u-container--success u-p-1 u-w-75-prc">u-w-75-prc</div>
-        <div class="u-radii-2 u-container--warning u-p-1 u-w-l-2">u-w-l-2</div>
-        <div class="u-radii-2 u-container--warning u-p-1 u-w-l-4">u-w-l-4</div>
-        <div class="u-radii-2 u-container--danger u-p-1 u-w-full">u-w-full</div>
+        <div class="u-container u-container--info u-w-auto">u-w-auto inside block container</div>
+        <div class="u-container u-container--success u-w-66-prc">u-w-66-prc</div>
+        <div class="u-container u-container--success u-w-75-prc">u-w-75-prc</div>
+        <div class="u-container u-container--warning u-w-l-2">u-w-l-2</div>
+        <div class="u-container u-container--warning u-w-l-4">u-w-l-4</div>
+        <div class="u-container u-container--danger u-w-full">u-w-full</div>
       </div>
     </doc-section>
 
@@ -157,30 +157,6 @@
         object-fit: cover;
       }
       </ltds-code-block>
-    </doc-section>
-
-    <ltds-divider></ltds-divider>
-
-    <!-- Containers -->
-    <doc-section title="Containers (tokenisés)">
-      <p>Largeur maximale contrôlée par <code>--large-size-*</code></p>
-      <ltds-code-block language="css" dedent>
-      .u-container    { width: min(100%, var(--large-size-10)); padding: var(--size-3); }
-      .u-container-sm { width: min(100%, var(--large-size-5));  padding: var(--size-3); }
-      .u-container-md { width: min(100%, var(--large-size-6));  padding: var(--size-3); }
-      .u-container-lg { width: min(100%, var(--large-size-8));  padding: var(--size-3); }
-      .u-container-xl { width: min(100%, var(--large-size-9));  padding: var(--size-3); }
-      .u-container-2xl{ width: min(100%, var(--large-size-10)); padding: var(--size-3); }
-
-      /* Modifiers */
-      .u-container--no-pad { padding: 0; }
-      .u-container--pad-sm { padding: var(--size-1); }
-      .u-container--pad-lg { padding: var(--size-4); }
-      .u-container--full   { width: 100%; }
-      </ltds-code-block>
-      <div class="u-container--danger u-container-md u-container--pad-lg">
-        .u-container-md .u-container--pad-lg
-      </div>
     </doc-section>
 
   </div>

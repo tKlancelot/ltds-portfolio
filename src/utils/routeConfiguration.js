@@ -14,6 +14,7 @@ export const routeConfigurations = [
   { path: "/design-system/flexboxes", template: "flexboxes", pageScript: "flexboxes.js" },
   { path: "/design-system/grids", template: "grids", pageScript: "grids.js" },
   { path: "/design-system/spacings", template: "spacings", pageScript: "spacings.js" },
+  { path: "/design-system/layouts", template: "layouts", pageScript: "layouts.js" },
 
   { path: "/404", template: "404", pageScript: null }
 ];

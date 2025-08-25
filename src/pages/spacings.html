@@ -30,9 +30,9 @@
 
         <p>.u-flex + .u-gap-6</p>
         <div class="u-flex u-gap-6">
-          <div class="u-container u-container--danger">1</div>
-          <div class="u-container u-container--danger">2</div>
-          <div class="u-container u-container--danger">3</div>
+          <div class="u-container u-container--danger u-px-4">1</div>
+          <div class="u-container u-container--danger u-px-4">2</div>
+          <div class="u-container u-container--danger u-px-4">3</div>
         </div>
         <ltds-alert scheme="info" title="Tip" content="Privilégiez &quot;gap&quot; pour séparer des items avant d’ajouter des marges sur chaque enfant." />
       </div>
@@ -58,9 +58,9 @@
       </ltds-code-block>
 
       <div class="lt-frame lt-frame--gap-2">
-        <div class="u-container--info u-p-4">.u-p-4</div>
-        <div class="u-container--warning u-px-4">.u-px-6</div>
-        <div class="u-container--success u-px-4 u-pt-3 u-pb-7">.u-px-4 .u-pt-3 + .u-pb-7</div>
+        <div class="u-container u-container--info u-p-4">.u-p-4</div>
+        <div class="u-container u-container--warning u-px-4">.u-px-6</div>
+        <div class="u-container u-container--success u-px-4 u-pt-3 u-pb-7">.u-px-4 .u-pt-3 + .u-pb-7</div>
         <ltds-alert scheme="info" title="Remap" content="Les tailles proviennent des tokens : --size-1..10, puis --large-size-1..2 (indices 11, 12)." />
       </div>
 
@@ -79,10 +79,10 @@
       </ltds-code-block>
 
       <div class="lt-frame lt-frame--gap-2">
-        <div class="u-container--info u-p-6 u-mob-p-3">
+        <div class="u-container u-container--info u-p-6 u-mob-p-3">
           Desktop: p-6 → Mobile: p-3
         </div>
-        <div class="u-container--warning u-px-2 u-tab-px-6">
+        <div class="u-container u-container--warning u-px-2 u-tab-px-6">
           ≤1024px : padding-inline plus généreux
         </div>
         <ltds-alert scheme="info" title="Conseil responsive" content="Commencez par le desktop (classes sans préfixe), puis affinez avec .u-mob-* et .u-tab-* si nécessaire." />
@@ -107,8 +107,8 @@
       </ltds-code-block>
 
       <div class="lt-frame lt-frame--gap-2">
-        <div class="u-container--success u-m-2">.u-m-2</div>
-        <div class="u-container--success u-mt-4 u-mb-4">.u-mt-4 + .u-mb-4</div>
+        <div class="u-container u-container--success u-m-2">.u-m-2</div>
+        <div class="u-container u-container--success u-mt-4 u-mb-4">.u-mt-4 + .u-mb-4</div>
         <ltds-alert scheme="info" title="Tip" content="Évitez de multiplier les marges sur chaque enfant : préférez un gap côté parent dès que possible." />
       </div>
 
@@ -126,7 +126,7 @@
       </ltds-code-block>
 
       <div class="lt-frame lt-frame--gap-2">
-        <div class="u-container--warning u-p-4">
+        <div class="u-container u-container--warning u-p-4">
           Parent padding 4
           <div class="u-container u-container--danger u--mx-4">Child compensé (.u--mx-4)</div>
         </div>
@@ -147,7 +147,7 @@
       </ltds-code-block>
 
       <div class="lt-frame lt-frame--gap-2">
-        <div class="u-container--info u-w-l-5 u-mx-auto u-text-center">Bloc centré horizontalement</div>
+        <div class="u-container u-container--info u-w-l-5 u-mx-auto u-text-center">Bloc centré horizontalement</div>
       </div>
     </doc-section>
 
