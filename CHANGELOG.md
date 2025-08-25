@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.16](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.15...v0.3.16) (2025-08-25)
+
+
+### Features
+
+* improve card + improve tokens page doc ([46dd3a0](https://github.com/tKlancelot/ltds-portfolio/commit/46dd3a05f52f30640fc1c3dba59c7518ff3886a5))
+
 ### [0.3.15](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.14...v0.3.15) (2025-08-25)
 
 
