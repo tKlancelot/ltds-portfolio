@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
-    "@tarik-leviathan/ltds": "^0.3.1",
+    "@tarik-leviathan/ltds": "^0.3.2",
     "node-fetch": "^3.3.2",
     "tippy.js": "^6.3.7",
     "universal-router": "^9.2.1"

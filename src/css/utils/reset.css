@@ -6,7 +6,7 @@
     --color-text-primary:var(--color-ui-white-opacity-80);
 }
 
-h1,h2,h3{
+h1,h2,h3,h4{
     font-family: var(--font-family-accent);
     font-weight: var(--font-weight-semibold);
 }
