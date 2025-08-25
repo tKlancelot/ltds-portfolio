@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.11](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.10...v0.3.11) (2025-08-25)
+
+
+### Features
+
+* improve get started frame + improve doc tokens.html ([195aa6d](https://github.com/tKlancelot/ltds-portfolio/commit/195aa6d9ccd4cbdf0a3f727a90aff9738139391e))
+
 ### [0.3.10](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.9...v0.3.10) (2025-08-24)
 
 
