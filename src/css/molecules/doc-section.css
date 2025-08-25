@@ -2,6 +2,14 @@
   /* border-bottom: 1px solid var(--color-border, rgba(255, 255, 255, 0.08)); */
 }
 
+.doc-section.--start{
+    padding-block: var(--size-0) var(--size-4);
+}
+
+.doc-section.--end{
+    padding-block:var(--size-4) var(--size-0);
+}
+
 .doc-section-title {
   margin-bottom: var(--size-3);
   color: var(--color-text-primary);

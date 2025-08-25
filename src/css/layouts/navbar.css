@@ -10,7 +10,7 @@
 /* une fois scrolled */
 #menu-nav.scrolled {
     top: 0;
-    background: var(--surface-page);
+    background: var(--surface-container);
     /* background: var(--color-ui-white-opacity-10); */
     /* backdrop-filter: blur(2px); */
     z-index: 1000;        /* au-dessus du contenu */

@@ -11,6 +11,11 @@
   will-change: opacity, transform;
 }
 
+.reveal.--scale{
+    transform: scale(0.84);
+    will-change: opacity, transform;
+}
+
 /* quand visible */
 .reveal.is-in {
   opacity: 1;

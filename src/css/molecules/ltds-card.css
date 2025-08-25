@@ -53,6 +53,7 @@ ltds-card a {
 
 .ltds-card--interactive:hover {
     transform: translateY(-4px);
+    backdrop-filter: saturate(120%) blur(10px);
 }
 
 .ltds-card--interactive:hover::before {
@@ -132,7 +133,7 @@ ltds-card .ltds-card-header {
 }
 
 ltds-card .ltds-card-title {
-    font-family: var(--font-family-accent);
+    font-family: var(--font-family-alt);
     font-weight: 400;
     text-transform: capitalize;
 }

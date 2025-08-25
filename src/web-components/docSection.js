@@ -1,8 +1,13 @@
 export class DocSection extends HTMLElement {
+
+  static get observedAttributes() {
+    return ["title","extra-class"];
+  }
+
   connectedCallback() {
     const title = this.getAttribute("title") || "";
     const wrapper = document.createElement("section");
-    wrapper.classList.add("doc-section","u-py-4","u-tab-py-2");
+    wrapper.classList.add("doc-section","u-py-4","u-tab-py-2",this.getAttribute("extra-class"));
 
     if (title) {
       const h2 = document.createElement("h2");

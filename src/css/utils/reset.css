@@ -2,6 +2,7 @@
     /* --font-family-accent: "Oswald", var(--font-family-base); */
     /* --font-family-accent: "Work Sans", var(--font-family-base); */
     --font-family-accent: "Mona Sans", var(--font-family-base);
+    --font-family-alt: "Oswald", var(--font-family-base);
     --color-text-primary:var(--color-ui-white-opacity-80);
 }
 

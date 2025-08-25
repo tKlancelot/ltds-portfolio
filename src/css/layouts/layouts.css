@@ -52,7 +52,7 @@
     radial-gradient(circle at 40% 20%, var(--brand-primary-opacity-10), transparent 70%),
     radial-gradient(circle at 80% 90%, var(--color-info-opacity-10), transparent 60%),
     linear-gradient(180deg, var(--brand-primary-opacity-20) 0%, var(--brand-primary-opacity-10) 100%);
-  opacity: 0.98; /* léger voile */
+  opacity: 0.98;
   &::before,
   &::after{
     content: "";
@@ -73,6 +73,16 @@
         > .lt-frame {
             padding: var(--size-4);
         }
+    }
+
+    .lt-page .lt-frame--fantasy{
+      padding:6px;
+      border-radius: var(--radii-4);
+      border-color: var(--brand-primary-opacity-20);
+      .lt-frame-content{
+        padding: 12px;
+        border-radius: calc(var(--radii-4) - 6px);
+      }
     }
 
     .u-container{

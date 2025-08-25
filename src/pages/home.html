@@ -40,10 +40,10 @@
 
 <section class="section lt-page">
 
-  <div class="lt-frame lt-frame--fantasy reveal" style="position: relative;">
+  <div data-scheme="3" class="lt-frame lt-frame--fantasy reveal --scale" style="position: relative;">
     <!-- <div class="lt-frame-inset-gradient"></div> -->
     <div class="lt-frame-content">
-      <doc-section title="Get started !">
+      <doc-section title="Get started !" extra-class="--start">
         <p>
           Installez le Design System via npm et commencez à l’utiliser immédiatement.  
           Vous pouvez importer la feuille de style complète ou seulement les parties qui vous intéressent grâce au <em>tree-shaking</em>.
@@ -55,7 +55,7 @@
   
       <ltds-divider></ltds-divider>
   
-      <doc-section title="Usage CSS">
+      <doc-section title="Usage CSS" extra-class="--end">
         <p>Importer tout le Design System :</p>
         <ltds-code-block language="js" dedent>
         import '@tarik-leviathan/ltds/dist/ltds.css';

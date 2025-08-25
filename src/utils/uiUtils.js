@@ -187,7 +187,7 @@ export function applyPageGradient({
     linear-gradient(
       to bottom,
       var(--surface-overlay) 0%,
-      var(--surface-page) 320px
+      var(--surface-container) 320px
     )
   `;
 }
