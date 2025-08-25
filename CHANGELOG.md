@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.13](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.12...v0.3.13) (2025-08-25)
+
+
+### Features
+
+* improve and customize cards and gradients ([4691da4](https://github.com/tKlancelot/ltds-portfolio/commit/4691da485fd8e0521613cbbe89a053ebf22d4b09))
+
 ### [0.3.12](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.11...v0.3.12) (2025-08-25)
 
 
