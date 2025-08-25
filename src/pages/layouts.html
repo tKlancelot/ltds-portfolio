@@ -15,7 +15,7 @@
     <doc-section title="API de base">
       <p>
         Par défaut : <code>lt-frame</code> empile en colonne, <code>lt-stack</code> aligne en rangée.
-        Les gaps/alignements/justifies sont contrôlés via des tokens (<code>--size-*</code>) et des classes utilitaires.
+        Les gaps/alignements/justifies sont contrôlés via des tokens et des classes utilitaires.
       </p>
 
       <ltds-code-block language="css" dedent>
@@ -48,9 +48,9 @@
         </div>
 
         <div class="lt-stack lt-stack--gap-3">
-          <div class="u-container--md u-container--warning">1</div>
-          <div class="u-container--md u-container--warning">2</div>
-          <div class="u-container--md u-container--warning">3</div>
+          <div class="u-container u-container--warning u-px-4">1</div>
+          <div class="u-container u-container--warning u-px-4">2</div>
+          <div class="u-container u-container--warning u-px-4">3</div>
         </div>
       </div>
     </doc-section>
@@ -60,34 +60,30 @@
     <!-- Modifiers -->
     <doc-section title="Modificateurs (desktop)">
       <p>Modifie le comportement sans media query :</p>
-      <ltds-code-block language="html" dedent>
       <!-- lt-frame (colonne) -->
-      <div class="lt-frame lt-frame--gap-6 lt-frame--items-center lt-frame--center">
-        ...
-      </div>
-
-      <!-- lt-stack (rangée) -->
-      <div class="lt-stack lt-stack--gap-4 lt-stack--between lt-stack--items-start">
-        ...
-      </div>
-
-      <!-- Direction (stack) -->
-      <div class="lt-stack lt-stack--col">...</div>
-      </ltds-code-block>
-
-      <div class="lt-frame lt-frame--gap-3">
+      <div class="lt-frame u-my-4">
+        <div class="lt-frame lt-frame--gap-6 lt-frame--items-center">
+          <div class="u-container u-container--info">frame child align items center</div>
+        </div>
+        
+        <!-- lt-stack (rangée) -->
         <div class="lt-stack lt-stack--gap-4 lt-stack--between">
-          <div class="u-container u-container--success">Gauche</div>
-          <div class="u-container u-container--success">Droite</div>
+          <div class="u-container u-container--info">stack between child start</div>
+          <div class="u-container u-container--info">stack between child end</div>
+        </div>
+        
+        <!-- Direction (stack) -->
+        <div class="lt-stack lt-stack--col">
+          <div class="u-container u-container--info">stack direction column</div>
         </div>
 
-        <div class="lt-frame lt-frame--gap-2 lt-frame--items-center lt-frame--center" style="min-height: 120px;">
-          <div class="u-container u-container--primary">Centré vertical/horizontal</div>
+        <!-- Alignement (frame) -->
+        <div class="lt-frame lt-frame--gap-2 lt-frame--items-center lt-frame--center u-bg-info-10" style="min-height: 120px;">
+          <div class="u-container u-container--primary">frame child align/justify center</div>
         </div>
+
       </div>
-
-      <ltds-alert scheme="info" title="Tip"
-        content="Les gaps disponibles : --gap-2, --gap-3, --gap-4, --gap-6, --gap-8 (via lt-*---gap-N)."></ltds-alert>
+      <ltds-alert scheme="info" title="Tip" content="Les gaps disponibles : --gap-2, --gap-3, --gap-4, --gap-6, --gap-8 (via lt-*---gap-N)."></ltds-alert>
     </doc-section>
 
     <ltds-divider></ltds-divider>
@@ -95,66 +91,66 @@
     <!-- Responsive -->
     <doc-section title="Responsive (max-width)">
       <p>
-        Préfixe les modificateurs avec le palier : <code>.lt-stack--mob-between</code>, 
-        <code>.lt-frame--tab-items-center</code>, <code>.lt-stack--sm-col</code>, etc.
+        Préfixe les modificateurs avec le palier : <span>.lt-stack--mob-between</span>, 
+        <span>.lt-frame--tab-items-center</span>, <span>.lt-stack--sm-col</span>, etc.
       </p>
 
-      <ltds-code-block language="html" dedent>
-      <!-- De row à col sur mobile, avec gaps adaptés -->
-      <div class="lt-stack lt-stack--gap-6 lt-stack--between
-                  lt-stack--mob-col lt-stack--mob-gap-3">
-        <div class="u-container u-container--info">Bloc 1</div>
-        <div class="u-container u-container--info">Bloc 2</div>
-        <div class="u-container u-container--info">Bloc 3</div>
+      <div class="lt-frame u-my-4">
+        <!-- De row à col sur mobile, avec gaps adaptés -->
+        <ltds-code-block language="markup" dedent>
+          <div class="lt-stack lt-stack--gap-6 lt-stack--between lt-stack--mob-col lt-stack--mob-gap-3 u-container u-container--info">
+            <div class="u-container u-container--info">Bloc 1</div>
+            <div class="u-container u-container--info">Bloc 2</div>
+            <div class="u-container u-container--info">Bloc 3</div>
+          </div>
+        </ltds-code-block>
+  
+        <div class="lt-stack lt-stack--gap-6 lt-stack--between lt-stack--mob-col lt-stack--mob-gap-3 u-container u-container--info">
+          <div class="u-container u-container--info">Bloc 1</div>
+          <div class="u-container u-container--info">Bloc 2</div>
+          <div class="u-container u-container--info">Bloc 3</div>
+        </div>
       </div>
-      </ltds-code-block>
 
-      <div class="lt-stack lt-stack--gap-6 lt-stack--between lt-stack--mob-col lt-stack--mob-gap-3">
-        <div class="u-container u-container--info">Bloc 1</div>
-        <div class="u-container u-container--info">Bloc 2</div>
-        <div class="u-container u-container--info">Bloc 3</div>
-      </div>
-
-      <ltds-alert scheme="info" title="Rappel breakpoints"
-        content="sm ≤414, mob ≤768, tab ≤1024, note ≤1199, lap ≤1439, desk ≤1919 (max-width)."></ltds-alert>
+      <ltds-alert scheme="info" title="Rappel breakpoints" content="sm ≤414, mob ≤768, tab ≤1024, note ≤1199, lap ≤1439, desk ≤1919 (max-width)."></ltds-alert>
     </doc-section>
 
     <ltds-divider></ltds-divider>
 
-    <!-- Patterns -->
-    <doc-section title="Patterns courants">
-      <p>Quelques compositions rapides.</p>
-
-      <h3 class="u-fs-3 u-text-secondary">Sidebar / Contenu</h3>
-      <ltds-code-block language="html" dedent>
-      <div class="lt-stack lt-stack--gap-6 lt-stack--items-stretch lt-stack--mob-col">
-        <aside class="u-col-span-3 u-container u-container--warning" style="min-width: 240px;">Sidebar</aside>
-        <section class="u-col-span-9 u-container u-container--success">Contenu principal</section>
-      </div>
-      </ltds-code-block>
-
-      <div class="lt-stack lt-stack--gap-6 lt-stack--items-stretch lt-stack--mob-col">
-        <aside class="u-container u-container--warning" style="min-width: 240px;">Sidebar</aside>
-        <section class="u-container u-container--success">Contenu principal</section>
-      </div>
-
-      <h3 class="u-fs-3 u-text-secondary">Header d’action</h3>
-      <ltds-code-block language="html" dedent>
-      <div class="lt-stack lt-stack--between lt-stack--items-center lt-stack--gap-3">
-        <h2 class="u-m-0">Titre</h2>
-        <div class="lt-stack lt-stack--gap-2">
-          <button class="ltds-btn ltds-btn--ghost">Secondaire</button>
-          <button class="ltds-btn ltds-btn--primary">Action</button>
+    <doc-section title="Compositions courantes">
+      <div class="lt-frame">
+        <h3>Sidebar / Contenu</h3>
+        <ltds-code-block language="html" dedent>
+          <div class="lt-stack lt-stack--items-stretch lt-stack--mob-col u-col">
+            <aside class="u-container u-container--warning u-min-w-l-3 u-min-h-l-3">Sidebar (min height)</aside>
+            <section class="u-container u-container--success u-grow">Contenu principal (stretch)</section>
+          </div>
+        </ltds-code-block>
+        <div class="lt-stack lt-stack--items-stretch lt-stack--mob-col u-col">
+          <aside class="u-container u-container--warning u-min-w-l-3 u-min-h-l-3">Sidebar (min height)</aside>
+          <section class="u-container u-container--success u-grow">Contenu principal (stretch)</section>
         </div>
       </div>
-      </ltds-code-block>
-
-      <div class="lt-stack lt-stack--between lt-stack--items-center lt-stack--gap-3">
-        <h2 class="u-m-0">Titre</h2>
-        <div class="lt-stack lt-stack--gap-2">
-          <button class="ltds-btn ltds-btn--ghost">Secondaire</button>
-          <button class="ltds-btn ltds-btn--primary">Action</button>
+      <div class="lt-frame">
+        <h3>Header d'action</h3>
+        <ltds-code-block language="html" dedent>
+        <div class="lt-stack lt-stack--between lt-stack--items-center lt-stack--gap-3 u-container u-container--info">
+          <h2 class="u-m-0">Titre</h2>
+          <div class="lt-stack lt-stack--gap-2">
+            <button class="ltds-btn ltds-btn--sm ltds-btn--outline">Secondaire</button>
+            <button class="ltds-btn ltds-btn--sm ltds-btn--primary">Action</button>
+          </div>
         </div>
+        </ltds-code-block>
+    
+        <div class="lt-stack lt-stack--between lt-stack--items-center lt-stack--gap-3 u-container u-container--info">
+          <h2 class="u-m-0">Titre</h2>
+          <div class="lt-stack lt-stack--gap-2">
+            <button class="ltds-btn ltds-btn--sm ltds-btn--outline">Secondaire</button>
+            <button class="ltds-btn ltds-btn--sm ltds-btn--primary">Action</button>
+          </div>
+        </div>
+
       </div>
     </doc-section>
 
@@ -162,31 +158,44 @@
 
     <!-- Cheatsheet -->
     <doc-section title="Cheatsheet">
-      <div class="lt-frame lt-frame--gap-3">
-        <div>
-          <h3 class="u-fs-3 u-text-secondary">lt-frame</h3>
-          <ul class="u-my-0">
-            <li><code>lt-frame--gap-2|3|4|6|8</code></li>
-            <li><code>lt-frame--items-start|center|end|stretch</code></li>
-            <li><code>lt-frame--start|end|center|between</code></li>
-            <li>Responsive : <code>lt-frame--mob-items-center</code>, <code>lt-frame--tab-gap-6</code>…</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="u-fs-3 u-text-secondary">lt-stack</h3>
-          <ul class="u-my-0">
-            <li><code>lt-stack--gap-2|3|4|6|8</code></li>
-            <li><code>lt-stack--items-start|center|end|stretch</code></li>
-            <li><code>lt-stack--start|end|center|between|around|evenly</code></li>
-            <li><code>lt-stack--wrap|nowrap</code>, <code>lt-stack--row|col</code></li>
-            <li>Responsive : <code>lt-stack--mob-col</code>, <code>lt-stack--tab-between</code>…</li>
-          </ul>
-        </div>
-      </div>
+      <table class="table u-w-full u-text-left u-my-4">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Composant</th>
+            <th>Modificateurs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>lt-frame</code></td>
+            <td>
+              <ul class="u-my-0">
+                <li><code>lt-frame--gap-2|3|4|6|8</code></li>
+                <li><code>lt-frame--items-start|center|end|stretch</code></li>
+                <li><code>lt-frame--start|end|center|between</code></li>
+                <li>Responsive : <code>lt-frame--mob-items-center</code>, <code>lt-frame--tab-gap-6</code>…</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><code>lt-stack</code></td>
+            <td>
+              <ul class="u-my-0">
+                <li><code>lt-stack--gap-2|3|4|6|8</code></li>
+                <li><code>lt-stack--items-start|center|end|stretch</code></li>
+                <li><code>lt-stack--start|end|center|between|around|evenly</code></li>
+                <li><code>lt-stack--wrap|nowrap</code>, <code>lt-stack--row|col</code></li>
+                <li>Responsive : <code>lt-stack--mob-col</code>, <code>lt-stack--tab-between</code>…</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
       <ltds-alert scheme="info" title="Conseil"
         content="Compose les layouts avec Grid pour la macro-structure, puis affine localement avec lt-stack/lt-frame pour les alignements et l’espacement."></ltds-alert>
     </doc-section>
+
 
   </div>
 </div>

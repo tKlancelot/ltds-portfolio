@@ -4,8 +4,9 @@ export class LtdsCodeBlock extends HTMLElement {
     const shouldDedent = this.hasAttribute("dedent");
     const enableCopy = this.getAttribute("copy") !== "false";
 
-    // 1) Récup + normalisation du contenu
-    const rawSource = this.textContent || "";
+    // 1) Récup + normalisation du contenu (HTML, pas textContent)
+    const tpl = this.querySelector("template");
+    const rawSource = (tpl ? tpl.innerHTML : this.innerHTML) || "";
     const cleaned = shouldDedent ? this.#dedent(rawSource) : rawSource;
 
     // 2) Structure DOM (sans Shadow DOM)
@@ -15,7 +16,7 @@ export class LtdsCodeBlock extends HTMLElement {
       btn.type = "button";
       btn.className = "ltds-copy-btn ltds-btn ltds-btn--sm ltds-btn--shape ltds-btn--ghost u-fs-0";
       btn.setAttribute("aria-label", "Copier le code");
-      btn.innerHTML = `<i class="icon lt-icon-copy icon-size-md"></i>`
+      btn.innerHTML = `<i class="icon lt-icon-copy icon-size-md"></i>`;
       btn.addEventListener("click", () => this.#copyToClipboard(cleaned, btn));
       this.appendChild(btn);
     }
@@ -24,7 +25,10 @@ export class LtdsCodeBlock extends HTMLElement {
     pre.className = `language-${lang}`;
     const codeEl = document.createElement("code");
     codeEl.className = `language-${lang}`;
-    codeEl.textContent = cleaned; // (sécurisé) → échappe automatiquement
+
+    // IMPORTANT : on veut afficher les <div> en tant que texte → textContent
+    codeEl.textContent = cleaned;
+
     pre.appendChild(codeEl);
     this.appendChild(pre);
 
@@ -34,7 +38,6 @@ export class LtdsCodeBlock extends HTMLElement {
     }
   }
 
-  // --- helpers ---
   #dedent(str = "") {
     const s = str.replace(/^\n+|\n+$/g, "");
     const lines = s.split("\n");
@@ -43,31 +46,32 @@ export class LtdsCodeBlock extends HTMLElement {
     return lines.map(l => l.slice(min)).join("\n");
   }
 
-  async #copyToClipboard(text, btn) {
-    try {
-      if (navigator.clipboard?.writeText) {
-        await navigator.clipboard.writeText(text);
-      } else {
-        // Fallback legacy
-        const ta = document.createElement("textarea");
-        ta.value = text;
-        ta.style.position = "fixed";
-        ta.style.opacity = "0";
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand("copy");
-        document.body.removeChild(ta);
-      }
-      btn.classList.add("is-copied");
-      setTimeout(() => {
-        btn.classList.remove("is-copied");
-      }, 1200);
-    } catch (e) {
-      btn.textContent = "Échec";
-      setTimeout(() => (btn.innerHTML = `<i class="icon lt-icon-copy icon-size-md"></i>`), 1200);
+  async #copyToClipboard(text, btn) { 
+    try { 
+      if (navigator.clipboard?.writeText) { await navigator.clipboard.writeText(text); } 
+      else { 
+        // Fallback legacy 
+        const ta = document.createElement("textarea"); 
+        ta.value = text; ta.style.position = "fixed"; 
+        ta.style.opacity = "0"; 
+        document.body.appendChild(ta); 
+        ta.select(); document.execCommand("copy"); 
+        document.body.removeChild(ta); 
+      } 
+      btn.classList.add("is-copied"); 
+      setTimeout(() => { 
+        btn.classList.remove("is-copied"); 
+      }, 1200); 
+    } 
+    catch (e) { 
+      btn.textContent = "Échec"; 
+      setTimeout(() => (
+        btn.innerHTML = `<i class="icon lt-icon-copy icon-size-md"></i>`
+      ), 1200); 
       console.error("Copie impossible:", e);
-    }
+    } 
   }
+
 }
 
 if (!customElements.get("ltds-code-block")) {

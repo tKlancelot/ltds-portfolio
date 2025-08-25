@@ -27,3 +27,13 @@
 .table tr:nth-of-type(even){ 
     background-color: var(--color-primary-opacity-10);
 }
+
+@media screen and (max-width: 768px) {
+
+    .table th,
+    .table td{
+        padding: var(--size-1);
+        font-size: var(--tfs-1);
+    }
+
+}
