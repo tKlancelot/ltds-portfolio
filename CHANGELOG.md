@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.14](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.13...v0.3.14) (2025-08-25)
+
+
+### Bug Fixes
+
+* order of imports ([1b07c6d](https://github.com/tKlancelot/ltds-portfolio/commit/1b07c6d20c4ef4b23c3c78ff658f16bde1ad39c9))
+
 ### [0.3.13](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.12...v0.3.13) (2025-08-25)
 
 
