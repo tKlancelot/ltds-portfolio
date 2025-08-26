@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.17](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.16...v0.3.17) (2025-08-26)
+
+
+### Features
+
+* adding a searchbar and search component ! ([c5b00d6](https://github.com/tKlancelot/ltds-portfolio/commit/c5b00d65d483ed0571ac8caf859eb66e74f82a28))
+
 ### [0.3.16](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.15...v0.3.16) (2025-08-25)
 
 
