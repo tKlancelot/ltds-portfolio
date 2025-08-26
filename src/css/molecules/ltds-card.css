@@ -89,22 +89,28 @@ ltds-card:focus-within .ltds-card {
     --card-border: rgba(255, 255, 255, .18);
 }
 
+.ltds-card--utils,
 .ltds-card--info{
     --card-bg: var(--color-info-opacity-10);
+    --card-bg2: var(--color-info-opacity-20);
     --card-border:  color-mix(in oklab, var(--color-info) 96%, transparent);
     --card-border-hover: var(--color-info-active);
     --card-outline-focus-visible: 2px solid color-mix(in oklab, var(--color-info) 55%, transparent);
 }
 
+.ltds-card--base,
 .ltds-card--success{
     --card-bg: var(--color-success-opacity-10);
+    --card-bg2: var(--color-success-opacity-20);
     --card-border: color-mix(in oklab, var(--color-success) 96%, transparent);
     --card-border-hover: var(--color-success-active);
     --card-outline-focus-visible: 2px solid color-mix(in oklab, var(--color-success) 55%, transparent);
 }
 
+.ltds-card--layouts,
 .ltds-card--warning{
     --card-bg: var(--color-warning-opacity-10);
+    --card-bg2: var(--color-warning-opacity-20);
     --card-border: color-mix(in oklab, var(--color-warning) 96%, transparent);
     --card-border-hover: var(--color-warning-active);
     --card-outline-focus-visible: 2px solid color-mix(in oklab, var(--color-warning) 55%, transparent);
@@ -201,7 +207,7 @@ ltds-card .ltds-card-footer {
 
 
 .splide__slide .ltds-card{
-    background-image: var(--brand-gradient-surface-overlay);
+    /* background-image: var(--brand-gradient-surface-overlay); */
     min-height: 140px;;
 }
 
@@ -216,6 +222,6 @@ ltds-card .ltds-card-footer {
 .splide__slide .ltds-card--interactive:hover {
     box-shadow: inset 0 0 32px 12px var(--color-ui-white-opacity-20);
     .ltds-card-overlay{
-        transform: rotate(-3deg);
+        transform: translateY(-2px) scale(1.02);
     }
 }

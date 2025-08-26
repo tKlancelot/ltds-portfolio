@@ -1,7 +1,7 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.woff?d545e2d834037ea9566ac154cd3c4c6f") format("woff"),
-url("./icons.woff2?d545e2d834037ea9566ac154cd3c4c6f") format("woff2");
+    src: url("./icons.woff?71f83bc0b9eae21cb2ce43837627e826") format("woff"),
+url("./icons.woff2?71f83bc0b9eae21cb2ce43837627e826") format("woff2");
 }
 
 i[class^="lt-icon-"]:before, i[class*=" lt-icon-"]:before {
@@ -36,51 +36,54 @@ i[class^="lt-icon-"]:before, i[class*=" lt-icon-"]:before {
 .lt-icon-molecules:before {
     content: "\f107";
 }
-.lt-icon-home:before {
+.lt-icon-jump-to:before {
     content: "\f108";
 }
-.lt-icon-font-system:before {
+.lt-icon-home:before {
     content: "\f109";
 }
-.lt-icon-expertise:before {
+.lt-icon-font-system:before {
     content: "\f10a";
 }
-.lt-icon-error:before {
+.lt-icon-expertise:before {
     content: "\f10b";
 }
-.lt-icon-download-test:before {
+.lt-icon-error:before {
     content: "\f10c";
 }
-.lt-icon-door-logout:before {
+.lt-icon-download-test:before {
     content: "\f10d";
 }
-.lt-icon-copy:before {
+.lt-icon-door-logout:before {
     content: "\f10e";
 }
-.lt-icon-close:before {
+.lt-icon-copy:before {
     content: "\f10f";
 }
-.lt-icon-check:before {
+.lt-icon-close:before {
     content: "\f110";
 }
-.lt-icon-caret-down:before {
+.lt-icon-check:before {
     content: "\f111";
 }
-.lt-icon-burger:before {
+.lt-icon-caret-down:before {
     content: "\f112";
 }
-.lt-icon-breakpoints:before {
+.lt-icon-burger:before {
     content: "\f113";
 }
-.lt-icon-base:before {
+.lt-icon-breakpoints:before {
     content: "\f114";
 }
-.lt-icon-back-arrow:before {
+.lt-icon-base:before {
     content: "\f115";
 }
-.lt-icon-atoms:before {
+.lt-icon-back-arrow:before {
     content: "\f116";
 }
-.lt-icon-about:before {
+.lt-icon-atoms:before {
     content: "\f117";
+}
+.lt-icon-about:before {
+    content: "\f118";
 }

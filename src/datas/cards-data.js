@@ -5,6 +5,7 @@ export const cards = [
     title: "Reset",
     subtitle: "base",
     content: "Normalisation CSS pour un rendu cohérent entre navigateurs.",
+    categ: "base",
     // extraClass: "ltds-card--glass",
     href: "/design-system/reset"
   },
@@ -13,6 +14,7 @@ export const cards = [
     title: "Tokens",
     subtitle: "design values",
     content: "Couleurs, typographie, tailles, radius, shadows et autres variables globales.",
+    categ: "base",
     // extraClass: "ltds-card--success" ,
     href: "/design-system/tokens"
   },
@@ -21,6 +23,7 @@ export const cards = [
     title: "Colors",
     subtitle: "palette",
     content: "Jeux de couleurs sémantiques et dynamiques, avec modes et thèmes.",
+    categ: "base",
     // extraClass: "ltds-card--success",
     href: "/design-system/colors"
   },
@@ -29,6 +32,7 @@ export const cards = [
     title: "Utilities",
     subtitle: "helpers",
     content: "Classes rapides : marges, paddings, line-height, font-size, backgrounds…",
+    categ: "utils",
     // extraClass: "ltds-card--success",
     href: "/design-system/utilities"
   },
@@ -37,6 +41,7 @@ export const cards = [
     title: "Accessibility",
     subtitle: "a11y",
     content: "Helpers visuels comme u-hidden, display-flex/block pour l’accessibilité.",
+    categ: "utils",
     // extraClass: "ltds-card--warning",
     href: "/design-system/accessibility"
   },
@@ -45,6 +50,7 @@ export const cards = [
     title: "Dimensions",
     subtitle: "sizes",
     content: "Utilitaires pour contraindre largeur/hauteur et ratios.",
+    categ: "utils",
     // extraClass: "ltds-card--success",
     href: "/design-system/dimensions"
   },
@@ -53,6 +59,7 @@ export const cards = [
     title: "Flexboxes",
     subtitle: "layout",
     content: "Alignements rapides, direction, gap et distribution des éléments.",
+    categ: "utils",
     // extraClass: "ltds-card--warning",
     href: "/design-system/flexboxes"
   },
@@ -61,6 +68,7 @@ export const cards = [
     title: "Grids",
     subtitle: "layout",
     content: "Système responsive basé sur 12 colonnes et breakpoints personnalisés.",
+    categ: "utils",
     // extraClass: "ltds-card--danger",
     href: "/design-system/grids"
   },
@@ -69,6 +77,7 @@ export const cards = [
     title: "Spacings",
     subtitle: "margin / padding",
     content: "Échelle d’espacement cohérente : u-mt-1, u-px-4, etc.",
+    categ: "utils",
     // extraClass: "ltds-card--danger",
     href: "/design-system/spacings"
   },
@@ -77,6 +86,7 @@ export const cards = [
     title: "Layouts",
     subtitle: "stack / frame",
     content: "Compositions rapides et responsives.",
+    categ: "layouts",
     // extraClass: "ltds-card--glass",
     href: "/design-system/layouts"
   }

@@ -33,15 +33,27 @@ export default async function initHomePage(params) {
 
     const grid = document.querySelector('.ltds-card-grid');
 
-    cards.forEach(({ title, subtitle, content, extraClass, href }) => {
+    const shuffleCards = () => {
+        // melanger toutes les cartes at random 
+        const children = Array.from(grid.children);
+        children.sort(() => Math.random() - 0.5);
+        grid.innerHTML = '';
+        children.forEach(child => grid.appendChild(child));
+    }
+
+
+    cards.forEach(({ title, subtitle, content, extraClass, href, categ }) => {
         const el = document.createElement('ltds-card');
         if (title) el.setAttribute('title', title);
         if (subtitle) el.setAttribute('subtitle', subtitle);
         if (content) el.setAttribute('content', content);
         if (extraClass) el.setAttribute('extra-class', extraClass);
+        if (categ) el.setAttribute('extra-class', 'ltds-card--' + categ);
         if (href) el.setAttribute('href', href);
         grid.appendChild(el);
+        shuffleCards();
     });
+
 
 
     // copy npm button 
