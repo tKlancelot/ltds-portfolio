@@ -22,14 +22,20 @@ export class SearchBar extends HTMLElement {
         this.modal.addEventListener('open', this.focusModalInput.bind(this));
     }
 
+                //     <div class="input" data-modal-ref="modal-search">
+                //     <i class="icon lt-icon-search icon-size-xl icon-size-mob-sm"></i>
+                //     <input class="u-text-style-italic u-display-mob-none" type="search" placeholder="Rechercher">
+                //     <i class="icon lt-icon-jump-to icon-size-lg icon-size-mob-sm"></i>
+                // </div>
+
     render() {
         this.innerHTML = `
             <div class="search-bar">
-                <div class="input" data-modal-ref="modal-search">
-                    <i class="icon lt-icon-search icon-size-xl icon-size-mob-sm"></i>
-                    <input class="u-text-style-italic u-display-mob-none" type="search" placeholder="Rechercher">
-                    <i class="icon lt-icon-jump-to icon-size-lg icon-size-mob-sm"></i>
-                </div>
+                <button class="ltds-btn ltds-btn--outline ltds-btn--sm" data-modal-ref="modal-search">
+                    <i class="icon lt-icon-search icon-size-lg"></i>
+                    <span class="ltds-btn-label">Rechercher</span>
+                    <i class="icon lt-icon-jump-to icon-size-lg"></i>
+                </button>
                 <modal-dialog id="modal-search" modal-title="Search" class="modal modal-color-scheme-primary" max-width="auto">
                 <div class="u-min-w-l-7 u-min-h-l-4">
                     <div class="input">

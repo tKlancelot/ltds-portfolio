@@ -1,4 +1,10 @@
-.theme-switch.selected{
+.theme-switch.selected {
     background-image: var(--brand-gradient-surface-primary);
     color: var(--color-text-primary);
+}
+
+.ltds-btn--sm {
+    --btn-font-size: var(--tfs-1);
+    --btn-size: var(--size-7);
+    padding-inline: var(--size-2);
 }

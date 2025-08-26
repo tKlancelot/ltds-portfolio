@@ -89,3 +89,12 @@
     }
 
 }
+
+#three-container {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 16 / 9;
+  /* pas de background -> canvas transparent */
+  display: flex;
+  margin: auto;
+}
