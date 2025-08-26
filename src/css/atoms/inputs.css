@@ -19,7 +19,6 @@ input,textarea{
 input{
     line-height: var(--size-8);
     padding-inline: var(--size-2);
-    font-family: var(--ff-primary);
 }
 
 
@@ -30,9 +29,8 @@ textarea{
 select,
 input::placeholder,
 textarea::placeholder{
-    color:var(--text-tertiary);
+    color:var(--color-text-tertiary);
 }
-
 
 
 select option{
@@ -40,18 +38,25 @@ select option{
 }
 
 
-input:focus-visible,
+.input:has(input:focus-visible),
 textarea:focus-visible{
-    outline: unset;
-    background-color:oklch(from var(--color-primary-opacity-20) calc(l * .90) c h);
+    outline: 2px solid var(--brand-primary-opacity-40);
+    /* outline: unset; */
+    /* background-color:oklch(from var(--color-primary-opacity-20) calc(l * .90) c h); */
 }
 
 .input,
 .select,
 .textarea{
-    border: unset;
+    border: 1px solid var(--color-primary-opacity-20);
     background-color: var(--color-primary-opacity-10);
-    font-family: var(--ff-primary);
+    border-radius: var(--radii-2);
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    padding-inline: var(--size-2);
 }
 
 .select{
@@ -117,3 +122,12 @@ textarea:focus-visible{
     height: 100%;
 }
 
+@media screen and (max-width: 768px) {
+
+    .navbar-right .input input{
+        min-width: 120px;
+        max-width: 80px;
+        padding-inline: var(--size-1);
+    }
+
+}

@@ -40,10 +40,6 @@
 
 .ltds-menu-submenu li{
     min-width: var(--large-size-2);
-    &:hover{
-        color: var(--color-primary);
-        /* text-decoration: underline;     */
-    }
 }
 
 .ltds-menu > li:hover .ltds-menu-submenu{

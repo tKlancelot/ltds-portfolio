@@ -41,6 +41,9 @@ export class ModalDialog extends HTMLElement {
       content.classList.add("animate-in");
     });
     document.addEventListener("keydown", this._onKeyDown);
+
+    // i need a dispatch event
+    this.dispatchEvent(new Event("open"));
   }
 
   close() {

@@ -11,6 +11,7 @@ import { LtdsDivider } from './web-components/divider.js';
 import { PanelMenu } from './web-components/panelMenu.js';
 import { LtdsMenuItem } from './web-components/menuItem.js';
 import { LtdsAlert } from './web-components/alertComponent.js';
+import { SearchBar } from './web-components/searchComponent.js';
 
 import UniversalRouter from 'universal-router';
 import { routeConfigurations } from './utils/routeConfiguration.js';

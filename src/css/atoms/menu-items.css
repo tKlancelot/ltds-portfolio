@@ -1,6 +1,6 @@
 .ltds-menu-item{
     --item-padding-inline: var(--size-2);
-    --item-line-height: var(--lh-4);
+    --item-line-height: var(--size-8);
     padding-inline: var(--item-padding-inline);
     line-height: var(--item-line-height);
     display: flex;
@@ -11,3 +11,7 @@
     text-transform: capitalize;
 }
 
+.ltds-menu-item:hover{
+    background-color: var(--brand-primary-opacity-10);
+    color: var(--brand-primary);
+}

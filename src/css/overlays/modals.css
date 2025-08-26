@@ -73,9 +73,23 @@ modal-dialog.is-open .modal {
     }
 }
 
-@media screen and (max-width: 768px) {
+modal-dialog#modal-search .modal-content{
+    margin-top: 6%;
+} 
 
+@media screen and (max-width: 768px) {
+    
     modal-dialog .modal-content{
         max-width: 360px!important;
     }
+
+    modal-dialog#modal-search .modal-content{
+        margin-top: auto;
+    }
+    
+    modal-dialog#modal-search .modal-content .u-min-w-l-7{
+        min-width: 320px;
+        max-width: 400px;
+    }
+
 }
