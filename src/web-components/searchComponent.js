@@ -26,7 +26,7 @@ export class SearchBar extends HTMLElement {
         this.innerHTML = `
             <div class="search-bar">
                 <div class="input">
-                    <i class="icon lt-icon-search icon-size-xl"></i>
+                    <i class="icon lt-icon-search icon-size-xl icon-size-mob-sm"></i>
                     <input type="search" placeholder="Rechercher" data-modal-ref="modal-search">
                 </div>
                 <modal-dialog id="modal-search" modal-title="Search" class="modal modal-color-scheme-primary" max-width="auto">

@@ -223,11 +223,12 @@ export function initReveals({
 
 export function showVersions() {
   // Emplacements dans ton HTML
-  const elDs  = document.querySelector('[data-version="ltds"]');
-  const elApp = document.querySelector('[data-version="portfolio"]');
+  const elDs  = document.querySelectorAll('[data-version="ltds"]');
+  const elApp = document.querySelectorAll('[data-version="portfolio"]');
 
-  if (elDs)  elDs.textContent  = ldsVersion;
-  if (elApp) elApp.textContent = portfolioVersion;
+  
+  elDs.forEach(el => el.textContent = ldsVersion);
+  elApp.forEach(el => el.textContent = portfolioVersion);
 
   // Option: log
   console.log(`[versions] portfolio ${portfolioVersion} — ltds ${ldsVersion}`);

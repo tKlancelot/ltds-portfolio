@@ -105,7 +105,7 @@ _render() {
         ${title}
       </h3>
       <button class="modal-close ltds-btn ltds-btn--ghost ltds-btn--shape ltds-btn--sm" aria-label="Fermer la modale" data-modal-dismiss>
-        <i class="icon lt-icon-close lt-icon-style-solid icon-size-md"></i>
+        <i class="icon lt-icon-close icon-size-lg"></i>
       </button>
     </div>
     <div class="modal-slot"></div>

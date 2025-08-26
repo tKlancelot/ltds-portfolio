@@ -10,15 +10,13 @@ i[class^="lt-icon-"].lt-icon-style-solid:before, i[class*=" lt-icon-"].lt-icon-s
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
     &::before{
-        font-size: var(--tfs-3);
+        font-size: var(--tfs-4);
     }
 }
 
 .icon.icon-size-sm::before{
-    font-size: var(--tfs-1);
+    font-size: var(--tfs-3);
 }
 
 .icon.icon-size-lg::before{
@@ -27,4 +25,20 @@ i[class^="lt-icon-"].lt-icon-style-solid:before, i[class*=" lt-icon-"].lt-icon-s
 
 .icon.icon-size-xl::before{
     font-size: var(--tfs-5);
+}
+
+@media screen and (max-width: 768px) {
+
+    .icon.icon-size-mob-sm::before{
+        font-size: var(--tfs-4);
+    }
+    
+    .icon.icon-size-mob-lg::before{
+        font-size: var(--tfs-5);
+    }
+
+    .icon.icon-size-mob-xl::before{
+        font-size: var(--tfs-6);
+    }
+
 }
