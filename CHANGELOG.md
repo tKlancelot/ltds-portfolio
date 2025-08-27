@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.23](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.22...v0.3.23) (2025-08-27)
+
+
+### Features
+
+* improve scene lookat function ([77465f2](https://github.com/tKlancelot/ltds-portfolio/commit/77465f2534fb24c748e7ab9ae62ccac204be92c1))
+
 ### [0.3.22](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.21...v0.3.22) (2025-08-27)
 
 
