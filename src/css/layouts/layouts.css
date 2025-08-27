@@ -104,10 +104,3 @@
 }
 
 #three-container canvas { background: transparent !important; }
-
-
-#getting-started{
-  position: relative;
-  z-index: 9;
-  /* background-color:var(--surface-page); */
-}
