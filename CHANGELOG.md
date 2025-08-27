@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.25](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.24...v0.3.25) (2025-08-27)
+
+
+### Bug Fixes
+
+* remove reset background ([592c28e](https://github.com/tKlancelot/ltds-portfolio/commit/592c28ed6ae4ac7eede9146d74a35171c8801f8f))
+
 ### [0.3.24](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.23...v0.3.24) (2025-08-27)
 
 
