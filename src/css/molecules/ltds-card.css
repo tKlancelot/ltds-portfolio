@@ -203,7 +203,7 @@ ltds-card .ltds-card-footer {
 }
 
 
-.splide__slide .ltds-card .ltds-card-overlay{
+/* .splide__slide .ltds-card .ltds-card-overlay{
     background-color: var(--card-bg2);
     box-shadow: var(--shadow-2);
     padding: var(--size-2);
@@ -215,4 +215,4 @@ ltds-card .ltds-card-footer {
     .ltds-card-overlay{
         transform: translateY(-2px) scale(1.02);
     }
-}
+} */

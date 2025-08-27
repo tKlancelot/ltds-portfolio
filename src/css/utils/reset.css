@@ -6,6 +6,10 @@
     --color-text-primary:var(--color-ui-white-opacity-80);
 }
 
+html, body{
+    background: unset;
+}
+
 h1,h2,h3,h4{
     font-family: var(--font-family-accent);
     font-weight: var(--font-weight-semibold);

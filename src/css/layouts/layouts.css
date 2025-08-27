@@ -95,6 +95,7 @@
   max-width: 480px;
   aspect-ratio: 16 / 9;
   /* pas de background -> canvas transparent */
+  background: transparent;
   display: flex;
   margin: auto;
   top: 80px;
@@ -102,9 +103,8 @@
   position: relative;
 }
 
-#three-container canvas {
-  background: transparent !important;
-}
+#three-container canvas { background: transparent !important; }
+
 
 #getting-started{
   position: relative;
