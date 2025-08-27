@@ -154,13 +154,63 @@ export function renderThreeScene(selector = '#three-container') {
         renderer.render(scene, camera);
     }
 
+    // --- Cible invisible que la scène va regarder
+    const target = new THREE.Object3D();
+    scene.add(target);
+
+    // État pointeur + auto-spin
+    let mx = 0, my = 0;
+    let lastMove = performance.now();
+    let autoSpin = true;
+
+    // Écoute globale (sur tout le document)
+    document.addEventListener('pointermove', (e) => {
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        mx = (e.clientX / w) * 2 - 1;   // -1..1
+        my = (e.clientY / h) * 2 - 1;   // -1..1
+        lastMove = performance.now();
+        autoSpin = false;               // désactive la rotation auto pendant qu’on bouge
+    });
+
+    document.addEventListener('pointerleave', () => {
+    autoSpin = true;
+    });
+
+    // —— Paramètres de “sensibilité” (joue avec ces 4 valeurs)
+    const SPREAD_X = 3.0;   // amplitude horizontale de la cible (↑ = plus sensible)
+    const SPREAD_Y = 2.0;   // amplitude verticale de la cible
+    const DEPTH    = 1.4;   // distance de la cible depuis la caméra (↓ = plus sensible)
+    const LERP_POS = 0.20;  // lissage de la position cible (↑ = suit plus vite)
+    const IDLE_MS  = 1200;  // délai d’inactivité avant de relancer l’auto-spin
+
+    const _desired = new THREE.Vector3();
+
+    // --- Animate
     function animate() {
-        requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
 
-        // rotation très lente (axe Y)
-        group.rotation.y += 0.0016; // ajuste la vitesse: 0.001 = très lent, 0.01 = plus rapide
+    const now = performance.now();
 
-        renderer.render(scene, camera);
+    if (!autoSpin) {
+        // Place une cible en coordonnées "caméra" puis convertit en monde
+        _desired.set(mx * SPREAD_X, -my * SPREAD_Y, -DEPTH) // -Z = devant la caméra
+                .applyMatrix4(camera.matrixWorld);
+
+        // Lisse la position de la cible pour éviter les à-coups
+        target.position.lerp(_desired, LERP_POS);
+
+        // La scène “regarde” la cible (réaction immédiate et ample)
+        group.lookAt(target.position);
+    } else {
+        // Rotation auto quand il n’y a plus d’activité pointeur
+        group.rotation.y += 0.003;
+    }
+
+    // Reprise auto-spin après inactivité
+    if (now - lastMove > IDLE_MS) autoSpin = true;
+
+    renderer.render(scene, camera);
     }
     animate();
 
