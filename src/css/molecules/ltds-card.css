@@ -41,6 +41,7 @@ ltds-card a {
     flex-direction: column;
     gap: var(--size-2);
     transition: all .18s ease;
+    width: 100%;
 }
 
 
@@ -176,23 +177,13 @@ ltds-card .ltds-card-footer {
 .ltds-card-grid {
     display: grid;
     gap: var(--gap-4);
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-}
+    /* grid-template-columns: repeat(12, minmax(0, 1fr)); */
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
 
-.ltds-card-grid>ltds-card {
-    grid-column: span 4;
-}
-
-@media (max-width: 1439px) {
-    .ltds-card-grid>ltds-card {
-        grid-column: span 6;
-    }
 }
 
 @media (max-width: 768px) {
-    .ltds-card-grid>ltds-card {
-        grid-column: span 12;
-    }
+
 
     .ltds-card{
         --card-padding: var(--size-3);
