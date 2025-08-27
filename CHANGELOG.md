@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.24](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.23...v0.3.24) (2025-08-27)
+
+
+### Bug Fixes
+
+* zindex on #getting-started ([ac8485e](https://github.com/tKlancelot/ltds-portfolio/commit/ac8485edcade9034c6472176090a20ec91bb5072))
+
 ### [0.3.23](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.22...v0.3.23) (2025-08-27)
 
 
