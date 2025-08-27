@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.22](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.21...v0.3.22) (2025-08-27)
+
+
+### Features
+
+* rework three scene ([bc8d2b1](https://github.com/tKlancelot/ltds-portfolio/commit/bc8d2b15bfc4fff91524fb831c1ec45a1226eef1))
+
 ### [0.3.21](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.20...v0.3.21) (2025-08-27)
 
 ### [0.3.20](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.19...v0.3.20) (2025-08-26)
