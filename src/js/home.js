@@ -43,10 +43,11 @@ export default async function initHomePage(params) {
     }
 
 
-    cards.forEach(({ title, subtitle, content, extraClass, href, categ }) => {
+    cards.forEach(({ title, subtitle, icon, content, extraClass, href, categ }) => {
         const el = document.createElement('ltds-card');
         if (title) el.setAttribute('title', title);
         if (subtitle) el.setAttribute('subtitle', subtitle);
+        if (icon) el.setAttribute('icon', icon);
         if (content) el.setAttribute('content', content);
         if (extraClass) el.setAttribute('extra-class', extraClass);
         if (categ) el.setAttribute('extra-class', 'ltds-card--' + categ);
@@ -70,6 +71,6 @@ export default async function initHomePage(params) {
         });
     }
 
-    renderThreeScene();
+    // renderThreeScene();
 
 }

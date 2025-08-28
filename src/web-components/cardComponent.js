@@ -10,6 +10,7 @@ export class LtdsCard extends HTMLElement {
         const props = {
             title: this.getAttribute('title') || '',
             subtitle: this.getAttribute('subtitle') || '',
+            icon: this.getAttribute('icon') || '',
             content: this.getAttribute('content') || '',
             extraClass: this.getAttribute('extra-class') || ''
         };
@@ -18,7 +19,10 @@ export class LtdsCard extends HTMLElement {
             <${wrapper} class="ltds-card ltds-card--interactive ${props.extraClass}" ${hrefAttr} ${roleAttr}>
                 <div class="ltds-card-overlay">
                     <header class="ltds-card-header">
-                    <h3 class="ltds-card-title"><slot name="title">${props.title}</slot></h3>
+                    <h3 class="ltds-card-title">
+                        <i class="icon ${props.icon} icon-size-lg"></i>
+                        <slot name="title">${props.title}</slot>
+                    </h3>
                     <span class="u-text-secondary u-fs-0"><slot name="subtitle">${props.subtitle}</slot></span>
                     </header>
                     <div class="ltds-card-body">

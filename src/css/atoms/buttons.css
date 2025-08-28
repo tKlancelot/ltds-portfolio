@@ -6,5 +6,5 @@
 .ltds-btn--sm {
     --btn-font-size: var(--tfs-1);
     --btn-size: var(--size-7);
-    padding-inline: var(--size-2);
+    /* padding-inline: var(--size-2); */
 }

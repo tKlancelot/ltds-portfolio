@@ -24,7 +24,11 @@ export function createDesktopMenu() {
     let menu = document.getElementById('desktop-menu');
     let menuItems = '';
     cards.forEach(card => {
-        menuItems += `<a href="/design-system/${card.slug}" class="u-col-span-4"><li class="ltds-menu-item">${card.title}</li></a>`;
+        menuItems += `<a href="/design-system/${card.slug}" class="u-col-span-4"><li class="ltds-menu-item">
+            <i class="icon ${card.icon} icon-size-lg"></i>
+            ${card.title}
+        </li>
+        </a>`;
     });
     menu.innerHTML = menuItems;
 }
