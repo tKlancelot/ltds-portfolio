@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.27](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.26...v0.3.27) (2025-08-28)
+
+
+### Features
+
+* rework favicon +adding card icons + add icons to menu ([d465505](https://github.com/tKlancelot/ltds-portfolio/commit/d465505d9ae0ac60ffaa8c7357f7d299bf6293e3))
+
 ### [0.3.26](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.25...v0.3.26) (2025-08-28)
 
 ### [0.3.25](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.24...v0.3.25) (2025-08-27)
