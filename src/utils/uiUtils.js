@@ -175,6 +175,13 @@ export function applyPageGradient({
   haloShiftY = '-8%',
   haloColor = 'var(--brand-primary-opacity-40)'
 } = {}) {
+
+
+  // seulement si on est en darkmode 
+
+  let mode = document.body.dataset.mode;
+  if(mode === 'light') return;
+
   const el = typeof target === 'string' ? document.querySelector(target) : target;
   if (!el) return;
 
@@ -243,3 +250,47 @@ export function showVersions() {
   // Option: log
   console.log(`[versions] portfolio ${portfolioVersion} — ltds ${ldsVersion}`);
 }
+
+
+// toggle-darkmode.js
+// toggle-darkmode.js
+export function toggleDarkmode () {
+  const KEY = "ui:color-mode";
+  const root = document.documentElement;
+  const toggles = [
+    { input: document.getElementById("modeToggle"), label: document.getElementById("modeLabel") },
+    { input: document.getElementById("modeToggleMobile"), label: document.getElementById("modeLabelMobile") }
+  ];
+
+  const get = () => { try { return localStorage.getItem(KEY); } catch { return null; } };
+  const set = (v) => { try { localStorage.setItem(KEY, v); } catch {} };
+
+  const apply = (mode) => {
+    const m = mode === "dark" ? "dark" : "light";
+    root.setAttribute("data-mode", m);
+    root.style.colorScheme = m;
+    toggles.forEach(({ input, label }) => {
+      if (input) input.checked = (m === "dark");
+      if (label) label.textContent = m === "dark" ? "DARK" : "LIGHT";
+    });
+  };
+
+  // état initial
+  apply(get() || root.getAttribute("data-mode") || "light");
+
+  // interactions
+  toggles.forEach(({ input }) => {
+    if (input) {
+      input.addEventListener("change", () => {
+        const next = input.checked ? "dark" : "light";
+        apply(next); set(next);
+      });
+    }
+  });
+
+  // synchro multi-onglets
+  window.addEventListener("storage", (e) => {
+    if (e.key === KEY && e.newValue) apply(e.newValue);
+  });
+}
+

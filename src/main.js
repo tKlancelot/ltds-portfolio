@@ -28,6 +28,7 @@ const defaultUI = [
   UI.scrollToTop,
   UI.changeTheme,
   UI.showVersions,
+  UI.toggleDarkmode,
   () => UI.initReveals({ resetOnExit: true }),
 ];
 

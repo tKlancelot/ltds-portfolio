@@ -19,7 +19,7 @@
         flex-direction: column;
         gap: var(--size-4);
         padding: var(--size-6);
-        border: 1px solid var(--color-border);
+        border:1px solid var(--color-border-primary-20);
         border-radius: var(--radii-3);
     }
     
@@ -33,27 +33,27 @@
     }
 }
 
-.lt-page .lt-frame--fantasy {
+.lt-page .lt-frame--accentuated {
   position: relative;
   overflow: hidden;
-  border:1px solid var(--brand-primary-opacity-40);
+  border:1px solid var(--brand-primary);
   border-radius:var(--radii-5);
   padding: 8px;
   background-color: var(--surface-container);
 }
 
 
-.lt-page .lt-frame--fantasy .lt-frame-content{
+.lt-page .lt-frame--accentuated .lt-frame-content{
   border-radius: calc(var(--radii-5) - 8px);
   padding:16px;
-  background-blend-mode: overlay;
+  /* background-blend-mode: overlay;
   background-size: auto;
-  /* background-image:linear-gradient(180deg,var(--brand-primary-opacity-20), var(--brand-primary-opacity-20), var(--brand-primary-opacity-10)); */
-  /* background-image:var(--brand-gradient-surface-overlay); */
+  background-image:linear-gradient(180deg,var(--brand-primary-opacity-20), var(--brand-primary-opacity-20), var(--brand-primary-opacity-10));
+  background-image:var(--brand-gradient-surface-overlay);
   background:
-    /* radial-gradient(circle at 40% 20%, var(--color-ui-white-opacity-20), transparent 70%), */
+    radial-gradient(circle at 40% 20%, var(--color-ui-white-opacity-20), transparent 70%),
     radial-gradient(circle at 40% 90%, var(--color-ui-white-opacity-20), transparent 60%),
-    linear-gradient(180deg, var(--brand-primary-opacity-40), var(--brand-primary-opacity-40));
+    linear-gradient(180deg, var(--brand-primary-opacity-40), var(--brand-primary-opacity-40)); */
   &::before,
   &::after{
     content: "";
@@ -78,7 +78,6 @@
 
     .lt-page .lt-frame--fantasy{
       padding:6px;
-      border-color: var(--brand-primary-opacity-20);
       .lt-frame-content{
         padding: 12px;
       }

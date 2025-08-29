@@ -18,7 +18,10 @@ code[class*=language-],
 pre[class*=language-] {
   /* font-family: var(--font-family-alt)!important; */
   font-size: var(--tfs-1) !important;
+  color: var(--color-text-secondary) !important;
 }
+
+
 
 @media screen and (max-width: 768px) {
 
