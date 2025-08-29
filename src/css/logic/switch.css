@@ -1,0 +1,7 @@
+[data-switch] .lt-icon-check {
+    display: none;
+}
+
+[data-switch].selected .lt-icon-check {
+    display: flex;
+}

@@ -42,12 +42,3 @@
     text-underline-offset: 8px;
     transition: var(--transition-ease);
 }
-
-@media screen and (max-width: 768px) {
-
-    #page-logotype {
-        width: 40px;
-        height: 40px;
-    }
-
-}

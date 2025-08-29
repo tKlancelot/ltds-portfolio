@@ -127,7 +127,7 @@ export const scrollToTop = () => {
 export const changeTheme = () => {
 
   let allThemeBtns = document.querySelectorAll('.theme-switch');
-  console.log('allThemeBtns', allThemeBtns);
+  // console.log('allThemeBtns', allThemeBtns);
   // on regarde si localstorage contient une clé de theme
   const scheme = localStorage.getItem('scheme');
 
@@ -142,7 +142,17 @@ export const changeTheme = () => {
     })
   } 
 
-  // sinon allThemeBtns.foreach 
+  // sinon on set par défaut le theme de document.body 
+  // et on ajoute selected sur le bouton correspondant
+  else {
+    document.body.dataset.scheme = '0';
+    allThemeBtns.forEach(btn => {
+      if (btn.dataset.scheme === '0') {
+        btn.classList.add('selected');
+      }
+    })
+  }
+  // allThemeBtns.foreach 
   allThemeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       // remove all selected 

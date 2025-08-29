@@ -1,7 +1,7 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.woff?b98eaf5c052a2873785b291b36cae294") format("woff"),
-url("./icons.woff2?b98eaf5c052a2873785b291b36cae294") format("woff2");
+    src: url("./icons.woff?31c9401a1c377f3b8720cbe7e1f5930f") format("woff"),
+url("./icons.woff2?31c9401a1c377f3b8720cbe7e1f5930f") format("woff2");
 }
 
 i[class^="lt-icon-"]:before, i[class*=" lt-icon-"]:before {
