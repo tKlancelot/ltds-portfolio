@@ -12,7 +12,7 @@
 .lt-page{
     /* Cadre de base */
     > .lt-frame {
-        background-color: var(--color-primary-opacity-10);
+        background-color: var(--brand-primary-opacity-10);
         width: 100%;
         max-width: 100ch; /* par défaut : lecture confortable */
         display: flex;

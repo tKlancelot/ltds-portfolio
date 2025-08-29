@@ -163,7 +163,7 @@ export function applyPageGradient({
   haloSizeY = '100%',
   haloStrength = 0.8,
   haloShiftY = '-8%',
-  haloColor = 'var(--color-primary-opacity-40)'
+  haloColor = 'var(--brand-primary-opacity-40)'
 } = {}) {
   const el = typeof target === 'string' ? document.querySelector(target) : target;
   if (!el) return;

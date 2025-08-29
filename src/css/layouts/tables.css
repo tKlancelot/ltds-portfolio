@@ -25,7 +25,7 @@
 }
 
 .table tr:nth-of-type(even){ 
-    background-color: var(--color-primary-opacity-10);
+    background-color: var(--brand-primary-opacity-10);
 }
 
 @media screen and (max-width: 768px) {

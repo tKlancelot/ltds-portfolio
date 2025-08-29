@@ -38,7 +38,7 @@ const initPageUI = async (template) => {
   UI.applyPageGradient(
     template === 'home'
       ? { haloSizeX: '150%', haloShiftY: '-20%', haloStrength: 0.9 }
-      : { haloSizeY: '100%', haloSizeX: '150%', haloShiftY: '-20%', haloStrength: 0.8, haloColor: 'var(--color-primary-opacity-10)' }
+      : { haloSizeY: '100%', haloSizeX: '150%', haloShiftY: '-20%', haloStrength: 0.8, haloColor: 'var(--brand-primary-opacity-10)' }
   );
 };
 

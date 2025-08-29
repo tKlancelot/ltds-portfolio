@@ -14,11 +14,11 @@ ltds-card a {
     /* Tokens configurables */
     --card-padding: var(--size-4);
     --card-radius: var(--radii-3);
-    --card-bg: var(--color-primary-opacity-10);
-    --card-bg2: var(--color-primary-opacity-20);
-    --card-border: color-mix(in oklab, var(--color-primary) 96%, transparent);
-    --card-border-hover: color-mix(in oklab, var(--color-primary) 100%, transparent);
-    --card-outline-focus-visible: 2px solid color-mix(in oklab, var(--color-primary) 55%, transparent);
+    --card-bg: var(--brand-primary-opacity-10);
+    --card-bg2: var(--brand-primary-opacity-20);
+    --card-border: color-mix(in oklab, var(--brand-primary) 96%, transparent);
+    --card-border-hover: color-mix(in oklab, var(--brand-primary) 100%, transparent);
+    --card-outline-focus-visible: 2px solid color-mix(in oklab, var(--brand-primary) 55%, transparent);
     --card-overlay-padding: var(--size-3);
     --card-overlay-gap: var(--size-2);
     --card-shadow: var(--shadow-1);
@@ -99,7 +99,7 @@ ltds-card:focus-within .ltds-card {
     --card-outline-focus-visible: 2px solid color-mix(in oklab, var(--color-info) 55%, transparent);
 }
 
-.ltds-card--base,
+.ltds-card--basics,
 .ltds-card--success{
     --card-bg: var(--color-success-opacity-10);
     --card-bg2: var(--color-success-opacity-20);
