@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.30](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.29...v0.3.30) (2025-08-29)
+
+
+### Features
+
+* adding a lightmode factory-tested ([7493d4d](https://github.com/tKlancelot/ltds-portfolio/commit/7493d4dff99922b4a8d9997611060b61d7806be0))
+
 ### [0.3.29](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.28...v0.3.29) (2025-08-29)
 
 ### [0.3.28](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.27...v0.3.28) (2025-08-29)
