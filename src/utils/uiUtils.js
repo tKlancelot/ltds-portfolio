@@ -255,7 +255,7 @@ export function showVersions() {
 // toggle-darkmode.js
 // toggle-darkmode.js
 export function toggleDarkmode () {
-  const KEY = "ui:color-mode";
+  const KEY = "mode";
   const root = document.documentElement;
   const toggles = [
     { input: document.getElementById("modeToggle"), label: document.getElementById("modeLabel") },

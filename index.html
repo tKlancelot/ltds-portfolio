@@ -9,6 +9,19 @@
     <link rel="icon" type="image/svg+xml" href="/public/favicon_io/favicon.ico" />
     <title>LTDS Catalog</title>
 
+    <script>
+    (function () {
+      try {
+        var scheme = localStorage.getItem('scheme') || '0';
+        var mode   = localStorage.getItem('mode')   || 'light'; // light par défaut
+        var r = document.documentElement;
+        r.setAttribute('data-scheme', scheme);
+        r.setAttribute('data-mode', mode);
+        r.style.colorScheme = (mode === 'light') ? 'light' : 'dark';
+      } catch (e) {}
+    })();
+    </script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
