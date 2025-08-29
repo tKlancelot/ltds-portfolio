@@ -36,7 +36,7 @@
 .lt-page .lt-frame--accentuated {
   position: relative;
   overflow: hidden;
-  border:1px solid var(--brand-primary);
+  border:1px solid var(--brand-primary-opacity-40);
   border-radius:var(--radii-5);
   padding: 8px;
   background-color: var(--surface-container);
