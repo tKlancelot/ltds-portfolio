@@ -1,3 +1,26 @@
+[data-mode="dark"] body.home{
+  --halo-size-x: 120%;
+  --halo-size-y: 100%;
+  --halo-strength: 0.8;
+  --halo-shift-y: -8%;
+  --halo-color: var(--brand-primary-opacity-40);
+  background:     radial-gradient(
+      ellipse var(--halo-size-x) var(--halo-size-y) at 50% var(--halo-shift-y),
+      color-mix(in oklab, var(--halo-color), transparent 45%) 0%,
+      color-mix(in oklab, var(--halo-color), transparent 65%) 35%,
+      rgba(0,0,0, calc(0.35 * (1 - var(--halo-strength)))) 55%,
+      transparent 70%
+    ),
+    linear-gradient(
+      to bottom,
+      var(--surface-overlay) 0%,
+      var(--surface-page) 320px
+    );
+
+}
+
+
+
 /* ================================
    LT PAGE LAYOUT
    ================================ */
@@ -39,7 +62,7 @@
   border:1px solid var(--brand-primary-opacity-40);
   border-radius:var(--radii-5);
   padding: 8px;
-  background-color: var(--surface-container);
+  background-color:var(--brand-primary-opacity-20);
 }
 
 
@@ -61,7 +84,7 @@
     inset-inline: 0;
     inset-block: 0;
     height:1px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 5%, var(--brand-primary-opacity-10) 20%, var(--brand-primary) 50%, var(--brand-primary-opacity-10) 80%, rgba(0, 0, 0, 0) 95%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 5%, var(--brand-primary-opacity-10) 20%, var(--brand-primary-active) 50%, var(--brand-primary-opacity-10) 80%, rgba(0, 0, 0, 0) 95%);
   }
   &::after{
     top: calc(100% - 1px);

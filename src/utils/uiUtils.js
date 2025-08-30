@@ -167,47 +167,6 @@ export const changeTheme = () => {
 }
 
 
-export function applyPageGradient({
-  target = 'body',
-  haloSizeX = '120%',
-  haloSizeY = '100%',
-  haloStrength = 0.8,
-  haloShiftY = '-8%',
-  haloColor = 'var(--brand-primary-opacity-40)'
-} = {}) {
-
-
-  // seulement si on est en darkmode 
-
-  let mode = document.body.dataset.mode;
-  if(mode === 'light') return;
-
-  const el = typeof target === 'string' ? document.querySelector(target) : target;
-  if (!el) return;
-
-  // Applique les custom properties
-  el.style.setProperty('--halo-size-x', haloSizeX);
-  el.style.setProperty('--halo-size-y', haloSizeY);
-  el.style.setProperty('--halo-strength', haloStrength);
-  el.style.setProperty('--halo-shift-y', haloShiftY);
-  el.style.setProperty('--halo-color', haloColor);
-
-  // Applique le background complet (halo + gradient)
-  el.style.background = `
-    radial-gradient(
-      ellipse var(--halo-size-x) var(--halo-size-y) at 50% var(--halo-shift-y),
-      color-mix(in oklab, var(--halo-color), transparent 45%) 0%,
-      color-mix(in oklab, var(--halo-color), transparent 65%) 35%,
-      rgba(0,0,0, calc(0.35 * (1 - var(--halo-strength)))) 55%,
-      transparent 70%
-    ),
-    linear-gradient(
-      to bottom,
-      var(--surface-overlay) 0%,
-      var(--surface-page) 320px
-    )
-  `;
-}
 
 
 // reveal.js
@@ -253,7 +212,6 @@ export function showVersions() {
 
 
 // toggle-darkmode.js
-// toggle-darkmode.js
 export function toggleDarkmode () {
   const KEY = "mode";
   const root = document.documentElement;
@@ -271,7 +229,7 @@ export function toggleDarkmode () {
     root.style.colorScheme = m;
     toggles.forEach(({ input, label }) => {
       if (input) input.checked = (m === "dark");
-      if (label) label.textContent = m === "dark" ? "DARK" : "LIGHT";
+      if (label) label.textContent = m === "dark" ? "Dark" : "Light";
     });
   };
 

@@ -1,7 +1,6 @@
 import Splide from '@splidejs/splide';
 import '@splidejs/splide/css'; // optionnel si tu veux le CSS par défaut
 import { cards } from '../datas/cards-data.js';
-import { applyPageGradient } from '../utils/uiUtils.js';
 import { renderThreeScene } from './threeScene.js';
 
 export default async function initHomePage(params) {
