@@ -5,10 +5,10 @@
     --font-family-alt: "Oswald", var(--font-family-base);
 }
 
-[data-scheme="1"][data-mode="light"],
+/* [data-scheme="1"][data-mode="light"],
 [data-scheme="2"][data-mode="light"]{
     --color-text-inverted:var(--color-ui-black);
-}
+} */
 
 
 h1,h2,h3,h4{

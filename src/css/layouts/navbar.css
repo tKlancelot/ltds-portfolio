@@ -29,7 +29,6 @@
 }
 
 
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -45,4 +44,13 @@
 
 .scrolled .navbar{
     border-bottom: 1px solid var(--color-border-primary-40);
+}
+
+@media screen and (max-width: 768px) {
+
+    #page-logotype svg{
+        width: 32px;
+        height: 32px;
+    }
+
 }

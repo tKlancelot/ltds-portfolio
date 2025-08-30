@@ -69,6 +69,37 @@
       </div>
     </modal-dialog>
 
+
+    <modal-dialog id="modal-nav-settings" modal-title="Ui Settings" class="modal modal-color-scheme-primary" max-width="auto">
+      <div class="lt-frame lt-frame--gap-6">
+        <div class="lt-frame">
+            <h3>Select a theme</h3>
+            <div class="lt-stack lt-stack--gap-2">
+                <div class="theme-switch ltds-btn ltds-btn--sm ltds-btn--rounded ltds-btn--outline" data-switch data-scheme="0">
+                    <span>Default</span>
+                    <i class="icon lt-icon-check icon-size-lg"></i>
+                </div>
+                <div class="theme-switch ltds-btn ltds-btn--sm ltds-btn--rounded ltds-btn--outline" data-switch data-scheme="1">
+                    <span>Iris Mist</span>
+                    <i class="icon lt-icon-check icon-size-lg"></i>
+                </div>
+                <div class="theme-switch ltds-btn ltds-btn--sm ltds-btn--rounded ltds-btn--outline" data-switch data-scheme="2">
+                    <span>Azure deep</span>
+                    <i class="icon lt-icon-check icon-size-lg"></i>
+                </div>
+            </div>
+        </div>
+        <ltds-divider></ltds-divider>
+        <div class="lt-stack lt-stack--between">
+            <h3 id="modeLabel">Select a mode</h3>
+            <label class="ltds-switch">
+                <input type="checkbox" id="modeToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+      </div>
+    </modal-dialog>
+
     <!-- Script -->
     <script type="module" src="/src/main.js"></script>
   </body>

@@ -1,7 +1,7 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.woff?31c9401a1c377f3b8720cbe7e1f5930f") format("woff"),
-url("./icons.woff2?31c9401a1c377f3b8720cbe7e1f5930f") format("woff2");
+    src: url("./icons.woff?4def950193e74a3e6f820e1c716c9b6f") format("woff"),
+url("./icons.woff2?4def950193e74a3e6f820e1c716c9b6f") format("woff2");
 }
 
 i[class^="lt-icon-"]:before, i[class*=" lt-icon-"]:before {
@@ -24,72 +24,75 @@ i[class^="lt-icon-"]:before, i[class*=" lt-icon-"]:before {
 .lt-icon-top-arrow:before {
     content: "\f103";
 }
-.lt-icon-send:before {
+.lt-icon-settings:before {
     content: "\f104";
 }
-.lt-icon-search:before {
+.lt-icon-send:before {
     content: "\f105";
 }
-.lt-icon-organisms:before {
+.lt-icon-search:before {
     content: "\f106";
 }
-.lt-icon-molecules:before {
+.lt-icon-organisms:before {
     content: "\f107";
 }
-.lt-icon-layouts:before {
+.lt-icon-molecules:before {
     content: "\f108";
 }
-.lt-icon-jump-to:before {
+.lt-icon-layouts:before {
     content: "\f109";
 }
-.lt-icon-home:before {
+.lt-icon-jump-to:before {
     content: "\f10a";
 }
-.lt-icon-font-system:before {
+.lt-icon-home:before {
     content: "\f10b";
 }
-.lt-icon-expertise:before {
+.lt-icon-font-system:before {
     content: "\f10c";
 }
-.lt-icon-error:before {
+.lt-icon-expertise:before {
     content: "\f10d";
 }
-.lt-icon-download-test:before {
+.lt-icon-error:before {
     content: "\f10e";
 }
-.lt-icon-door-logout:before {
+.lt-icon-download-test:before {
     content: "\f10f";
 }
-.lt-icon-copy:before {
+.lt-icon-door-logout:before {
     content: "\f110";
 }
-.lt-icon-close:before {
+.lt-icon-copy:before {
     content: "\f111";
 }
-.lt-icon-check:before {
+.lt-icon-close:before {
     content: "\f112";
 }
-.lt-icon-caret-down:before {
+.lt-icon-check:before {
     content: "\f113";
 }
-.lt-icon-burger:before {
+.lt-icon-caret-down:before {
     content: "\f114";
 }
-.lt-icon-breakpoints:before {
+.lt-icon-burger:before {
     content: "\f115";
 }
-.lt-icon-basics:before {
+.lt-icon-breakpoints:before {
     content: "\f116";
 }
-.lt-icon-base:before {
+.lt-icon-basics:before {
     content: "\f117";
 }
-.lt-icon-back-arrow:before {
+.lt-icon-base:before {
     content: "\f118";
 }
-.lt-icon-atoms:before {
+.lt-icon-back-arrow:before {
     content: "\f119";
 }
-.lt-icon-about:before {
+.lt-icon-atoms:before {
     content: "\f11a";
+}
+.lt-icon-about:before {
+    content: "\f11b";
 }
