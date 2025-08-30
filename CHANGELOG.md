@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.37](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.36...v0.3.37) (2025-08-30)
+
+
+### Features
+
+* simplify card get started and variables gradients fix theme switch ([9fbdb4e](https://github.com/tKlancelot/ltds-portfolio/commit/9fbdb4e9388eab45a6d26a91b1f4ce84e7335629))
+
 ### [0.3.36](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.35...v0.3.36) (2025-08-30)
 
 
