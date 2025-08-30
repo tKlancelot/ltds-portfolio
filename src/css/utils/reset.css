@@ -10,6 +10,38 @@
     --color-text-inverted:var(--color-ui-black);
 } */
 
+/* test compliance theme add */
+
+/* [data-scheme="3"] {
+    --color-background: #e4ebe9;
+    --color-container: #ffffff;
+    --color-overlay: #e2e7e6;
+    --color-component: #efeafc;
+    --brand-primary: rgb(26, 187, 152);
+    --brand-primary-hover: oklch(from var(--brand-primary) calc(l * .9) c h);
+    --brand-primary-active: oklch(from var(--brand-primary) calc(l * .8) c h);
+    --brand-primary-opacity-4: rgba(26, 187, 152, .04);
+    --brand-primary-opacity-10: rgba(26, 187, 152, .1);
+    --brand-primary-opacity-20: rgba(26, 187, 152, .2);
+    --brand-primary-opacity-40: rgba(26, 187, 152, .4);
+    --brand-gradient-surface-primary: linear-gradient(180deg,
+    color-mix(in oklab, var(--brand-primary) 12%, transparent) 0%,
+    color-mix(in oklab, var(--brand-primary) 6%, transparent) 100%);
+    --brand-gradient-surface-overlay: linear-gradient(to bottom, oklch(from var(--brand-primary) calc(l * .96) c h / .9), oklch(from var(--brand-primary) calc(l * .6) c h / .9));
+    --brand-gradient-text-primary: linear-gradient(120deg, var(--brand-primary-active),
+    color-mix(in oklab, var(--brand-primary) 55%, transparent));
+}
+
+:root[data-mode=dark] [data-scheme="3"] {
+    --color-background: #05241d;
+    --color-container: #053328;
+    --color-overlay: #174138;
+    --color-component: #255a4f;
+    --brand-gradient-surface-primary: linear-gradient(to bottom, oklch(from var(--brand-primary) calc(l * 1.1) c h), var(--brand-primary));
+    --brand-gradient-surface-overlay: linear-gradient(to bottom, oklch(from var(--brand-primary) calc(l * .88) c h / .95), oklch(from var(--brand-primary) calc(l * .42) c h / .98));
+    --brand-gradient-text-primary: linear-gradient(120deg, var(--brand-primary-active), var(--brand-primary-opacity-20));
+} */
+
 
 h1,h2,h3,h4{
     font-family: var(--font-family-accent);

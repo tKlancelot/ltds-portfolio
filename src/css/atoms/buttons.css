@@ -7,3 +7,10 @@
     --text-color-btn:var(--color-ui-white);
 }
 
+.ltds-btn{
+    --btn-gradient-hover:linear-gradient(to bottom,oklch(from var(--brand-primary) calc(l*.9) c h / .92),oklch(from var(--brand-primary) calc(l*.6) c h / .8))
+}
+
+.ltds-btn--sm{
+    padding-inline: var(--size-3);
+}
