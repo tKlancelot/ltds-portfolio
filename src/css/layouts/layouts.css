@@ -1,4 +1,4 @@
-[data-mode="dark"] body.home{
+/* [data-mode="dark"] body.home{
   --halo-size-x: 120%;
   --halo-size-y: 100%;
   --halo-strength: 0.8;
@@ -17,9 +17,20 @@
       var(--surface-page) 320px
     );
 
+} */
+
+[data-mode="dark"] body::before{
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      var(--surface-overlay) 0%,
+      var(--surface-page) 320px
+    );
 }
-
-
 
 /* ================================
    LT PAGE LAYOUT
@@ -34,15 +45,16 @@
 
 .lt-page{
     /* Cadre de base */
+    background-color: var(--surface-page);
     > .lt-frame {
-        background-color: var(--brand-primary-opacity-10);
+        background-color: var(--brand-primary-opacity-20);
         width: 100%;
         max-width: 100ch; /* par défaut : lecture confortable */
         display: flex;
         flex-direction: column;
         gap: var(--size-4);
         padding: var(--size-6);
-        border:1px solid var(--color-border-primary-20);
+        border:1px solid var(--color-border-primary-40);
         border-radius: var(--radii-3);
     }
     
@@ -54,6 +66,15 @@
     .lt-frame--wide {
       max-width: 1200px; /* idéal pour des grilles / composants visuels */
     }
+}
+
+[data-mode="light"]{
+  body:not(.home) .lt-page{
+    background-color: var(--brand-primary-opacity-20);
+    > .lt-frame {
+      background-color: var(--surface-page);
+    }
+  }
 }
 
 .lt-page .lt-frame--accentuated {

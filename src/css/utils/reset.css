@@ -3,7 +3,13 @@
     /* --font-family-accent: "Work Sans", var(--font-family-base); */
     --font-family-accent: "Mona Sans", var(--font-family-base);
     --font-family-alt: "Oswald", var(--font-family-base);
+    /* --color-text-secondary: rgba(0, 0, 0, .64);
+    --color-text-tertiary: rgba(0, 0, 0, .4); */
 }
+
+/* [data-scheme="1"]{
+    --brand-gradient-surface-overlay:linear-gradient(to bottom,oklch(from var(--brand-primary-opacity-40) calc(l * 0.88) c h / 0.95),oklch(from var(--brand-primary-opacity-40) calc(l * 0.42) c h / 0.98));
+} */
 
 /* [data-scheme="1"][data-mode="light"],
 [data-scheme="2"][data-mode="light"]{
@@ -41,6 +47,7 @@
     --brand-gradient-surface-overlay: linear-gradient(to bottom, oklch(from var(--brand-primary) calc(l * .88) c h / .95), oklch(from var(--brand-primary) calc(l * .42) c h / .98));
     --brand-gradient-text-primary: linear-gradient(120deg, var(--brand-primary-active), var(--brand-primary-opacity-20));
 } */
+
 
 
 h1,h2,h3,h4{
