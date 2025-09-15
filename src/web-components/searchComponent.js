@@ -31,7 +31,7 @@ export class SearchBar extends HTMLElement {
     render() {
         this.innerHTML = `
             <div class="search-bar">
-                <button class="ltds-btn ltds-btn--outline ltds-btn--sm" data-modal-ref="modal-search">
+                <button class="ltds-btn ltds-btn--muted ltds-btn--sm" data-modal-ref="modal-search">
                     <i class="icon lt-icon-search icon-size-lg"></i>
                     <span class="ltds-btn-label">Rechercher</span>
                     <i class="icon lt-icon-jump-to icon-size-lg"></i>
