@@ -201,5 +201,6 @@ ltds-card .ltds-card-footer {
     /* background-image: var(--brand-gradient-surface-overlay); */
     min-height: 140px;
     --card-border:  color-mix(in oklab, var(--brand-primary) 20%, transparent);
+    --card-bg: var(--brand-primary-opacity-20);
     /* border:1px solid var(--card-border); */
 }
