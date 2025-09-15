@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.40](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.39...v0.3.40) (2025-09-15)
+
 ### [0.3.39](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.38...v0.3.39) (2025-09-14)
 
 ### [0.3.38](https://github.com/tKlancelot/ltds-portfolio/compare/v0.3.37...v0.3.38) (2025-09-14)
